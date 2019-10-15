@@ -96,7 +96,6 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Navbar_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/Navbar.vue */ "./resources/js/components/Navbar.vue");
-/* harmony import */ var _pages_Home_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pages/Home.vue */ "./resources/js/pages/Home.vue");
 //
 //
 //
@@ -236,12 +235,72 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    "app-navbar": _components_Navbar_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-    Home: _pages_Home_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+    "app-navbar": _components_Navbar_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
 });
 
@@ -256,64 +315,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Home.vue?vue&type=script&lang=js&":
-/*!**********************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Home.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -32947,6 +32948,8 @@ var render = function() {
     [
       _c("app-navbar"),
       _vm._v(" "),
+      _c("div", { staticClass: "mb-5" }),
+      _vm._v(" "),
       _c(
         "b-jumbotron",
         {
@@ -32960,9 +32963,7 @@ var render = function() {
               key: "header",
               fn: function() {
                 return [
-                  _c("div", { staticClass: "text-center" }, [
-                    _vm._v(" PLUG-IN")
-                  ])
+                  _c("div", { staticClass: "text-center" }, [_vm._v("PLUG-IN")])
                 ]
               },
               proxy: true
@@ -32988,19 +32989,17 @@ var render = function() {
           _c("hr", { staticClass: "my-4" }),
           _vm._v(" "),
           _c("p", { staticClass: "text-center" }, [
-            _vm._v(
-              "\n      Politeknik Harapan Bersama Linux User Group Indonesia.\n    "
-            )
+            _vm._v("Politeknik Harapan Bersama Linux User Group Indonesia.")
           ])
         ]
       ),
       _vm._v(" "),
-      _c("h4", [_vm._v("Programming Squad")]),
+      _c("h4", { staticClass: "ml-50" }, [_vm._v("Programming Squad")]),
       _vm._v(" "),
       _c(
         "b-card",
         {
-          staticClass: "mb-3",
+          staticClass: "ml-50 mb-4",
           attrs: {
             "img-src": "https://placekitten.com/300/300",
             "img-alt": "Card image",
@@ -33011,7 +33010,7 @@ var render = function() {
           _c("b-card-text", [
             _c("div", { staticClass: "text-center" }, [
               _vm._v(
-                "\n      Squad kami berkontribusi dalam pengembangan aplikasi (mobile, desktop, web) dengan teknologi open source.  \n      "
+                "Squad kami berkontribusi dalam pengembangan aplikasi (m mb-4obile, desktop, web) dengan teknologi open source."
               )
             ])
           ])
@@ -33019,11 +33018,14 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _c("h4", [_vm._v("Multimedia Squad")]),
+      _c("h4", { staticClass: "text-right mr-50" }, [
+        _vm._v("Multimedia Squad")
+      ]),
       _vm._v(" "),
       _c(
         "b-card",
         {
+          staticClass: "mr-50 mb-4",
           attrs: {
             "img-src": "https://placekitten.com/300/300",
             "img-alt": "Card image",
@@ -33034,7 +33036,7 @@ var render = function() {
           _c("b-card-text", [
             _c("div", { staticClass: "text-center" }, [
               _vm._v(
-                "\n        Squad kami bertujuan mengasah kemampuan dalam bidang design 2D dan 3D.\n      "
+                "Squad kami bertujuan mengasah kemampuan dalam bidang design 2D dan 3D."
               )
             ])
           ])
@@ -33042,16 +33044,12 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _c("p"),
-      _vm._v(" "),
-      _c("h4", [_vm._v("Networking Squad")]),
-      _vm._v(" "),
-      _c("p"),
+      _c("h4", { staticClass: "ml-50" }, [_vm._v("Networking Squad")]),
       _vm._v(" "),
       _c(
         "b-card",
         {
-          staticClass: "mb-3",
+          staticClass: "mb-4 ml-50",
           attrs: {
             "img-src": "https://placekitten.com/300/300",
             "img-alt": "Card image",
@@ -33062,7 +33060,7 @@ var render = function() {
           _c("b-card-text", [
             _c("div", { staticClass: "text-center" }, [
               _vm._v(
-                "\n        Squad kami bertujuan mengembangkan dalam mengelola jaringan internet dalam bidang IoT.\n      "
+                "Squad kami bertujuan mengembangkan dalam mengelola jaringan internet dalam bidang IoT."
               )
             ])
           ])
@@ -33071,6 +33069,120 @@ var render = function() {
       ),
       _vm._v(" "),
       _vm._m(0),
+      _vm._v(" "),
+      _c(
+        "b-container",
+        { staticClass: "bv-example-row" },
+        [
+          _c(
+            "b-row",
+            [
+              _c("b-col", [
+                _c(
+                  "div",
+                  [
+                    _c(
+                      "b-card",
+                      {
+                        staticClass: "mb-2",
+                        staticStyle: { "max-width": "20rem" },
+                        attrs: {
+                          title: "Nama Event",
+                          "img-src": "https://picsum.photos/600/300/?image=25",
+                          "img-alt": "Image",
+                          "img-top": "",
+                          tag: "article"
+                        }
+                      },
+                      [
+                        _c("b-card-text", [_vm._v("Descripsi event.")]),
+                        _vm._v(" "),
+                        _c(
+                          "b-button",
+                          { attrs: { href: "#", variant: "primary" } },
+                          [_vm._v("Detail")]
+                        )
+                      ],
+                      1
+                    )
+                  ],
+                  1
+                )
+              ]),
+              _vm._v(" "),
+              _c("b-col", [
+                _c(
+                  "div",
+                  [
+                    _c(
+                      "b-card",
+                      {
+                        staticClass: "mb-2",
+                        staticStyle: { "max-width": "20rem" },
+                        attrs: {
+                          title: "Nama Event",
+                          "img-src": "https://picsum.photos/600/300/?image=25",
+                          "img-alt": "Image",
+                          "img-top": "",
+                          tag: "article"
+                        }
+                      },
+                      [
+                        _c("b-card-text", [_vm._v("Descripsi event.")]),
+                        _vm._v(" "),
+                        _c(
+                          "b-button",
+                          { attrs: { href: "#", variant: "primary" } },
+                          [_vm._v("Detail")]
+                        )
+                      ],
+                      1
+                    )
+                  ],
+                  1
+                )
+              ]),
+              _vm._v(" "),
+              _c("b-col", [
+                _c(
+                  "div",
+                  [
+                    _c(
+                      "b-card",
+                      {
+                        staticClass: "mb-2",
+                        staticStyle: { "max-width": "20rem" },
+                        attrs: {
+                          title: "Nama event",
+                          "img-src": "https://picsum.photos/600/300/?image=25",
+                          "img-alt": "Image",
+                          "img-top": "",
+                          tag: "article"
+                        }
+                      },
+                      [
+                        _c("b-card-text", [_vm._v("Descripsi Event")]),
+                        _vm._v(" "),
+                        _c(
+                          "b-button",
+                          { attrs: { href: "#", variant: "primary" } },
+                          [_vm._v("Detail")]
+                        )
+                      ],
+                      1
+                    )
+                  ],
+                  1
+                )
+              ])
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _vm._m(1),
       _vm._v(" "),
       _c(
         "b-container",
@@ -33097,11 +33209,11 @@ var render = function() {
                     },
                     [
                       _c("b-card-text", { staticClass: "text-center" }, [
-                        _vm._v("\n      Zihan\n      0895422809945\n    ")
+                        _vm._v("Zihan")
                       ]),
                       _vm._v(" "),
                       _c("b-card-text", { staticClass: "text-center" }, [
-                        _vm._v("\n      0895422809945\n    ")
+                        _vm._v("0895422809945")
                       ])
                     ],
                     1
@@ -33128,7 +33240,7 @@ var render = function() {
                     },
                     [
                       _c("b-card-text", { staticClass: "text-center" }, [
-                        _vm._v("\n     plugintegal@gmail.com\n    ")
+                        _vm._v("plugintegal@gmail.com")
                       ])
                     ],
                     1
@@ -33156,7 +33268,7 @@ var render = function() {
                     [
                       _c("b-card-text", { staticClass: "text-center" }, [
                         _vm._v(
-                          "\n     Jl. Mataram No.9, Kel. pesurungan lor, Kel. Pesurungan Lor, Pesurungan Lor, Margadana, Kota Tegal, Jawa Tengah 52147\n    "
+                          "Jl. Mataram No.9, Kel. pesurungan lor, Kel. Pesurungan Lor, Pesurungan Lor, Margadana, Kota Tegal, Jawa Tengah 52147"
                         )
                       ])
                     ],
@@ -33181,9 +33293,15 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("h1", [
-      _c("div", { staticClass: "text-center" }, [
-        _vm._v("\n     Hubungi Kami\n     ")
-      ])
+      _c("div", { staticClass: "text-center" }, [_vm._v("Event")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h1", [
+      _c("div", { staticClass: "text-center" }, [_vm._v("Hubungi Kami")])
     ])
   }
 ]
@@ -33215,196 +33333,55 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("header", { attrs: { id: "header" } }, [
-      _c("div", { staticClass: "container main-menu" }, [
-        _c(
-          "div",
-          {
-            staticClass: "row align-items-center justify-content-between d-flex"
-          },
-          [
-            _c("div", { attrs: { id: "logo" } }, [
-              _c("a", { attrs: { href: "index.html" } }, [
-                _c("img", {
-                  attrs: { src: "img/logo.png", alt: "", title: "" }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("nav", { attrs: { id: "nav-menu-container" } }, [
-              _c("ul", { staticClass: "nav-menu" }, [
-                _c("li", [
-                  _c("a", { attrs: { href: "about.html" } }, [_vm._v("About")])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "services.html" } }, [
-                    _vm._v("Squad")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "price.html" } }, [_vm._v("Event")])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "contact.html" } }, [
-                    _vm._v("Contact")
+    return _c(
+      "header",
+      {
+        staticStyle: { "background-color": "#e3f2fd" },
+        attrs: { id: "header" }
+      },
+      [
+        _c("div", { staticClass: "container main-menu" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "row align-items-center justify-content-between d-flex"
+            },
+            [
+              _c("div", { attrs: { id: "logo" } }, [
+                _c("a", { attrs: { href: "index.html" } }, [
+                  _c("img", {
+                    attrs: { src: "img/logo.png", alt: "", title: "" }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("nav", { attrs: { id: "nav-menu-container" } }, [
+                _c("ul", { staticClass: "nav-menu" }, [
+                  _c("li", [
+                    _c("a", { attrs: { href: "#" } }, [_vm._v("About")])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("a", { attrs: { href: "#" } }, [_vm._v("Squad")])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("a", { attrs: { href: "#" } }, [_vm._v("Event")])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c("a", { attrs: { href: "#" } }, [_vm._v("Contact")])
                   ])
                 ])
               ])
-            ])
-          ]
-        )
-      ])
-    ])
+            ]
+          )
+        ])
+      ]
+    )
   }
 ]
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Home.vue?vue&type=template&id=b3c5cf30&":
-/*!**************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/Home.vue?vue&type=template&id=b3c5cf30& ***!
-  \**************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c(
-        "b-jumbotron",
-        {
-          attrs: {
-            "bg-variant": "white",
-            "text-variant": "black",
-            "border-variant": ""
-          },
-          scopedSlots: _vm._u([
-            {
-              key: "header",
-              fn: function() {
-                return [
-                  _c("div", { staticClass: "text-center" }, [
-                    _vm._v(" PLUG-IN")
-                  ])
-                ]
-              },
-              proxy: true
-            },
-            {
-              key: "lead",
-              fn: function() {
-                return [
-                  _c("div", { staticClass: "text-center" }, [
-                    _vm._v(
-                      "Plug-in adalah suatu organisasi atau komunitas studi linux di Politeknik Harapan Bersama Tegal. Kami mempunyai tujuan untuk mengenalkan dan mengOpen Source kan mahasiswa dan masyarakat umum dengan berbagai kegiatan yang nantinya bisa membuka wawasan serta mindset OpenSource guna untuk mengurangi angka pembajakan Software di Indonesia."
-                    )
-                  ])
-                ]
-              },
-              proxy: true
-            }
-          ])
-        },
-        [
-          _vm._v(" "),
-          _vm._v(" "),
-          _c("hr", { staticClass: "my-4" }),
-          _vm._v(" "),
-          _c("p", { staticClass: "text-center" }, [
-            _vm._v(
-              "\n      Politeknik Harapan Bersama Linux User Group Indonesia.\n    "
-            )
-          ])
-        ]
-      ),
-      _vm._v(" "),
-      _c("h4", [_vm._v("Programming Squad")]),
-      _vm._v(" "),
-      _c(
-        "b-card",
-        {
-          staticClass: "mb-3",
-          attrs: {
-            "img-src": "https://placekitten.com/300/300",
-            "img-alt": "Card image",
-            "img-left": ""
-          }
-        },
-        [
-          _c("b-card-text", [
-            _vm._v(
-              "\n      Squad kami berkontribusi dalam pengembangan aplikasi (mobile, desktop, web) dengan teknologi open source.  \n      "
-            )
-          ])
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c("h4", [_vm._v("Multimedia Squad")]),
-      _vm._v(" "),
-      _c(
-        "b-card",
-        {
-          attrs: {
-            "img-src": "https://placekitten.com/300/300",
-            "img-alt": "Card image",
-            "img-right": ""
-          }
-        },
-        [
-          _c("b-card-text", [
-            _vm._v(
-              "\n        Squad kami bertujuan mengasah kemampuan dalam bidang design 2D dan 3D.\n      "
-            )
-          ])
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c("p"),
-      _vm._v(" "),
-      _c("h4", [_vm._v("Networking Squad")]),
-      _vm._v(" "),
-      _c("p"),
-      _vm._v(" "),
-      _c(
-        "b-card",
-        {
-          staticClass: "mb-3",
-          attrs: {
-            "img-src": "https://placekitten.com/300/300",
-            "img-alt": "Card image",
-            "img-left": ""
-          }
-        },
-        [
-          _c("b-card-text", [
-            _vm._v(
-              "\n        Squad kami bertujuan mengembangkan dalam mengelola jaringan internet dalam bidang IoT.\n      "
-            )
-          ])
-        ],
-        1
-      )
-    ],
-    1
-  )
-}
-var staticRenderFns = []
 render._withStripped = true
 
 
@@ -48577,75 +48554,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Navbar_vue_vue_type_template_id_6dde423b___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Navbar_vue_vue_type_template_id_6dde423b___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/pages/Home.vue":
-/*!*************************************!*\
-  !*** ./resources/js/pages/Home.vue ***!
-  \*************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Home_vue_vue_type_template_id_b3c5cf30___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Home.vue?vue&type=template&id=b3c5cf30& */ "./resources/js/pages/Home.vue?vue&type=template&id=b3c5cf30&");
-/* harmony import */ var _Home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Home.vue?vue&type=script&lang=js& */ "./resources/js/pages/Home.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _Home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Home_vue_vue_type_template_id_b3c5cf30___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _Home_vue_vue_type_template_id_b3c5cf30___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/pages/Home.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/pages/Home.vue?vue&type=script&lang=js&":
-/*!**************************************************************!*\
-  !*** ./resources/js/pages/Home.vue?vue&type=script&lang=js& ***!
-  \**************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Home.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Home.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/pages/Home.vue?vue&type=template&id=b3c5cf30&":
-/*!********************************************************************!*\
-  !*** ./resources/js/pages/Home.vue?vue&type=template&id=b3c5cf30& ***!
-  \********************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_template_id_b3c5cf30___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Home.vue?vue&type=template&id=b3c5cf30& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/Home.vue?vue&type=template&id=b3c5cf30&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_template_id_b3c5cf30___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_template_id_b3c5cf30___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

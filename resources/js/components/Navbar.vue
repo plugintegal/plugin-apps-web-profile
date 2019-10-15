@@ -1,6 +1,6 @@
 <template>
 
-  <header id="header">
+  <header id="header" style="background-color: #e3f2fd;">
 		    <div class="container main-menu">
 		    	<div class="row align-items-center justify-content-between d-flex">
 			      <div id="logo">
@@ -8,10 +8,10 @@
 			      </div>
 			      <nav id="nav-menu-container">
 			        <ul class="nav-menu">
-			          <li><a href="about.html">About</a></li>
-			          <li><a href="services.html">Squad</a></li>
-			          <li><a href="price.html">Event</a></li>
-                      <li><a href="contact.html">Contact</a></li>
+			          <li><a href="#">About</a></li>
+			          <li><a href="#">Squad</a></li>
+			          <li><a href="#">Event</a></li>
+                      <li><a href="#">Contact</a></li>
 			        </ul>
 			      </nav><!-- #nav-menu-container -->		    		
 		    	</div>
