@@ -259,11 +259,8 @@
       <div class="footer">
         <img src="asset/img/footer.png" width="1352" />
         <div class="plugin">
-          <div style="margin-left: 530px">
-            <img src="asset/img/plugin.png" width="300" height="100" alt />
-            <p>
-                
-            </p>
+          <div style="margin-left: 530px" class="ftlogo">
+            <img src="asset/img/plugin.png" width="200" height="60" alt />
             <ul class="sci">
               <li>
                 <a href="#https://github.com/plugintegal">
@@ -311,7 +308,9 @@ export default {
   padding: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: bottom;
+  align-content: center;
+  margin-top: 40px;
 }
 .sci li {
   list-style: none;
@@ -328,5 +327,9 @@ export default {
 .COPYRIGHT {
   text-align: center;
   color: #000;
+}
+.ftlogo {
+  margin-top: 40px;
+  padding-top: 40;
 }
 </style>

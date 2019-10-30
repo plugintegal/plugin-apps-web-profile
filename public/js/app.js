@@ -392,9 +392,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -28745,7 +28742,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "\n.sci {\n  margin: 0;\n  padding: 0;\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n          align-items: center;\n}\n.sci li {\n  list-style: none;\n  margin: 0 20px;\n}\n.sci li a {\n  color: #000;\n  font-size: 2em;\n  -webkit-transition: 0, 5s;\n  transition: 0, 5s;\n}\n.sci li a:hover {\n  color: #000;\n}\n.COPYRIGHT {\n  text-align: center;\n  color: #000;\n}\n", ""]);
+exports.push([module.i, "\n.sci {\n  margin: 0;\n  padding: 0;\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-pack: center;\n          justify-content: center;\n  -webkit-box-align: bottom;\n          align-items: bottom;\n  align-content: center;\n  margin-top: 40px;\n}\n.sci li {\n  list-style: none;\n  margin: 0 20px;\n}\n.sci li a {\n  color: #000;\n  font-size: 2em;\n  -webkit-transition: 0, 5s;\n  transition: 0, 5s;\n}\n.sci li a:hover {\n  color: #000;\n}\n.COPYRIGHT {\n  text-align: center;\n  color: #000;\n}\n.ftlogo {\n  margin-top: 40px;\n  padding-top: 40;\n}\n", ""]);
 
 // exports
 
@@ -33634,63 +33631,65 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticStyle: { "margin-left": "530px" } }, [
-      _c("img", {
-        attrs: {
-          src: "asset/img/plugin.png",
-          width: "300",
-          height: "100",
-          alt: ""
-        }
-      }),
-      _vm._v(" "),
-      _c("p"),
-      _vm._v(" "),
-      _c("ul", { staticClass: "sci" }, [
-        _c("li", [
-          _c("a", { attrs: { href: "#https://github.com/plugintegal" } }, [
-            _c("i", { staticClass: "fa fa-github" })
+    return _c(
+      "div",
+      { staticClass: "ftlogo", staticStyle: { "margin-left": "530px" } },
+      [
+        _c("img", {
+          attrs: {
+            src: "asset/img/plugin.png",
+            width: "200",
+            height: "60",
+            alt: ""
+          }
+        }),
+        _vm._v(" "),
+        _c("ul", { staticClass: "sci" }, [
+          _c("li", [
+            _c("a", { attrs: { href: "#https://github.com/plugintegal" } }, [
+              _c("i", { staticClass: "fa fa-github" })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c(
+              "a",
+              { attrs: { href: "#https://www.instagram.com/officialplugin/" } },
+              [_c("i", { staticClass: "fa fa-instagram" })]
+            )
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c(
+              "a",
+              {
+                attrs: {
+                  href: "#https://plus.google.com/u/0/107691223860674495969"
+                }
+              },
+              [_c("i", { staticClass: "fa fa-google-plus" })]
+            )
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c(
+              "a",
+              {
+                attrs: {
+                  href:
+                    "#https://www.youtube.com/channel/UCW0p5Y6cNZ34G1LkY46xeLg"
+                }
+              },
+              [_c("i", { staticClass: "fa fa-youtube" })]
+            )
           ])
         ]),
         _vm._v(" "),
-        _c("li", [
-          _c(
-            "a",
-            { attrs: { href: "#https://www.instagram.com/officialplugin/" } },
-            [_c("i", { staticClass: "fa fa-instagram" })]
-          )
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c(
-            "a",
-            {
-              attrs: {
-                href: "#https://plus.google.com/u/0/107691223860674495969"
-              }
-            },
-            [_c("i", { staticClass: "fa fa-google-plus" })]
-          )
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c(
-            "a",
-            {
-              attrs: {
-                href:
-                  "#https://www.youtube.com/channel/UCW0p5Y6cNZ34G1LkY46xeLg"
-              }
-            },
-            [_c("i", { staticClass: "fa fa-youtube" })]
-          )
+        _c("p", { staticClass: "COPYRIGHT" }, [
+          _vm._v("© COPYRIGHT 2019. MAINTANCE BY PLUGIN TEAM")
         ])
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "COPYRIGHT" }, [
-        _vm._v("© COPYRIGHT 2019. MAINTANCE BY PLUGIN TEAM")
-      ])
-    ])
+      ]
+    )
   }
 ]
 render._withStripped = true
