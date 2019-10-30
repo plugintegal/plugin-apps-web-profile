@@ -1,201 +1,299 @@
 <template>
   <div>
-    <!-- <b-navbar toggleable="lg" type="dark" variant="info">
-    <b-navbar-brand href="#">Home</b-navbar-brand text="Lang" right>
-
-    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-
-    <b-collapse id="nav-collapse" is-nav>
-      <b-navbar-nav>
-        <b-nav-item href="#">Squad</b-nav-item>
-        <b-nav-item href="#" >Event</b-nav-item>
-        <b-nav-item href="#" >About</b-nav-item>
-        <b-nav-item href="#" >Wiyata OS</b-nav-item>
-        <b-nav-item href="#" >Contacts</b-nav-item>
-    </b-navbar-nav>-->
-
-    <!-- Right aligned nav items -->
-
-    <!-- Using 'button-content' slot -->
-    <!-- <template v-slot:button-content>
-            <em>User</em>
-          </template>          
-      </b-collapse>
-    </b-navbar>-->
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
     <app-navbar />
-
     <!-- Tentang -->
-    <div class="mb-5"></div>
-    <b-jumbotron bg-variant="white" text-variant="black" border-variant>
-      <template v-slot:header>
-        <div class="text-center">PLUG-IN</div>
-      </template>
+    <section id="about">
+      <div class="mb-5"></div>
+      <b-jumbotron bg-variant="white" text-variant="black" border-variant>
+        <div class="text-center">
+          <h1>PLUG-IN</h1>
+        </div>
 
-      <template v-slot:lead>
-        <div
-          class="text-center"
-        >Plug-in adalah suatu organisasi atau komunitas studi linux di Politeknik Harapan Bersama Tegal. Kami mempunyai tujuan untuk mengenalkan dan mengOpen Source kan mahasiswa dan masyarakat umum dengan berbagai kegiatan yang nantinya bisa membuka wawasan serta mindset OpenSource guna untuk mengurangi angka pembajakan Software di Indonesia.</div>
-      </template>
+        <div class="text-center">
+          <p>
+            Plug-in adalah suatu organisasi atau komunitas studi linux di Politeknik Harapan Bersama Tegal. Kami
+            mempunyai tujuan untuk mengenalkan dan mengOpen Source kan mahasiswa dan masyarakat umum dengan
+            berbagai kegiatan yang nantinya bisa membuka wawasan serta mindset OpenSource guna untuk mengurangi
+            angka pembajakan Software di Indonesia.
+          </p>
+        </div>
+        <hr class="my-4" />
 
-      <hr class="my-4" />
-
-      <p class="text-center">Politeknik Harapan Bersama Linux User Group Indonesia.</p>
-    </b-jumbotron>
+        <p class="text-center">Politeknik Harapan Bersama Linux User Group Indonesia.</p>
+      </b-jumbotron>
+    </section>
 
     <!-- Squad -->
-    <h4 class="ml-50">Programming Squad</h4>
-    <b-card
-      img-src="https://placekitten.com/300/300"
-      img-alt="Card image"
-      img-left
-      class="ml-50 mb-4"
-    >
-      <b-card-text>
-        <div
-          class="text-center"
-        >Squad kami berkontribusi dalam pengembangan aplikasi (m mb-4obile, desktop, web) dengan teknologi open source.</div>
-      </b-card-text>
-    </b-card>
-
-    <h4 class="text-right mr-50">Multimedia Squad</h4>
-    <b-card
-      img-src="https://placekitten.com/300/300"
-      img-alt="Card image"
-      img-right
-      class="mr-50 mb-4"
-    >
-      <b-card-text>
-        <div
-          class="text-center"
-        >Squad kami bertujuan mengasah kemampuan dalam bidang design 2D dan 3D.</div>
-      </b-card-text>
-    </b-card>
-
-    <h4 class="ml-50">Networking Squad</h4>
-    <b-card
-      img-src="https://placekitten.com/300/300"
-      img-alt="Card image"
-      img-left
-      class="mb-4 ml-50"
-    >
-      <b-card-text>
-        <div
-          class="text-center"
-        >Squad kami bertujuan mengembangkan dalam mengelola jaringan internet dalam bidang IoT.</div>
-      </b-card-text>
-    </b-card>
-    <!-- Event -->
-    <h1>
-      <div class="text-center">Event</div>
-    </h1>
-
-    <b-container class="bv-example-row">
-      <b-row>
-        <b-col>
-          <div>
-            <b-card
-              title="Nama Event"
-              img-src="https://picsum.photos/600/300/?image=25"
-              img-alt="Image"
-              img-top
-              tag="article"
-              style="max-width: 20rem;"
-              class="mb-2"
-            >
-              <b-card-text>Descripsi event.</b-card-text>
-
-              <b-button href="#" variant="primary">Detail</b-button>
-            </b-card>
-          </div>
-        </b-col>
-        <b-col>
-        <div>
-          <b-card
-            title="Nama Event"
-            img-src="https://picsum.photos/600/300/?image=25"
-            img-alt="Image"
-            img-top
-            tag="article"
-            style="max-width: 20rem;"
-            class="mb-2"
-          >
-            <b-card-text>Descripsi event.</b-card-text>
-
-            <b-button href="#" variant="primary">Detail</b-button>
-          </b-card>
+    <section id="squad">
+      <b-jumbotron bg-variant="white" text-variant="black" border-variant id="squad">
+        <div class="text-center" style="padding-bottom:20px">
+          <h1>Programming Squad</h1>
         </div>
-        </b-col>
-        <b-col>
-          <div>
-            <b-card
-              title="Nama event"
-              img-src="https://picsum.photos/600/300/?image=25"
-              img-alt="Image"
-              img-top
-              tag="article"
-              style="max-width: 20rem;"
-              class="mb-2"
-            >
-              <b-card-text>Descripsi Event</b-card-text>
+        <br />
+        <b-row style="margin-bottom: 50px">
+          <b-col>
+            <b-img
+              src="asset/img/web_dev.png"
+              width="500px"
+              height="400px"
+              style="margin-left: 100px"
+            ></b-img>
+          </b-col>
+          <b-col>
+            <div>
+              <h3>Web Development</h3>
+            </div>
+            <div style="margin-right: 100px">
+              <p style="text-align: justify">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Adipisci voluptatum rem, nemo doloremque temporibus architecto pariatur cumque autem et
+                exercitationem. Quaerat sit eveniet veritatis, ullam error laboriosam modi cupiditate vitae.
+              </p>
+              <b-button pill variant="primary" style="width:100px">Detail</b-button>
+            </div>
+          </b-col>
+        </b-row>
+        <b-row style="margin-bottom: 50px">
+          <b-col style="margin-top: 50px">
+            <div style="margin-left: 100px">
+              <h3>Mobile Development</h3>
+            </div>
+            <div style="margin-left: 100px">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate praesentium rem debitis
+                necessitatibus, repellat voluptatibus quisquam non ipsa doloribus dolor asperiores hic
+                facere veritatis vitae voluptatum porro quam accusamus saepe!
+              </p>
+              <b-button pill variant="primary" style="width:100px">Detail</b-button>
+            </div>
+          </b-col>
+          <b-col>
+            <b-img
+              src="asset/img/mobile_dev.png"
+              width="500px"
+              height="400px"
+              style="margin-right: 100px"
+            ></b-img>
+          </b-col>
+        </b-row>
+        <b-row>
+          <b-col>
+            <b-img src="asset/img/uiux.png" width="500px" height="400px" style="margin-left: 100px"></b-img>
+          </b-col>
+          <b-col style="margin-top: 50px">
+            <div>
+              <h3>UI/UX</h3>
+            </div>
+            <div style="margin-right: 100px">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis odit corporis vel facere,
+                iure ipsum soluta sed? Commodi expedita nihil quisquam repellendus, quae rem, quod velit
+                quia accusantium labore dolorem.
+              </p>
+              <b-button pill variant="primary" style="width:100px">Detail</b-button>
+            </div>
+          </b-col>
+        </b-row>
+      </b-jumbotron>
+    </section>
 
-              <b-button href="#" variant="primary">Detail</b-button>
-            </b-card>
-          </div>
-        </b-col>
-      </b-row>
-    </b-container>
+    <!-- Event -->
+    <section id="event">
+      <h1>
+        <div class="text-center">Event</div>
+      </h1>
+
+      <b-container class="bv-example-row" id="event">
+        <b-row>
+          <b-col>
+            <div>
+              <b-card
+                title="Nama Event"
+                img-src="https://picsum.photos/600/300/?image=25"
+                img-alt="Image"
+                img-top
+                tag="article"
+                style="max-width: 20rem;"
+                class="mb-2"
+              >
+                <b-card-text>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</b-card-text>
+
+                <b-button href="#" variant="primary">Detail</b-button>
+              </b-card>
+            </div>
+          </b-col>
+          <b-col>
+            <div>
+              <b-card
+                title="Nama Event"
+                img-src="https://picsum.photos/600/300/?image=25"
+                img-alt="Image"
+                img-top
+                tag="article"
+                style="max-width: 20rem;"
+                class="mb-2"
+              >
+                <b-card-text>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</b-card-text>
+
+                <b-button href="#" variant="primary">Detail</b-button>
+              </b-card>
+            </div>
+          </b-col>
+          <b-col>
+            <div>
+              <b-card
+                title="Nama event"
+                img-src="https://picsum.photos/600/300/?image=25"
+                img-alt="Image"
+                img-top
+                tag="article"
+                style="max-width: 20rem;"
+                class="mb-2"
+              >
+                <b-card-text>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</b-card-text>
+
+                <b-button href="#" variant="primary">Detail</b-button>
+              </b-card>
+            </div>
+          </b-col>
+        </b-row>
+      </b-container>
+    </section>
 
     <!-- Contacts -->
-    <h1>
-      <div class="text-center">Hubungi Kami</div>
-    </h1>
+    <!-- <h1>
+            <div class="text-center">Hubungi Kami</div>
+    </h1>-->
 
-    <b-container class="bv-example-row">
-      <b-row>
-        <b-col>
-          <b-card
-            title="Phone"
-            img-src="https://picsum.photos/600/300/?image=25"
-            img-alt="Image"
-            img-top
-            tag="article"
-            style="max-width: 20rem;"
-            class="mb-2 text-center"
-          >
-            <b-card-text class="text-center">Zihan</b-card-text>
-            <b-card-text class="text-center">0895422809945</b-card-text>
-          </b-card>
-        </b-col>
-        <b-col>
-          <b-card
-            title="Email"
-            img-src="https://picsum.photos/600/300/?image=25"
-            img-alt="Image"
-            img-top
-            tag="article"
-            style="max-width: 20rem;"
-            class="mb-2 text-center"
-          >
-            <b-card-text class="text-center">plugintegal@gmail.com</b-card-text>
-          </b-card>
-        </b-col>
-        <b-col>
-          <b-card
-            title="Alamat"
-            img-src="https://picsum.photos/600/300/?image=25"
-            img-alt="Image"
-            img-top
-            tag="article"
-            style="max-width: 20rem;"
-            class="mb-2 text-center"
-          >
-            <b-card-text
-              class="text-center"
-            >Jl. Mataram No.9, Kel. pesurungan lor, Kel. Pesurungan Lor, Pesurungan Lor, Margadana, Kota Tegal, Jawa Tengah 52147</b-card-text>
-          </b-card>
-        </b-col>
-      </b-row>
-    </b-container>
+    <!-- <b-container class="bv-example-row">
+            <b-row>
+                <b-col>
+                    <b-card title="Phone" img-src="https://picsum.photos/600/300/?image=25" img-alt="Image" img-top
+                        tag="article" style="max-width: 20rem;" class="mb-2 text-center">
+                        <b-card-text class="text-center">Zihan</b-card-text>
+                        <b-card-text class="text-center">0895422809945</b-card-text>
+                    </b-card>
+                </b-col>
+                <b-col>
+                    <b-card title="Email" img-src="https://picsum.photos/600/300/?image=25" img-alt="Image" img-top
+                        tag="article" style="max-width: 20rem;" class="mb-2 text-center">
+                        <b-card-text class="text-center">plugintegal@gmail.com</b-card-text>
+                    </b-card>
+                </b-col>
+                <b-col>
+                    <b-card title="Alamat" img-src="https://picsum.photos/600/300/?image=25" img-alt="Image" img-top
+                        tag="article" style="max-width: 20rem;" class="mb-2 text-center">
+                        <b-card-text class="text-center">Jl. Mataram No.9, Kel. pesurungan lor, Kel. Pesurungan Lor,
+                            Pesurungan Lor, Margadana, Kota Tegal, Jawa Tengah 52147</b-card-text>
+                    </b-card>
+                </b-col>
+            </b-row>
+    </b-container>-->
+    <section id="kontak">
+      <b-jumbotron bg-variant="white" text-variant="black" border-variant id="kontak">
+        <div class="text-center" style="padding-bottom:20px">
+          <h1>Hubungi Kami</h1>
+        </div>
+        <br />
+        <b-row style="margin-bottom: 50px">
+          <div class="col-sm-4">
+            <div class="text-center">
+              <a href="#">
+                <img
+                  src="asset/img/phone.png"
+                  width="50px"
+                  height="50px"
+                  style="margin-bottom: 20px"
+                />
+              </a>
+              <h3>Phone</h3>
+              <p>
+                Zihan
+                <br />0895422809945
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="text-center">
+              <a href="#">
+                <img
+                  src="asset/img/email.png"
+                  width="50px"
+                  height="50px"
+                  style="margin-bottom: 20px"
+                />
+              </a>
+              <h3>Email</h3>
+              <p>
+              plugintegal@gmail.com
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="text-center">
+              <a href="#">
+                <img
+                  src="asset/img/alamat.png"
+                  width="50px"
+                  height="50px"
+                  style="margin-bottom: 20px"
+                />
+              </a>
+              <h3>Alamat</h3>
+              <p>
+                Jl. Mataram No.9, Kel. pesurungan lor, Kel. Pesurungan Lor,
+                Pesurungan Lor, Margadana, Kota Tegal, Jawa Tengah 52147
+              </p>
+            </div>
+          </div>
+        </b-row>
+      </b-jumbotron>
+    </section>
+    <footer>
+      <div class="footer">
+        <img src="asset/img/footer.png" width="1352" />
+        <div class="plugin">
+          <div style="margin-left: 530px">
+            <img src="asset/img/plugin.png" width="300" height="100" alt />
+            <p>
+                
+            </p>
+            <ul class="sci">
+              <li>
+                <a href="#https://github.com/plugintegal">
+                  <i class="fa fa-github"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#https://www.instagram.com/officialplugin/">
+                  <i class="fa fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#https://plus.google.com/u/0/107691223860674495969">
+                  <i class="fa fa-google-plus"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#https://www.youtube.com/channel/UCW0p5Y6cNZ34G1LkY46xeLg">
+                  <i class="fa fa-youtube"></i>
+                </a>
+              </li>
+            </ul>
+            <p class="COPYRIGHT">© COPYRIGHT 2019. MAINTANCE BY PLUGIN TEAM</p>
+          </div>
+          <div>
+            <b-row></b-row>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -207,4 +305,28 @@ export default {
   }
 };
 </script>
-
+<style>
+.sci {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sci li {
+  list-style: none;
+  margin: 0 20px;
+}
+.sci li a {
+  color: #000;
+  font-size: 2em;
+  transition: 0, 5s;
+}
+.sci li a:hover {
+  color: #000;
+}
+.COPYRIGHT {
+  text-align: center;
+  color: #000;
+}
+</style>

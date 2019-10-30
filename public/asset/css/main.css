@@ -2052,8 +2052,12 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   transition: all 0.5s;
   z-index: 997;
-  background: #fff;
+  background: #10bdf1;
+  background: -webkit-linear-gradient(right, #10bdf1 20% ,#1395d4 67%, #1580c4 85%);
+  background: -o-linear-gradient(right, #10bdf1 20% ,#1395d4 70%, #1580c4 85%);
+  background: -moz-linear-gradient(right, #10bdf1 20% ,#1395d4 70%, #1580c4 85%);
 }
+
 
 #header.header-scrolled {
   transition: all 0.5s;
@@ -3351,7 +3355,7 @@ dl.accordion.time-line:before {
 /* =================================== */
 /*============ Start Blog Home Styles  =============*/
 .blog-home-banner {
-  background: url(../img/blog/blog-home-banner.jpg) bottom;
+  background: url(../img/blog/blog-home-banner.jpeg) bottom;
   background-size: cover;
   padding: 130px 0px;
 }
@@ -4311,8 +4315,20 @@ dl.accordion.time-line:before {
 /* =================================== */
 /*  Footer Styles
 /* =================================== */
+.footer{
+  position: relative;
+  margin-top: 10px;
+}
+.footer .plugin{
+  position: absolute;
+  top: 240px;
+  text-align: center;
+  margin: auto;
+}
+
 .footer-area {
-  background-color: #04091e;
+  /* background-color: #04091e; */
+  background-image: url(../img/footer.png);
 }
 
 .single-footer-widget h4 {
