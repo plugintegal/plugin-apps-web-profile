@@ -8,9 +8,8 @@
     />
     <app-navbar />
     <!-- Tentang -->
-    <section id="about">
-      <div class="mb-5"></div>
-      <b-jumbotron bg-variant="white" text-variant="black" border-variant>
+    <section id="about" class="jumbotron bg-white">
+      <b-jumbotron bg-variant="white" text-variant="black">
         <div class="text-center">
           <h1>PLUG-IN</h1>
         </div>
@@ -36,13 +35,13 @@
           <h1>Programming Squad</h1>
         </div>
         <br />
-        <b-row style="margin-bottom: 50px">
+        <b-row style="margin-bottom: 40px">
           <b-col>
             <b-img
               src="asset/img/web_dev.png"
-              width="500px"
-              height="400px"
-              style="margin-left: 100px"
+              width="450px"
+              height="350px"
+              style="margin-left: 100px img-fluid"
             ></b-img>
           </b-col>
           <b-col>
@@ -76,15 +75,15 @@
           <b-col>
             <b-img
               src="asset/img/mobile_dev.png"
-              width="500px"
-              height="400px"
-              style="margin-right: 100px"
+              width="450px"
+              height="350px"
+              style="margin-right: 100px img-fluid"
             ></b-img>
           </b-col>
         </b-row>
         <b-row>
           <b-col>
-            <b-img src="asset/img/uiux.png" width="500px" height="400px" style="margin-left: 100px"></b-img>
+            <b-img src="asset/img/uiux.png" width="450px" height="350px" style="margin-left: 100px img-fluid"></b-img>
           </b-col>
           <b-col style="margin-top: 50px">
             <div>
@@ -110,9 +109,9 @@
       </h1>
 
       <b-container class="bv-example-row" id="event">
-        <b-row>
-          <b-col>
-            <div>
+        <b-row style="margin-bottom: 70px">
+          <div class="col-sm-4">
+            <div class="text-center">
               <b-card
                 title="Nama Event"
                 img-src="https://picsum.photos/600/300/?image=25"
@@ -127,9 +126,10 @@
                 <b-button href="#" variant="primary">Detail</b-button>
               </b-card>
             </div>
-          </b-col>
-          <b-col>
-            <div>
+          </div>
+          
+           <div class="col-sm-4">
+            <div class="text-center">
               <b-card
                 title="Nama Event"
                 img-src="https://picsum.photos/600/300/?image=25"
@@ -144,11 +144,12 @@
                 <b-button href="#" variant="primary">Detail</b-button>
               </b-card>
             </div>
-          </b-col>
-          <b-col>
-            <div>
+          </div>
+
+           <div class="col-sm-4">
+            <div class="text-center">
               <b-card
-                title="Nama event"
+                title="Nama Event"
                 img-src="https://picsum.photos/600/300/?image=25"
                 img-alt="Image"
                 img-top
@@ -161,40 +162,12 @@
                 <b-button href="#" variant="primary">Detail</b-button>
               </b-card>
             </div>
-          </b-col>
+          </div>
         </b-row>
       </b-container>
     </section>
 
-    <!-- Contacts -->
-    <!-- <h1>
-            <div class="text-center">Hubungi Kami</div>
-    </h1>-->
-
-    <!-- <b-container class="bv-example-row">
-            <b-row>
-                <b-col>
-                    <b-card title="Phone" img-src="https://picsum.photos/600/300/?image=25" img-alt="Image" img-top
-                        tag="article" style="max-width: 20rem;" class="mb-2 text-center">
-                        <b-card-text class="text-center">Zihan</b-card-text>
-                        <b-card-text class="text-center">0895422809945</b-card-text>
-                    </b-card>
-                </b-col>
-                <b-col>
-                    <b-card title="Email" img-src="https://picsum.photos/600/300/?image=25" img-alt="Image" img-top
-                        tag="article" style="max-width: 20rem;" class="mb-2 text-center">
-                        <b-card-text class="text-center">plugintegal@gmail.com</b-card-text>
-                    </b-card>
-                </b-col>
-                <b-col>
-                    <b-card title="Alamat" img-src="https://picsum.photos/600/300/?image=25" img-alt="Image" img-top
-                        tag="article" style="max-width: 20rem;" class="mb-2 text-center">
-                        <b-card-text class="text-center">Jl. Mataram No.9, Kel. pesurungan lor, Kel. Pesurungan Lor,
-                            Pesurungan Lor, Margadana, Kota Tegal, Jawa Tengah 52147</b-card-text>
-                    </b-card>
-                </b-col>
-            </b-row>
-    </b-container>-->
+    <!-- Contacts -->   
     <section id="kontak">
       <b-jumbotron bg-variant="white" text-variant="black" border-variant id="kontak">
         <div class="text-center" style="padding-bottom:20px">
@@ -255,12 +228,14 @@
         </b-row>
       </b-jumbotron>
     </section>
+    
+    
     <footer>
       <div class="footer">
-        <img src="asset/img/footer.png" width="1352" />
+        <img src="asset/img/footer.png" width="1350">
         <div class="plugin">
           <div style="margin-left: 530px" class="ftlogo">
-            <img src="asset/img/plugin.png" width="200" height="60" alt />
+            <img src="asset/img/plugin.png" width="200" height="60" alt >
             <ul class="sci">
               <li>
                 <a href="#https://github.com/plugintegal">
@@ -285,9 +260,6 @@
             </ul>
             <p class="COPYRIGHT">© COPYRIGHT 2019. MAINTANCE BY PLUGIN TEAM</p>
           </div>
-          <div>
-            <b-row></b-row>
-          </div>
         </div>
       </div>
     </footer>
@@ -303,6 +275,14 @@ export default {
 };
 </script>
 <style>
+.jumbotron{
+  min-height: 300px;
+  margin-top: 70px;
+}
+
+.footer{
+  margin-top: -100px;
+}
 .sci {
   margin: 0;
   padding: 0;

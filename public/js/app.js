@@ -364,34 +364,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -28742,7 +28714,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "\n.sci {\n  margin: 0;\n  padding: 0;\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-pack: center;\n          justify-content: center;\n  -webkit-box-align: bottom;\n          align-items: bottom;\n  align-content: center;\n  margin-top: 40px;\n}\n.sci li {\n  list-style: none;\n  margin: 0 20px;\n}\n.sci li a {\n  color: #000;\n  font-size: 2em;\n  -webkit-transition: 0, 5s;\n  transition: 0, 5s;\n}\n.sci li a:hover {\n  color: #000;\n}\n.COPYRIGHT {\n  text-align: center;\n  color: #000;\n}\n.ftlogo {\n  margin-top: 40px;\n  padding-top: 40;\n}\n", ""]);
+exports.push([module.i, "\n.jumbotron{\n  min-height: 300px;\n  margin-top: 70px;\n}\n.footer{\n  margin-top: -100px;\n}\n.sci {\n  margin: 0;\n  padding: 0;\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-pack: center;\n          justify-content: center;\n  -webkit-box-align: bottom;\n          align-items: bottom;\n  align-content: center;\n  margin-top: 40px;\n}\n.sci li {\n  list-style: none;\n  margin: 0 20px;\n}\n.sci li a {\n  color: #000;\n  font-size: 2em;\n  -webkit-transition: 0, 5s;\n  transition: 0, 5s;\n}\n.sci li a:hover {\n  color: #000;\n}\n.COPYRIGHT {\n  text-align: center;\n  color: #000;\n}\n.ftlogo {\n  margin-top: 40px;\n  padding-top: 40;\n}\n", ""]);
 
 // exports
 
@@ -33150,19 +33122,11 @@ var render = function() {
       _vm._v(" "),
       _c(
         "section",
-        { attrs: { id: "about" } },
+        { staticClass: "jumbotron bg-white", attrs: { id: "about" } },
         [
-          _c("div", { staticClass: "mb-5" }),
-          _vm._v(" "),
           _c(
             "b-jumbotron",
-            {
-              attrs: {
-                "bg-variant": "white",
-                "text-variant": "black",
-                "border-variant": ""
-              }
-            },
+            { attrs: { "bg-variant": "white", "text-variant": "black" } },
             [
               _c("div", { staticClass: "text-center" }, [
                 _c("h1", [_vm._v("PLUG-IN")])
@@ -33215,17 +33179,17 @@ var render = function() {
               _vm._v(" "),
               _c(
                 "b-row",
-                { staticStyle: { "margin-bottom": "50px" } },
+                { staticStyle: { "margin-bottom": "40px" } },
                 [
                   _c(
                     "b-col",
                     [
                       _c("b-img", {
-                        staticStyle: { "margin-left": "100px" },
+                        staticStyle: { "margin-left": "100px img-fluid" },
                         attrs: {
                           src: "asset/img/web_dev.png",
-                          width: "500px",
-                          height: "400px"
+                          width: "450px",
+                          height: "350px"
                         }
                       })
                     ],
@@ -33297,11 +33261,11 @@ var render = function() {
                     "b-col",
                     [
                       _c("b-img", {
-                        staticStyle: { "margin-right": "100px" },
+                        staticStyle: { "margin-right": "100px img-fluid" },
                         attrs: {
                           src: "asset/img/mobile_dev.png",
-                          width: "500px",
-                          height: "400px"
+                          width: "450px",
+                          height: "350px"
                         }
                       })
                     ],
@@ -33318,11 +33282,11 @@ var render = function() {
                     "b-col",
                     [
                       _c("b-img", {
-                        staticStyle: { "margin-left": "100px" },
+                        staticStyle: { "margin-left": "100px img-fluid" },
                         attrs: {
                           src: "asset/img/uiux.png",
-                          width: "500px",
-                          height: "400px"
+                          width: "450px",
+                          height: "350px"
                         }
                       })
                     ],
@@ -33374,125 +33338,124 @@ var render = function() {
             "b-container",
             { staticClass: "bv-example-row", attrs: { id: "event" } },
             [
-              _c(
-                "b-row",
-                [
-                  _c("b-col", [
-                    _c(
-                      "div",
-                      [
-                        _c(
-                          "b-card",
-                          {
-                            staticClass: "mb-2",
-                            staticStyle: { "max-width": "20rem" },
-                            attrs: {
-                              title: "Nama Event",
-                              "img-src":
-                                "https://picsum.photos/600/300/?image=25",
-                              "img-alt": "Image",
-                              "img-top": "",
-                              tag: "article"
-                            }
-                          },
-                          [
-                            _c("b-card-text", [
-                              _vm._v(
-                                "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "b-button",
-                              { attrs: { href: "#", variant: "primary" } },
-                              [_vm._v("Detail")]
+              _c("b-row", { staticStyle: { "margin-bottom": "70px" } }, [
+                _c("div", { staticClass: "col-sm-4" }, [
+                  _c(
+                    "div",
+                    { staticClass: "text-center" },
+                    [
+                      _c(
+                        "b-card",
+                        {
+                          staticClass: "mb-2",
+                          staticStyle: { "max-width": "20rem" },
+                          attrs: {
+                            title: "Nama Event",
+                            "img-src":
+                              "https://picsum.photos/600/300/?image=25",
+                            "img-alt": "Image",
+                            "img-top": "",
+                            tag: "article"
+                          }
+                        },
+                        [
+                          _c("b-card-text", [
+                            _vm._v(
+                              "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
                             )
-                          ],
-                          1
-                        )
-                      ],
-                      1
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("b-col", [
-                    _c(
-                      "div",
-                      [
-                        _c(
-                          "b-card",
-                          {
-                            staticClass: "mb-2",
-                            staticStyle: { "max-width": "20rem" },
-                            attrs: {
-                              title: "Nama Event",
-                              "img-src":
-                                "https://picsum.photos/600/300/?image=25",
-                              "img-alt": "Image",
-                              "img-top": "",
-                              tag: "article"
-                            }
-                          },
-                          [
-                            _c("b-card-text", [
-                              _vm._v(
-                                "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "b-button",
-                              { attrs: { href: "#", variant: "primary" } },
-                              [_vm._v("Detail")]
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "b-button",
+                            { attrs: { href: "#", variant: "primary" } },
+                            [_vm._v("Detail")]
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-sm-4" }, [
+                  _c(
+                    "div",
+                    { staticClass: "text-center" },
+                    [
+                      _c(
+                        "b-card",
+                        {
+                          staticClass: "mb-2",
+                          staticStyle: { "max-width": "20rem" },
+                          attrs: {
+                            title: "Nama Event",
+                            "img-src":
+                              "https://picsum.photos/600/300/?image=25",
+                            "img-alt": "Image",
+                            "img-top": "",
+                            tag: "article"
+                          }
+                        },
+                        [
+                          _c("b-card-text", [
+                            _vm._v(
+                              "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
                             )
-                          ],
-                          1
-                        )
-                      ],
-                      1
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("b-col", [
-                    _c(
-                      "div",
-                      [
-                        _c(
-                          "b-card",
-                          {
-                            staticClass: "mb-2",
-                            staticStyle: { "max-width": "20rem" },
-                            attrs: {
-                              title: "Nama event",
-                              "img-src":
-                                "https://picsum.photos/600/300/?image=25",
-                              "img-alt": "Image",
-                              "img-top": "",
-                              tag: "article"
-                            }
-                          },
-                          [
-                            _c("b-card-text", [
-                              _vm._v(
-                                "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "b-button",
-                              { attrs: { href: "#", variant: "primary" } },
-                              [_vm._v("Detail")]
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "b-button",
+                            { attrs: { href: "#", variant: "primary" } },
+                            [_vm._v("Detail")]
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-sm-4" }, [
+                  _c(
+                    "div",
+                    { staticClass: "text-center" },
+                    [
+                      _c(
+                        "b-card",
+                        {
+                          staticClass: "mb-2",
+                          staticStyle: { "max-width": "20rem" },
+                          attrs: {
+                            title: "Nama Event",
+                            "img-src":
+                              "https://picsum.photos/600/300/?image=25",
+                            "img-alt": "Image",
+                            "img-top": "",
+                            tag: "article"
+                          }
+                        },
+                        [
+                          _c("b-card-text", [
+                            _vm._v(
+                              "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
                             )
-                          ],
-                          1
-                        )
-                      ],
-                      1
-                    )
-                  ])
-                ],
-                1
-              )
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "b-button",
+                            { attrs: { href: "#", variant: "primary" } },
+                            [_vm._v("Detail")]
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ])
+              ])
             ],
             1
           )
@@ -33603,17 +33566,7 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _c("footer", [
-        _c("div", { staticClass: "footer" }, [
-          _c("img", { attrs: { src: "asset/img/footer.png", width: "1352" } }),
-          _vm._v(" "),
-          _c("div", { staticClass: "plugin" }, [
-            _vm._m(1),
-            _vm._v(" "),
-            _c("div", [_c("b-row")], 1)
-          ])
-        ])
-      ])
+      _vm._m(1)
     ],
     1
   )
@@ -33631,65 +33584,80 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "ftlogo", staticStyle: { "margin-left": "530px" } },
-      [
-        _c("img", {
-          attrs: {
-            src: "asset/img/plugin.png",
-            width: "200",
-            height: "60",
-            alt: ""
-          }
-        }),
+    return _c("footer", [
+      _c("div", { staticClass: "footer" }, [
+        _c("img", { attrs: { src: "asset/img/footer.png", width: "1350" } }),
         _vm._v(" "),
-        _c("ul", { staticClass: "sci" }, [
-          _c("li", [
-            _c("a", { attrs: { href: "#https://github.com/plugintegal" } }, [
-              _c("i", { staticClass: "fa fa-github" })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c(
-              "a",
-              { attrs: { href: "#https://www.instagram.com/officialplugin/" } },
-              [_c("i", { staticClass: "fa fa-instagram" })]
-            )
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c(
-              "a",
-              {
+        _c("div", { staticClass: "plugin" }, [
+          _c(
+            "div",
+            { staticClass: "ftlogo", staticStyle: { "margin-left": "530px" } },
+            [
+              _c("img", {
                 attrs: {
-                  href: "#https://plus.google.com/u/0/107691223860674495969"
+                  src: "asset/img/plugin.png",
+                  width: "200",
+                  height: "60",
+                  alt: ""
                 }
-              },
-              [_c("i", { staticClass: "fa fa-google-plus" })]
-            )
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c(
-              "a",
-              {
-                attrs: {
-                  href:
-                    "#https://www.youtube.com/channel/UCW0p5Y6cNZ34G1LkY46xeLg"
-                }
-              },
-              [_c("i", { staticClass: "fa fa-youtube" })]
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "COPYRIGHT" }, [
-          _vm._v("© COPYRIGHT 2019. MAINTANCE BY PLUGIN TEAM")
+              }),
+              _vm._v(" "),
+              _c("ul", { staticClass: "sci" }, [
+                _c("li", [
+                  _c(
+                    "a",
+                    { attrs: { href: "#https://github.com/plugintegal" } },
+                    [_c("i", { staticClass: "fa fa-github" })]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c(
+                    "a",
+                    {
+                      attrs: {
+                        href: "#https://www.instagram.com/officialplugin/"
+                      }
+                    },
+                    [_c("i", { staticClass: "fa fa-instagram" })]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c(
+                    "a",
+                    {
+                      attrs: {
+                        href:
+                          "#https://plus.google.com/u/0/107691223860674495969"
+                      }
+                    },
+                    [_c("i", { staticClass: "fa fa-google-plus" })]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c(
+                    "a",
+                    {
+                      attrs: {
+                        href:
+                          "#https://www.youtube.com/channel/UCW0p5Y6cNZ34G1LkY46xeLg"
+                      }
+                    },
+                    [_c("i", { staticClass: "fa fa-youtube" })]
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "COPYRIGHT" }, [
+                _vm._v("© COPYRIGHT 2019. MAINTANCE BY PLUGIN TEAM")
+              ])
+            ]
+          )
         ])
-      ]
-    )
+      ])
+    ])
   }
 ]
 render._withStripped = true
