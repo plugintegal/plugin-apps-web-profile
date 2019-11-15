@@ -4329,6 +4329,11 @@ dl.accordion.time-line:before {
 .footer-area {
   /* background-color: #04091e; */
   background-image: url(../img/footer.png);
+  width: 1352;
+  background-repeat: no-repeat;
+  background: cover;
+  height: 400px ;
+  margin-top: 30px;
 }
 
 .single-footer-widget h4 {

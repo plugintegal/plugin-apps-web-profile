@@ -13,4 +13,6 @@
 
 
 
-Route::get('/', 'FrontController@index');
+// Route::get('/', 'FrontController@index');
+
+Route::get('/{any}', 'FrontController@index')->where('any', '.*');

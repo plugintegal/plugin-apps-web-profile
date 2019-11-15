@@ -7,9 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PLUG-IN</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
-    <!--
-			CSS
-			============================================= -->
+    <!--CSS ============================================= -->
     <link rel="stylesheet" href="asset/css/linearicons.css">
     <link rel="stylesheet" href="asset/css/font-awesome.min.css">
     <link rel="stylesheet" href="asset/css/bootstrap.css">
@@ -24,9 +22,35 @@
 
 <body>
     <div id="wp">
-        <app></app>
+        <!-- <app></app> -->
+        <router-view></router-view>
     </div>
+     
 
+    <!-- WhatsHelp.io widget -->
+    <script type="text/javascript">
+        (function () {
+            var options = {
+                whatsapp: "+62895422809945", // WhatsApp number
+                call_to_action: "Message us", // Call to action
+                position: "right", // Position may be 'right' or 'left'
+            };
+            var proto = document.location.protocol,
+                host = "getbutton.io",
+                url = proto + "//static." + host;
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = url + '/widget-send-button/js/init.js';
+            s.onload = function () {
+                WhWidgetSendButton.init(host, proto, options);
+            };
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+        })();
+
+    </script>
+    <!-- /WhatsHelp.io widget -->
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="asset/js/vendor/jquery-2.2.4.min.js"></script>
     <script src="asset/js/popper.min.js"></script>
