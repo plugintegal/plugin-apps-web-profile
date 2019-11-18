@@ -105,38 +105,19 @@
 
             <b-container class="bv-example-row" id="event">
                 <b-row style="margin-bottom: 70px">
-                    <div class="col-sm-4">
-                        <div class="text-center">
-                            <b-card title="Nama Event" img-src="https://picsum.photos/600/300/?image=25" img-alt="Image"
+                    <div class="bv-example-col col-sm-4">
+                        <div class="text-center" v-for="event of events" v-bind:key="event.event_id">
+                            <b-card img-src="https://picsum.photos/600/300/?image=25" img-alt="Image"
                                 img-top tag="article" style="max-width: 20rem;" class="mb-2">
-                                <b-card-text>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</b-card-text>
+                                <b-card-title>{{event.event_name}}</b-card-title>
+                                <b-card-text>{{event.description}}</b-card-text>
                                 <router-link to="/event" class="btn btn-primary">Detail</router-link>
                                 <!-- <b-button router-link to="/event" variant="primary">Detail</b-button> -->
+                                <!-- <router-link :to="{name: 'detailMember', params: {member_id: user.member_id}}">Detail</router-link> -->
                             </b-card>
                         </div>
                     </div>
 
-                    <div class="col-sm-4">
-                        <div class="text-center">
-                            <b-card title="Nama Event" img-src="https://picsum.photos/600/300/?image=25" img-alt="Image"
-                                img-top tag="article" style="max-width: 20rem;" class="mb-2">
-                                <b-card-text>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</b-card-text>
-
-                                <b-button href="#" variant="primary">Detail</b-button>
-                            </b-card>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4">
-                        <div class="text-center">
-                            <b-card title="Nama Event" img-src="https://picsum.photos/600/300/?image=25" img-alt="Image"
-                                img-top tag="article" style="max-width: 20rem;" class="mb-2">
-                                <b-card-text>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</b-card-text>
-
-                                <b-button href="#" variant="primary">Detail</b-button>
-                            </b-card>
-                        </div>
-                    </div>
                 </b-row>
             </b-container>
         </section>
@@ -197,7 +178,7 @@
                     <div class="col">
                         <div class="ftlogo">
                             <div class="sci">
-                              <img src="asset/img/plugin.png" width="200" height="60" alt>
+                                <img src="asset/img/plugin.png" width="200" height="60" alt>
                             </div>
                             <ul class="sci">
                                 <li>
@@ -232,12 +213,24 @@
 </template>
 
 <script>
+    import axios from "axios";
     import Navbar from "./components/Navbar.vue";
     export default {
         components: {
             "app-navbar": Navbar
+        },
+        name: "wp",
+        data() {
+            return {
+                events: []
+            };
+        },
+        mounted() {
+            console.log("Berhasil tampil");
+            axios.get('http://localhost:8001/api/event').then(response => this.events = response.data);
         }
-    };  
+    };
+
 </script>
 <style>
     .jumbotron {
