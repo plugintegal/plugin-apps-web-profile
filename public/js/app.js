@@ -1911,9 +1911,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -30781,7 +30778,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "\n.jumbotron {\n    min-height: 300px;\n    margin-top: 70px;\n}\n.footer {\n    margin-top: -100px;\n}\n.sci {\n    margin: 0;\n    padding: 0;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-pack: center;\n            justify-content: center;\n    -webkit-box-align: bottom;\n            align-items: bottom;\n    align-content: center;\n    margin-top: 50px;\n}\n.sci li {\n    list-style: none;\n    margin: 0 20px;\n}\n.sci li a {\n    color: #000;\n    font-size: 2em;\n    -webkit-transition: 0, 5s;\n    transition: 0, 5s;\n}\n.sci li a:hover {\n    color: #000;\n}\n.COPYRIGHT {\n    text-align: center;\n    color: #000;\n}\n.ftlogo {\n    margin-top: 40px;\n    padding-top: 40;\n}\n\n", ""]);
+exports.push([module.i, "\n.jumbotron {\n    min-height: 300px;\n    margin-top: 70px;\n}\n.event{\n    margin-left: 40px !important;\n    position: relative;\n}\n.footer {\n    margin-top: -100px;\n}\n.sci {\n    margin: 0;\n    padding: 0;\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-pack: center;\n            justify-content: center;\n    -webkit-box-align: bottom;\n            align-items: bottom;\n    align-content: center;\n    margin-top: 50px;\n}\n.sci li {\n    list-style: none;\n    margin: 0 20px;\n}\n.sci li a {\n    color: #000;\n    font-size: 2em;\n    -webkit-transition: 0, 5s;\n    transition: 0, 5s;\n}\n.sci li a:hover {\n    color: #000;\n}\n.COPYRIGHT {\n    text-align: center;\n    color: #000;\n}\n.ftlogo {\n    margin-top: 40px;\n    padding-top: 40;\n}\n\n", ""]);
 
 // exports
 
@@ -35476,55 +35473,53 @@ var render = function() {
             "b-container",
             { staticClass: "bv-example-row", attrs: { id: "event" } },
             [
-              _c("b-row", { staticStyle: { "margin-bottom": "70px" } }, [
-                _c(
-                  "div",
-                  { staticClass: "bv-example-col col-sm-4" },
-                  _vm._l(_vm.events, function(event) {
-                    return _c(
-                      "div",
-                      { key: event.event_id, staticClass: "text-center" },
-                      [
-                        _c(
-                          "b-card",
-                          {
-                            staticClass: "mb-2",
-                            staticStyle: { "max-width": "20rem" },
-                            attrs: {
-                              "img-src":
-                                "https://picsum.photos/600/300/?image=25",
-                              "img-alt": "Image",
-                              "img-top": "",
-                              tag: "article"
-                            }
-                          },
-                          [
-                            _c("b-card-title", [
-                              _vm._v(_vm._s(event.event_name))
-                            ]),
-                            _vm._v(" "),
-                            _c("b-card-text", [
-                              _vm._v(_vm._s(event.description))
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "router-link",
-                              {
-                                staticClass: "btn btn-primary",
-                                attrs: { to: "/event" }
-                              },
-                              [_vm._v("Detail")]
-                            )
-                          ],
-                          1
-                        )
-                      ],
-                      1
-                    )
-                  }),
-                  0
-                )
-              ])
+              _c(
+                "b-card-group",
+                { staticClass: "event", attrs: { deck: "" } },
+                _vm._l(_vm.events, function(event) {
+                  return _c(
+                    "div",
+                    { key: event.event_id, staticClass: "text-center" },
+                    [
+                      _c(
+                        "b-card",
+                        {
+                          staticClass: "mb-2",
+                          staticStyle: { "max-width": "20rem" },
+                          attrs: {
+                            "img-src":
+                              "https://picsum.photos/600/300/?image=25",
+                            "img-alt": "Image",
+                            "img-top": "",
+                            tag: "article"
+                          }
+                        },
+                        [
+                          _c("b-card-title", [
+                            _vm._v(_vm._s(event.event_name))
+                          ]),
+                          _vm._v(" "),
+                          _c("b-card-text", [
+                            _vm._v(_vm._s(event.description))
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "router-link",
+                            {
+                              staticClass: "btn btn-primary",
+                              attrs: { to: "/event" }
+                            },
+                            [_vm._v("Detail")]
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                }),
+                0
+              )
             ],
             1
           )

@@ -104,21 +104,18 @@
             </h1>
 
             <b-container class="bv-example-row" id="event">
-                <b-row style="margin-bottom: 70px">
-                    <div class="bv-example-col col-sm-4">
-                        <div class="text-center" v-for="event of events" v-bind:key="event.event_id">
-                            <b-card img-src="https://picsum.photos/600/300/?image=25" img-alt="Image"
-                                img-top tag="article" style="max-width: 20rem;" class="mb-2">
-                                <b-card-title>{{event.event_name}}</b-card-title>
-                                <b-card-text>{{event.description}}</b-card-text>
-                                <router-link to="/event" class="btn btn-primary">Detail</router-link>
-                                <!-- <b-button router-link to="/event" variant="primary">Detail</b-button> -->
-                                <!-- <router-link :to="{name: 'detailMember', params: {member_id: user.member_id}}">Detail</router-link> -->
-                            </b-card>
-                        </div>
+                <b-card-group deck class="event">
+                    <div class="text-center" v-for="event of events" v-bind:key="event.event_id">
+                        <b-card img-src="https://picsum.photos/600/300/?image=25" img-alt="Image"
+                            img-top tag="article" style="max-width: 20rem;" class="mb-2">
+                            <b-card-title>{{event.event_name}}</b-card-title>
+                            <b-card-text>{{event.description}}</b-card-text>
+                            <router-link to="/event" class="btn btn-primary">Detail</router-link>
+                            <!-- <b-button router-link to="/event" variant="primary">Detail</b-button> -->
+                            <!-- <router-link :to="{name: 'detailMember', params: {member_id: user.member_id}}">Detail</router-link> -->
+                        </b-card>
                     </div>
-
-                </b-row>
+                </b-card-group>   
             </b-container>
         </section>
 
@@ -236,6 +233,12 @@
     .jumbotron {
         min-height: 300px;
         margin-top: 70px;
+    }
+    .event{
+        margin-left: 40px !important;
+        position: relative; 
+        
+
     }
 
     .footer {
