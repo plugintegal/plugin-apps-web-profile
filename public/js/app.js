@@ -1969,10 +1969,170 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     "app-navbar": _Navbar_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  data: function data() {
+    return {
+      selected: [],
+      // Must be an array reference!
+      options: [{
+        text: "Seminar",
+        value: "Seminar"
+      }, {
+        text: "Workshop",
+        value: "Workshop"
+      }, {
+        text: "TalkShow",
+        value: "TalkShow"
+      }],
+      form: {
+        name: "",
+        institusi: "",
+        email: "",
+        NomorHP: " ",
+        gender: null,
+        Alamat: ""
+      },
+      gender: [{
+        text: "Jenis Kelamin",
+        value: null
+      }, "Laki-laki", "Perempuan"],
+      show: true
+    };
+  },
+  methods: {
+    onSubmit: function onSubmit(evt) {
+      evt.preventDefault();
+      alert(JSON.stringify(this.form));
+    },
+    onReset: function onReset(evt) {
+      var _this = this;
+
+      evt.preventDefault(); // Reset our form values
+
+      this.form.email = "";
+      this.form.name = "";
+      this.form.institusi = " ";
+      this.form.NomorHP = " ";
+      this.form.gender = null;
+      this.textArea.Alamat = " ";
+      this.selected; // Trick to reset/clear native browser form validation state
+
+      this.show = false;
+      this.$nextTick(function () {
+        _this.show = true;
+      });
+    }
   }
 });
 
@@ -30797,7 +30957,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.jevent{\n    min-height: 450px;\n    background: url(/asset/img/jumbotron.png);\n    background-size: cover;\n}\n\n\n", ""]);
+exports.push([module.i, "\n.jevent {\n  min-height: 550px;\n  background: url(/asset/img/jumbotron.png);\n  background-size: cover;\n}\n.OPREC1{\n  text-align: center;\n}\n", ""]);
 
 // exports
 
@@ -35479,7 +35639,7 @@ var render = function() {
                 _vm._l(_vm.events, function(event) {
                   return _c(
                     "div",
-                    { key: event.event_id, staticClass: "text-center" },
+                    { key: event.event_id },
                     [
                       _c(
                         "b-card",
@@ -35771,7 +35931,11 @@ var render = function() {
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "text-center" },
+        {
+          staticClass: "OPREC1",
+          staticStyle: { "margin-bottom": "50px" },
+          attrs: { id: "OPREC1" }
+        },
         [
           _c("b-jumbotron", {
             staticClass: "jevent",
@@ -35780,19 +35944,383 @@ var render = function() {
               {
                 key: "header",
                 fn: function() {
-                  return [_vm._v("Nama Event")]
+                  return [_vm._v("OPREC 1.0")]
                 },
                 proxy: true
               },
               {
                 key: "lead",
                 fn: function() {
-                  return [_vm._v("\n      Tujuan Event\n    ")]
+                  return [
+                    _vm._v(
+                      "\n        This is a simple hero unit, a simple jumbotron-style component for calling extra attention to\n        featured content or information. Lorem ipsum dolor sit amet consectetur adipisicing elit.\n        Saepe ratione delectus esse iste repellendus, dolorum nulla vitae veritatis ducimus,\n        quasi quos reprehenderit dignissimos debitis eligendi ab quia iure sit. Obcaecati?\n      "
+                    )
+                  ]
                 },
                 proxy: true
               }
             ])
           })
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "b-container",
+        {
+          staticClass: "bv-example-row",
+          staticStyle: { "margin-bottom": "50px", "padding-top": "75px" }
+        },
+        [
+          _c(
+            "b-row",
+            [
+              _c("b-col", { attrs: { cols: "4" } }, [
+                _c("h3", { staticStyle: { "text-align": "center" } }, [
+                  _vm._v("Due Date")
+                ]),
+                _vm._v(" "),
+                _c("p", { staticStyle: { "text-align": "left" } }, [
+                  _vm._v("Tangga : 30 Feb 2020")
+                ]),
+                _vm._v(" "),
+                _c("p", { staticStyle: { "text-align": "left" } }, [
+                  _vm._v("Tempat : Plug-In Home")
+                ]),
+                _vm._v(" "),
+                _c("p", { staticStyle: { "text-align": "left" } }, [
+                  _vm._v("Waktu : 08.00 - selesai WIB")
+                ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "b-col",
+                { attrs: { cols: "8" } },
+                [
+                  _c("h3", { staticStyle: { "text-align": "center" } }, [
+                    _vm._v("Deskripsi")
+                  ]),
+                  _vm._v(" "),
+                  _c("P", { staticStyle: { "text-align": "justify" } }, [
+                    _vm._v(
+                      "\n          Lorem ipsum dolor sit amet consectetur adipisicing elit.\n          Laborum quidem quos maiores asperiores qui laudantium fugiat consequuntur.\n          Voluptatum saepe dignissimos facere consectetur,\n          quam officiis excepturi! Quibusdam veniam praesentium magni sed.\n          Lorem ipsum dolor sit amet consectetur adipisicing elit.\n          Aliquam tenetur culpa praesentium est odio impedit consequuntur totam quidem nisi! Fugit,eligendi.\n          Praesentium corrupti reprehenderit cupiditate blanditiis voluptatem totam voluptatibus architecto!\n        "
+                    )
+                  ])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c("b-col", { attrs: { cols: "4" } }, [
+                _c("h3", { staticStyle: { "text-align": "center" } }, [
+                  _vm._v("HTM & Fasilitas")
+                ]),
+                _vm._v(" "),
+                _c("p", { staticStyle: { "text-align": "left" } }, [
+                  _vm._v("Fee : Rp 35.000,-")
+                ]),
+                _vm._v(" "),
+                _c("p", { staticStyle: { "text-align": "left" } }, [
+                  _vm._v("Fasilitas : Sertifikat, Snack & Merchandise")
+                ])
+              ])
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticStyle: { "margin-bottom": "10px" },
+          attrs: { role: "tablist" }
+        },
+        [
+          _c(
+            "b-card",
+            { staticClass: "mb-1", attrs: { "no-body": "" } },
+            [
+              _c(
+                "b-card-header",
+                {
+                  staticClass: "p-1",
+                  attrs: { "header-tag": "header", role: "tab" }
+                },
+                [
+                  _c(
+                    "b-button",
+                    {
+                      directives: [
+                        {
+                          name: "b-toggle",
+                          rawName: "v-b-toggle.accordion",
+                          modifiers: { accordion: true }
+                        }
+                      ],
+                      attrs: { block: "", href: "#", variant: "info" }
+                    },
+                    [_vm._v("Daftar")]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "b-collapse",
+                {
+                  attrs: {
+                    id: "accordion",
+                    accordion: "my-accordion",
+                    role: "tabpanel"
+                  }
+                },
+                [
+                  _c("b-card-body", [
+                    _c(
+                      "div",
+                      [
+                        _vm.show
+                          ? _c(
+                              "b-form",
+                              {
+                                on: { submit: _vm.onSubmit, reset: _vm.onReset }
+                              },
+                              [
+                                _c(
+                                  "b-form-group",
+                                  {
+                                    attrs: {
+                                      id: "input-group-2",
+                                      label: "Nama lengkap:",
+                                      "label-for": "input-2"
+                                    }
+                                  },
+                                  [
+                                    _c("b-form-input", {
+                                      attrs: {
+                                        id: "input-2",
+                                        required: "",
+                                        placeholder: "Ketikan nama"
+                                      },
+                                      model: {
+                                        value: _vm.form.name,
+                                        callback: function($$v) {
+                                          _vm.$set(_vm.form, "name", $$v)
+                                        },
+                                        expression: "form.name"
+                                      }
+                                    })
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "b-form-group",
+                                  {
+                                    attrs: {
+                                      id: "input-group-4",
+                                      label: "Asal Institusi:",
+                                      "label-for": "input-4"
+                                    }
+                                  },
+                                  [
+                                    _c("b-form-input", {
+                                      attrs: {
+                                        id: "input-4",
+                                        required: "",
+                                        placeholder: "Ketikan asal institusi"
+                                      },
+                                      model: {
+                                        value: _vm.form.institusi,
+                                        callback: function($$v) {
+                                          _vm.$set(_vm.form, "institusi", $$v)
+                                        },
+                                        expression: "form.institusi"
+                                      }
+                                    })
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "b-form-group",
+                                  {
+                                    attrs: {
+                                      id: "input-group-1",
+                                      label: "Email:",
+                                      "label-for": "input-1"
+                                    }
+                                  },
+                                  [
+                                    _c("b-form-input", {
+                                      attrs: {
+                                        id: "input-1",
+                                        type: "email",
+                                        required: "",
+                                        placeholder: "Ketikan Email"
+                                      },
+                                      model: {
+                                        value: _vm.form.email,
+                                        callback: function($$v) {
+                                          _vm.$set(_vm.form, "email", $$v)
+                                        },
+                                        expression: "form.email"
+                                      }
+                                    })
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "b-form-group",
+                                  {
+                                    attrs: {
+                                      id: "input-group-5",
+                                      label: "Nomor HP:",
+                                      "label-for": "input-5"
+                                    }
+                                  },
+                                  [
+                                    _c("b-form-input", {
+                                      attrs: {
+                                        id: "input-5",
+                                        required: "",
+                                        placeholder: "Ketikan kuwuk"
+                                      },
+                                      model: {
+                                        value: _vm.form.NomorHP,
+                                        callback: function($$v) {
+                                          _vm.$set(_vm.form, "NomorHP", $$v)
+                                        },
+                                        expression: "form.NomorHP"
+                                      }
+                                    })
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "b-form-group",
+                                  {
+                                    attrs: {
+                                      id: "input-group-3",
+                                      label: "jenis kelamin:",
+                                      "label-for": "input-3"
+                                    }
+                                  },
+                                  [
+                                    _c("b-form-select", {
+                                      attrs: {
+                                        id: "input-3",
+                                        options: _vm.gender,
+                                        required: ""
+                                      },
+                                      model: {
+                                        value: _vm.form.gender,
+                                        callback: function($$v) {
+                                          _vm.$set(_vm.form, "gender", $$v)
+                                        },
+                                        expression: "form.gender"
+                                      }
+                                    })
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "b-form-group",
+                                  {
+                                    attrs: {
+                                      id: "input-group-6",
+                                      label: "Alamat:",
+                                      "label-for": "input-6"
+                                    }
+                                  },
+                                  [
+                                    _c("b-form-textarea", {
+                                      attrs: {
+                                        id: "textarea",
+                                        placeholder: "Ketikan Alamat",
+                                        rows: "3",
+                                        "max-rows": "6"
+                                      },
+                                      model: {
+                                        value: _vm.text,
+                                        callback: function($$v) {
+                                          _vm.text = $$v
+                                        },
+                                        expression: "text"
+                                      }
+                                    }),
+                                    _vm._v(" "),
+                                    _c("pre", { staticClass: "mt-3 mb-0" }, [
+                                      _vm._v(_vm._s(_vm.Alamat))
+                                    ])
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "b-form-group",
+                                  {
+                                    attrs: {
+                                      id: "input-group-7",
+                                      label: "Pilih Acara:",
+                                      "label-for": "input-7"
+                                    }
+                                  },
+                                  [
+                                    _c("b-form-checkbox-group", {
+                                      attrs: {
+                                        options: _vm.options,
+                                        plain: "",
+                                        stacked: ""
+                                      },
+                                      model: {
+                                        value: _vm.selected,
+                                        callback: function($$v) {
+                                          _vm.selected = $$v
+                                        },
+                                        expression: "selected"
+                                      }
+                                    })
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "b-button",
+                                  {
+                                    attrs: {
+                                      type: "submit",
+                                      variant: "primary"
+                                    }
+                                  },
+                                  [_vm._v("Submit")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "b-button",
+                                  {
+                                    attrs: { type: "reset", variant: "danger" }
+                                  },
+                                  [_vm._v("Reset")]
+                                )
+                              ],
+                              1
+                            )
+                          : _vm._e()
+                      ],
+                      1
+                    )
+                  ])
+                ],
+                1
+              )
+            ],
+            1
+          )
         ],
         1
       )

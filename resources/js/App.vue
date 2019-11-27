@@ -105,7 +105,7 @@
 
             <b-container class="bv-example-row" id="event">
                 <b-card-group deck class="event">
-                    <div class="text-center" v-for="event of events" v-bind:key="event.event_id">
+                    <div class="" v-for="event of events" v-bind:key="event.event_id">
                         <b-card img-src="https://picsum.photos/600/300/?image=25" img-alt="Image"
                             img-top tag="article" style="max-width: 20rem;" class="mb-2">
                             <b-card-title>{{event.event_name}}</b-card-title>
