@@ -4,7 +4,10 @@
             integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
             crossorigin="anonymous" />
         <app-navbar />
-        <!-- Tentang -->
+        
+
+        
+         <!-- Tentang -->
         <section id="about" class="jumbotron bg-white">
             <b-jumbotron bg-variant="white" text-variant="black">
                 <div class="text-center">

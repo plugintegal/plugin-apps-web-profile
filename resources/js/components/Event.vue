@@ -48,10 +48,11 @@
     <!-- akhir detail event -->
 
     <!-- daftar -->
+    <div class="container">
     <div role="tablist" style="margin-bottom: 10px">
       <b-card no-body class="mb-1">
         <b-card-header header-tag="header" class="p-1" role="tab">
-          <b-button block href="#" v-b-toggle.accordion variant="info">Daftar</b-button>
+          <b-button block href="#" v-b-toggle.accordion variant="light">Daftar</b-button>
         </b-card-header>
         <b-collapse id="accordion" accordion="my-accordion" role="tabpanel">
           <b-card-body>
@@ -123,6 +124,7 @@
           </b-card-body>
         </b-collapse>
       </b-card>
+    </div>
     </div>
     <!-- akhir daftar -->
   </div>
