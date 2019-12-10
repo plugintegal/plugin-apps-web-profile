@@ -4,7 +4,7 @@
         <div class="container main-menu">
             <b-navbar toggleable="lg" type="dark" class="justify-content-between d-flex">
                 <b-navbar-brand id="logo">
-                    <a href="/"><img src="asset/img/plugin.png"  width="175" height="50" alt="" title=""></a>
+                    <a href="/"><img src="asset/img/plugin.png"  width="175" height="50"></a>
                 </b-navbar-brand>
 
                 <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -29,5 +29,5 @@ export default {
 </script>
 
 <style>
-
+    
 </style>

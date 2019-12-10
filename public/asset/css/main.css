@@ -4327,12 +4327,15 @@ dl.accordion.time-line:before {
 }
 
 .footer-area {
-  /* background-color: #04091e; */
-  background-image: url(../img/footer.png);
-  width: 1352;
-  background-repeat: no-repeat;
-  background: cover;
-  height: 400px ;
+  background: #10bdf1;
+  background: -webkit-linear-gradient(right, #10bdf1 20% ,#1395d4 67%, #1580c4 85%);
+  background: -o-linear-gradient(right, #10bdf1 20% ,#1395d4 70%, #1580c4 85%);
+  background: -moz-linear-gradient(right, #10bdf1 20% ,#1395d4 70%, #1580c4 85%);
+  /* background-image: url(../img/footer.png); */
+  /* width: 1352; */
+  /* background-repeat: no-repeat; */
+  /* background: cover; */
+  height: 420px !important;
   margin-top: 30px;
 }
 

@@ -34,7 +34,7 @@
         <section id="squad">
             <b-jumbotron bg-variant="white" text-variant="black" border-variant id="squad">
                 <div class="text-center" style="padding-bottom:20px">
-                    <h1>Programming Squad</h1>
+                    <h1>Our Squad</h1>
                 </div>
                 <br />
                 <b-row style="margin-bottom: 40px">
@@ -44,7 +44,7 @@
                     </b-col>
                     <b-col>
                         <div>
-                            <h3>Web Development</h3>
+                            <h3>Networking</h3>
                         </div>
                         <div style="margin-right: 100px">
                             <p style="text-align: justify">
@@ -60,7 +60,7 @@
                 <b-row style="margin-bottom: 50px">
                     <b-col style="margin-top: 50px">
                         <div style="margin-left: 100px">
-                            <h3>Mobile Development</h3>
+                            <h3>Programming Squad</h3>
                         </div>
                         <div style="margin-left: 100px">
                             <p style="text-align: justify">
@@ -95,6 +95,26 @@
                             </p>
                             <b-button pill variant="primary" style="width:100px">Detail</b-button>
                         </div>
+                    </b-col>
+                </b-row>
+                 <b-row style="margin-bottom: 50px">
+                    <b-col style="margin-top: 50px">
+                        <div style="margin-left: 100px">
+                            <h3>E-Sport Squad</h3>
+                        </div>
+                        <div style="margin-left: 100px">
+                            <p style="text-align: justify">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate praesentium rem
+                                debitis
+                                necessitatibus, repellat voluptatibus quisquam non ipsa doloribus dolor asperiores hic
+                                facere veritatis vitae voluptatum porro quam accusamus saepe!
+                            </p>
+                            <b-button pill variant="primary" style="width:100px">Detail</b-button>
+                        </div>
+                    </b-col>
+                    <b-col>
+                        <b-img src="asset/img/mobile_dev.png" width="450px" height="350px"
+                            style="margin-right: 100px img-fluid"></b-img>
                     </b-col>
                 </b-row>
             </b-jumbotron>
@@ -177,6 +197,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="ftlogo">
+                            <h4 class="text-center">Follow Us</h4>
                             <div class="sci">
                                 <img src="asset/img/plugin.png" width="200" height="60" alt>
                             </div>
@@ -208,6 +229,9 @@
                 </div>
             </div>
         </footer>
+        
+       
+
         <!--End Footer-->
     </div>
 </template>
@@ -244,9 +268,6 @@
 
     }
 
-    .footer {
-        margin-top: -100px;
-    }
 
     .sci {
         margin: 0;
@@ -278,9 +299,5 @@
         color: #000;
     }
 
-    .ftlogo {
-        margin-top: 40px;
-        padding-top: 40;
-    }
 
 </style>
