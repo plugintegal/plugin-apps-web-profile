@@ -122,6 +122,7 @@
                 </b-form-group>
                 <!-- Save -->
                 <div class="text-center">
+                  <!-- <router-link to="/regis" class="btn btn-primary" type="submit">Daftar</router-link> -->
                   <b-button type="submit" variant="primary">Submit</b-button>
                   <b-button type="reset" variant="danger">Reset</b-button>
                 </div>
@@ -142,6 +143,8 @@
 
 
 <script>
+
+import axios from  "axios";
 import Navbar from "./Navbar.vue";
 export default {
   components: {
@@ -176,6 +179,7 @@ export default {
     onSubmit(evt) {
       evt.preventDefault();
       alert(JSON.stringify(this.form));
+      axios.post('http://localhost:8001/api/regis').then(response => this.regis = response.data);
     },
     onReset(evt) {
       evt.preventDefault();
@@ -193,7 +197,12 @@ export default {
         this.show = true;
       });
     }
-  }
+  },
+  mounted() {
+            console.log("Berhasil tampil");
+            axios.get('http://localhost:8001/api/regis').then(response => this.regis = response.data);
+        }
+
 };
 </script>
 

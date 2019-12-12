@@ -133,7 +133,7 @@
                             img-top tag="article" style="max-width: 20rem;" class="mb-2">
                             <b-card-title>{{event.event_name}}</b-card-title>
                             <b-card-text>{{event.description}}</b-card-text>
-                            <router-link to="/event" class="btn btn-primary">Detail</router-link>
+                            <router-link :to="{name: 'event', params: {id_event:event.event_id}}" class="btn btn-primary">Detail</router-link>
                             <!-- <b-button router-link to="/event" variant="primary">Detail</b-button> -->
                             <!-- <router-link :to="{name: 'detailMember', params: {member_id: user.member_id}}">Detail</router-link> -->
                         </b-card>
