@@ -4,12 +4,12 @@
             integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
             crossorigin="anonymous" />
         <app-navbar />
-        
 
-        
-         <!-- Tentang -->
+
+
+        <!-- Tentang -->
         <section id="about" class="jumbotron bg-white">
-            <b-jumbotron bg-variant="white" text-variant="black">
+            <!-- <b-jumbotron bg-variant="white" text-variant="black">
                 <div class="text-center">
                     <h1>PLUG-IN</h1>
                 </div>
@@ -27,90 +27,95 @@
                 <hr class="my-4" />
 
                 <p class="text-center">Politeknik Harapan Bersama Linux User Group Indonesia.</p>
-            </b-jumbotron>
+            </b-jumbotron> -->
+            <div class="container">
+                <div class="text-center">
+                    <h1><b>PLUG-IN</b></h1>
+                </div>
+            </div>
         </section>
 
         <!-- Squad -->
-        <section id="squad">
+        <!-- <section id="squad">
+
             <b-jumbotron bg-variant="white" text-variant="black" border-variant id="squad">
                 <div class="text-center" style="padding-bottom:20px">
                     <h1>Programming Squad</h1>
                 </div>
                 <br />
-                <b-row style="margin-bottom: 40px">
-                    <b-col>
-                        <b-img src="asset/img/web_dev.png" width="450px" height="350px"
-                            style="margin-left: 100px img-fluid"></b-img>
-                    </b-col>
-                    <b-col>
-                        <div>
-                            <h3>Web Development</h3>
-                        </div>
-                        <div style="margin-right: 100px">
-                            <p style="text-align: justify">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                Adipisci voluptatum rem, nemo doloremque temporibus architecto pariatur cumque autem et
-                                exercitationem. Quaerat sit eveniet veritatis, ullam error laboriosam modi cupiditate
-                                vitae.
-                            </p>
-                            <b-button pill variant="primary" style="width:100px">Detail</b-button>
-                        </div>
-                    </b-col>
-                </b-row>
-                <b-row style="margin-bottom: 50px">
-                    <b-col style="margin-top: 50px">
-                        <div style="margin-left: 100px">
-                            <h3>Mobile Development</h3>
-                        </div>
-                        <div style="margin-left: 100px">
-                            <p style="text-align: justify">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate praesentium rem
-                                debitis
-                                necessitatibus, repellat voluptatibus quisquam non ipsa doloribus dolor asperiores hic
-                                facere veritatis vitae voluptatum porro quam accusamus saepe!
-                            </p>
-                            <b-button pill variant="primary" style="width:100px">Detail</b-button>
-                        </div>
-                    </b-col>
-                    <b-col>
-                        <b-img src="asset/img/mobile_dev.png" width="450px" height="350px"
-                            style="margin-right: 100px img-fluid"></b-img>
-                    </b-col>
-                </b-row>
-                <b-row>
-                    <b-col>
-                        <b-img src="asset/img/uiux.png" width="450px" height="350px"
-                            style="margin-left: 100px img-fluid"></b-img>
-                    </b-col>
-                    <b-col style="margin-top: 50px">
-                        <div>
-                            <h3>UI/UX</h3>
-                        </div>
-                        <div style="margin-right: 100px">
-                            <p style="text-align: justify">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis odit corporis vel
-                                facere,
-                                iure ipsum soluta sed? Commodi expedita nihil quisquam repellendus, quae rem, quod velit
-                                quia accusantium labore dolorem.
-                            </p>
-                            <b-button pill variant="primary" style="width:100px">Detail</b-button>
-                        </div>
-                    </b-col>
-                </b-row>
+                
             </b-jumbotron>
+        </section> -->
+        <section id="squad">
+        <div class="container">
+            <div class="text-center" style="padding-bottom: 20px">
+                <h1 id="squad"><b>Squad</b></h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="d-inline-block"><br><br>
+                        <img class="img-fluid center_vertical" src="asset/img/web.png" alt="">
+
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="row" style="margin: 20px">
+                        <div class="col-md-2">
+                            <img src="asset/img/web_squad.png" alt="" srcset="" width="70">
+                        </div>
+                        <div class="col-md-10">
+                            <div>
+                                <h4 class="">Web Developer</h4>
+                                <p class="">Anda bisa berhemat dan tetap mendapatkan hosting
+                                    terbaik dengan fitur lengkap, dari auto install WordPress, cPanel lengkap, hingga
+                                    SSL gratis
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin: 20px">
+                        <div class="col-md-2" style="">
+                            <img src="asset/img/mobile_squad.png" alt="" srcset="" width="70">
+                        </div>
+                        <div class="col-md-10">
+                            <div>
+                                <h4 class="">Mobile Developer</h4>
+                                <p class="">Anda bisa berhemat dan tetap mendapatkan hosting
+                                    terbaik dengan fitur lengkap, dari auto install WordPress, cPanel lengkap, hingga
+                                    SSL gratis
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin: 20px">
+                        <div class="col-md-2">
+                            <img src="asset/img/uiux_squad.png" alt="" srcset="" width="65">
+                        </div>
+                        <div class="col-md-10">
+                            <div>
+                                <h4 class="">UI / UX Designer</h4>
+                                <p class="">Anda bisa berhemat dan tetap mendapatkan hosting
+                                    terbaik dengan fitur lengkap, dari auto install WordPress, cPanel lengkap, hingga
+                                    SSL gratis
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         </section>
 
         <!-- Event -->
-        <section id="event">
-            <h1>
-                <div class="text-center">Event</div>
+        <h1  id="event">
+                <div class="text-center"><b>Event</b></div>
             </h1>
-
-            <b-container class="bv-example-row" id="event">
+        <section>
+            <b-container class="bv-example-row">
                 <b-card-group deck class="event">
                     <div class="" v-for="event of events" v-bind:key="event.event_id">
-                        <b-card img-src="https://picsum.photos/600/300/?image=25" img-alt="Image"
-                            img-top tag="article" style="max-width: 20rem;" class="mb-2">
+                        <b-card img-src="https://picsum.photos/600/300/?image=25" img-alt="Image" img-top tag="article"
+                            style="max-width: 20rem;" class="mb-2">
                             <b-card-title>{{event.event_name}}</b-card-title>
                             <b-card-text>{{event.description}}</b-card-text>
                             <router-link to="/event" class="btn btn-primary">Detail</router-link>
@@ -118,37 +123,37 @@
                             <!-- <router-link :to="{name: 'detailMember', params: {member_id: user.member_id}}">Detail</router-link> -->
                         </b-card>
                     </div>
-                </b-card-group>   
+                </b-card-group>
             </b-container>
         </section>
 
         <!-- Contacts -->
-        <section id="kontak">
+        <section >
             <b-jumbotron bg-variant="white" text-variant="black" border-variant id="kontak">
-                <div class="text-center" style="padding-bottom:20px">
-                    <h1>Hubungi Kami</h1>
+                <div class="text-center" style="padding-bottom:20px" id="kontak">
+                    <h1><b>Hubungi Kami</b></h1>
                 </div>
                 <br />
                 <b-row style="margin-bottom: 50px">
                     <div class="col-sm-4">
                         <div class="text-center">
                             <a href="#">
-                                <img src="asset/img/phone.png" width="50px" height="50px" style="margin-bottom: 20px" />
+                                <img src="asset/img/phone.png" width="40px" height="40px" style="margin-bottom: 20px" />
                             </a>
-                            <h3>Phone</h3>
-                            <p>
-                                Zihan
-                                <br />0895422809945
+                            <h3><b>Phone</b></h3>
+                            <p style="color: #17A6E7">
+                                Felix
+                                <br />087848114793
                             </p>
                         </div>
                     </div>
                     <div class="col-sm-4">
                         <div class="text-center">
                             <a href="#">
-                                <img src="asset/img/email.png" width="50px" height="50px" style="margin-bottom: 20px" />
+                                <img src="asset/img/email.png" width="50px" style="margin-bottom: 20px" />
                             </a>
-                            <h3>Email</h3>
-                            <p>
+                            <h3><b>Email</b></h3>
+                            <p style="color: #17A6E7">
                                 plugintegal@gmail.com
                             </p>
                         </div>
@@ -157,11 +162,11 @@
                         <div class="text-center">
                             <a href="https://www.google.co.id/maps/place/PLUGIN+HOME/@-6.8886796,109.1138097,17z/data=!3m1!4b1!4m5!3m4!1s0x2e6fb9a911a57b03:0x517b64e58f7cbd9c!8m2!3d-6.8886796!4d109.1159984"
                                 target="_blank">
-                                <img src="asset/img/alamat.png" width="50px" height="50px"
+                                <img src="asset/img/alamat.png" width="50px"
                                     style="margin-bottom: 20px" />
                             </a>
-                            <h3>Alamat</h3>
-                            <p>
+                            <h3><b>Alamat</b></h3>
+                            <p style="color: #17A6E7">
                                 Jl. Mataram No.9, Kel. pesurungan lor, Kel. Pesurungan Lor,
                                 Pesurungan Lor, Margadana, Kota Tegal, Jawa Tengah 52147
                             </p>
@@ -227,7 +232,8 @@
         },
         mounted() {
             console.log("Berhasil tampil");
-            axios.get('http://localhost:8001/api/event').then(response => this.events = response.data);
+            axios.get('https://plugin-apps-server.herokuapps.com/api/event').then(response => this.events = response
+                .data);
         }
     };
 
@@ -237,10 +243,11 @@
         min-height: 300px;
         margin-top: 70px;
     }
-    .event{
+
+    .event {
         margin-left: 40px !important;
-        position: relative; 
-        
+        position: relative;
+
 
     }
 
@@ -281,6 +288,15 @@
     .ftlogo {
         margin-top: 40px;
         padding-top: 40;
+    }
+
+    .img_squad {
+        width: auto;
+        height: auto;
+    }
+
+    .center_vertical {
+        margin: auto;
     }
 
 </style>

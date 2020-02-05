@@ -1,10 +1,10 @@
 <template>
 
   <header id="header">
-        <div class="container main-menu">
-            <b-navbar toggleable="lg" type="dark" class="justify-content-between d-flex">
+        <div class="">
+            <b-navbar toggleable="lg" type="dark" class="justify-content-between d-flex mr-sm-5 ml-sm-5">
                 <b-navbar-brand id="logo">
-                    <a href="/"><img src="asset/img/plugin.png"  width="175" height="50" alt="" title=""></a>
+                    <a href="/"><img src="asset/img/plugin.png" width="155"  alt="" title=""></a>
                 </b-navbar-brand>
 
                 <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>

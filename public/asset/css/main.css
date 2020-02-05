@@ -48,6 +48,10 @@ $black			: #222;
 /* =================================== */
 /*  Basic Style 
 /* =================================== */
+
+.color-nav-black{
+  color: #000;
+}
 ::-moz-selection {
   /* Code for Firefox */
   background-color: #8490ff;
@@ -920,7 +924,7 @@ td, th {
 }
 
 b, sup, sub, u, del {
-  color: #8490ff;
+  color: #17A6E7;
 }
 
 h1 {
@@ -2052,10 +2056,11 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   transition: all 0.5s;
   z-index: 997;
-  background: #10bdf1;
-  background: -webkit-linear-gradient(right, #10bdf1 20% ,#1395d4 67%, #1580c4 85%);
+  background: #17A6E7;
+  /* background: #10bdf1; */
+  /* background: -webkit-linear-gradient(right, #10bdf1 20% ,#1395d4 67%, #1580c4 85%);
   background: -o-linear-gradient(right, #10bdf1 20% ,#1395d4 70%, #1580c4 85%);
-  background: -moz-linear-gradient(right, #10bdf1 20% ,#1395d4 70%, #1580c4 85%);
+  background: -moz-linear-gradient(right, #10bdf1 20% ,#1395d4 70%, #1580c4 85%); */
 }
 
 
