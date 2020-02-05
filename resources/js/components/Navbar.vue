@@ -4,7 +4,11 @@
         <div class="">
             <b-navbar toggleable="lg" type="dark" class="justify-content-between d-flex mr-sm-5 ml-sm-5">
                 <b-navbar-brand id="logo">
+<<<<<<< HEAD
                     <a href="/"><img src="asset/img/plugin.png" width="155"  alt="" title=""></a>
+=======
+                    <a href="/"><img src="asset/img/plugin.png"  width="175" height="50"></a>
+>>>>>>> b25738ba804b0d8fbde8e1f9ffed0c086d5f80bb
                 </b-navbar-brand>
 
                 <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -29,5 +33,5 @@ export default {
 </script>
 
 <style>
-
+    
 </style>

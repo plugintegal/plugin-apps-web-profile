@@ -18,14 +18,18 @@
     <!-- detail event -->
     <b-container class="bv-example-row" style="margin-bottom: 50px; padding-top: 75px">
       <b-row>
-        <b-col cols="4">
-          <h3 style="text-align: center">Due Date</h3>
-          <p style="text-align: left">Tangga : 30 Feb 2020</p>
-          <p style="text-align: left">Tempat : Plug-In Home</p>
-          <p style="text-align: left">Waktu : 08.00 - selesai WIB</p>
-        </b-col>
+        <div class="col-lg-4 mb-3">
+            <h3 style="text-align: center">Due Date</h3>
+                  <p style="text-align: left">Tangga : 30 Feb 2020</p>
+                  <p style="text-align: left">Tempat : Plug-In Home</p>
+                  <p style="text-align: left">Waktu : 08.00 - selesai WIB</p>
+            <br>
+            <h3 style="text-align: center">HTM & Fasilitas</h3>
+          <p style="text-align: left">Fee : Rp 35.000,-</p>
+          <p style="text-align: left">Fasilitas : Sertifikat, Snack & Merchandise</p>
+        </div>
 
-        <b-col cols="8">
+        <div class="col-lg-8">
           <h3 style="text-align: center">Deskripsi</h3>
           <P style="text-align: justify">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -36,23 +40,24 @@
             Aliquam tenetur culpa praesentium est odio impedit consequuntur totam quidem nisi! Fugit,eligendi.
             Praesentium corrupti reprehenderit cupiditate blanditiis voluptatem totam voluptatibus architecto!
           </P>
-        </b-col>
+        </div>
 
         <b-col cols="4">
-          <h3 style="text-align: center">HTM & Fasilitas</h3>
-          <p style="text-align: left">Fee : Rp 35.000,-</p>
-          <p style="text-align: left">Fasilitas : Sertifikat, Snack & Merchandise</p>
+          
         </b-col>
       </b-row>
     </b-container>
     <!-- akhir detail event -->
 
     <!-- daftar -->
-    <div class="container">
+    <div class="daftar">
+    <b-container class="bv-example-row">
     <div role="tablist" style="margin-bottom: 10px">
-      <b-card no-body class="mb-1">
-        <b-card-header header-tag="header" class="p-1" role="tab">
-          <b-button block href="#" v-b-toggle.accordion variant="light">Daftar</b-button>
+      <div class="row justify-content-center d-flex" >
+      <div class="col-6">
+      <b-card no-body class="mb-1" >
+        <b-card-header header-tag="header" class="p-1 text-center justify-content-center d-flex" role="tab">
+          <b-button block href="#" v-b-toggle.accordion variant="info" style="width :150px">Daftar</b-button>
         </b-card-header>
         <b-collapse id="accordion" accordion="my-accordion" role="tabpanel">
           <b-card-body>
@@ -93,7 +98,7 @@
                     id="input-5"
                     v-model="form.NomorHP"
                     required
-                    placeholder="Ketikan kuwuk"
+                    placeholder="Ketikan No HP"
                   ></b-form-input>
                 </b-form-group>
                 <!-- Gender -->
@@ -116,15 +121,21 @@
                   <b-form-checkbox-group v-model="selected" :options="options" plain stacked></b-form-checkbox-group>
                 </b-form-group>
                 <!-- Save -->
-                <b-button type="submit" variant="primary">Submit</b-button>
-                <b-button type="reset" variant="danger">Reset</b-button>
+                <div class="text-center">
+                  <!-- <router-link to="/regis" class="btn btn-primary" type="submit">Daftar</router-link> -->
+                  <b-button type="submit" variant="primary">Submit</b-button>
+                  <b-button type="reset" variant="danger">Reset</b-button>
+                </div>
               </b-form>
             </div>
             <!-- akhir isi daftar -->
           </b-card-body>
         </b-collapse>
       </b-card>
+      </div>
+      </div>
     </div>
+    </b-container>
     </div>
     <!-- akhir daftar -->
   </div>
@@ -132,6 +143,8 @@
 
 
 <script>
+
+import axios from  "axios";
 import Navbar from "./Navbar.vue";
 export default {
   components: {
@@ -166,6 +179,7 @@ export default {
     onSubmit(evt) {
       evt.preventDefault();
       alert(JSON.stringify(this.form));
+      axios.post('http://localhost:8001/api/regis').then(response => this.regis = response.data);
     },
     onReset(evt) {
       evt.preventDefault();
@@ -183,7 +197,12 @@ export default {
         this.show = true;
       });
     }
-  }
+  },
+  mounted() {
+            console.log("Berhasil tampil");
+            axios.get('http://localhost:8001/api/regis').then(response => this.regis = response.data);
+        }
+
 };
 </script>
 
@@ -199,4 +218,8 @@ export default {
 
 
 }
+/* .daftar{
+  position:
+
+} */
 </style>

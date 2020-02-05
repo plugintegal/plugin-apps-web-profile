@@ -1952,7 +1952,20 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Navbar_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Navbar.vue */ "./resources/js/components/Navbar.vue");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Navbar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Navbar.vue */ "./resources/js/components/Navbar.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2087,9 +2100,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    "app-navbar": _Navbar_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    "app-navbar": _Navbar_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
     return {
@@ -2122,11 +2136,16 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     onSubmit: function onSubmit(evt) {
+      var _this = this;
+
       evt.preventDefault();
       alert(JSON.stringify(this.form));
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('http://localhost:8001/api/regis').then(function (response) {
+        return _this.regis = response.data;
+      });
     },
     onReset: function onReset(evt) {
-      var _this = this;
+      var _this2 = this;
 
       evt.preventDefault(); // Reset our form values
 
@@ -2140,9 +2159,17 @@ __webpack_require__.r(__webpack_exports__);
 
       this.show = false;
       this.$nextTick(function () {
-        _this.show = true;
+        _this2.show = true;
       });
     }
+  },
+  mounted: function mounted() {
+    var _this3 = this;
+
+    console.log("Berhasil tampil");
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('http://localhost:8001/api/regis').then(function (response) {
+      return _this3.regis = response.data;
+    });
   }
 });
 
@@ -2181,7 +2208,36 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Regis.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Regis.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /***/ }),
 
@@ -35542,7 +35598,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.jevent {\n  min-height: 550px;\n  background: url(/asset/img/jumbotron.png);\n  background-size: cover;\n}\n.OPREC1{\n  text-align: center;\n}\n", ""]);
+exports.push([module.i, "\n.jevent {\n  min-height: 550px;\n  background: url(/asset/img/jumbotron.png);\n  background-size: cover;\n}\n.OPREC1{\n  text-align: center;\n}\n/* .daftar{\n  position:\n\n} */\n", ""]);
 
 // exports
 
@@ -40471,7 +40527,7 @@ var render = function() {
           _c(
             "b-row",
             [
-              _c("b-col", { attrs: { cols: "4" } }, [
+              _c("div", { staticClass: "col-lg-4 mb-3" }, [
                 _c("h3", { staticStyle: { "text-align": "center" } }, [
                   _vm._v("Due Date")
                 ]),
@@ -40486,12 +40542,26 @@ var render = function() {
                 _vm._v(" "),
                 _c("p", { staticStyle: { "text-align": "left" } }, [
                   _vm._v("Waktu : 08.00 - selesai WIB")
+                ]),
+                _vm._v(" "),
+                _c("br"),
+                _vm._v(" "),
+                _c("h3", { staticStyle: { "text-align": "center" } }, [
+                  _vm._v("HTM & Fasilitas")
+                ]),
+                _vm._v(" "),
+                _c("p", { staticStyle: { "text-align": "left" } }, [
+                  _vm._v("Fee : Rp 35.000,-")
+                ]),
+                _vm._v(" "),
+                _c("p", { staticStyle: { "text-align": "left" } }, [
+                  _vm._v("Fasilitas : Sertifikat, Snack & Merchandise")
                 ])
               ]),
               _vm._v(" "),
               _c(
-                "b-col",
-                { attrs: { cols: "8" } },
+                "div",
+                { staticClass: "col-lg-8" },
                 [
                   _c("h3", { staticStyle: { "text-align": "center" } }, [
                     _vm._v("Deskripsi")
@@ -40506,19 +40576,7 @@ var render = function() {
                 1
               ),
               _vm._v(" "),
-              _c("b-col", { attrs: { cols: "4" } }, [
-                _c("h3", { staticStyle: { "text-align": "center" } }, [
-                  _vm._v("HTM & Fasilitas")
-                ]),
-                _vm._v(" "),
-                _c("p", { staticStyle: { "text-align": "left" } }, [
-                  _vm._v("Fee : Rp 35.000,-")
-                ]),
-                _vm._v(" "),
-                _c("p", { staticStyle: { "text-align": "left" } }, [
-                  _vm._v("Fasilitas : Sertifikat, Snack & Merchandise")
-                ])
-              ])
+              _c("b-col", { attrs: { cols: "4" } })
             ],
             1
           )
@@ -40526,308 +40584,370 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _c("div", { staticClass: "container" }, [
-        _c(
-          "div",
-          {
-            staticStyle: { "margin-bottom": "10px" },
-            attrs: { role: "tablist" }
-          },
-          [
+      _c(
+        "div",
+        { staticClass: "daftar" },
+        [
+          _c("b-container", { staticClass: "bv-example-row" }, [
             _c(
-              "b-card",
-              { staticClass: "mb-1", attrs: { "no-body": "" } },
+              "div",
+              {
+                staticStyle: { "margin-bottom": "10px" },
+                attrs: { role: "tablist" }
+              },
               [
                 _c(
-                  "b-card-header",
-                  {
-                    staticClass: "p-1",
-                    attrs: { "header-tag": "header", role: "tab" }
-                  },
+                  "div",
+                  { staticClass: "row justify-content-center d-flex" },
                   [
                     _c(
-                      "b-button",
-                      {
-                        directives: [
-                          {
-                            name: "b-toggle",
-                            rawName: "v-b-toggle.accordion",
-                            modifiers: { accordion: true }
-                          }
-                        ],
-                        attrs: { block: "", href: "#", variant: "light" }
-                      },
-                      [_vm._v("Daftar")]
-                    )
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "b-collapse",
-                  {
-                    attrs: {
-                      id: "accordion",
-                      accordion: "my-accordion",
-                      role: "tabpanel"
-                    }
-                  },
-                  [
-                    _c("b-card-body", [
-                      _c(
-                        "div",
-                        [
-                          _vm.show
-                            ? _c(
-                                "b-form",
-                                {
-                                  on: {
-                                    submit: _vm.onSubmit,
-                                    reset: _vm.onReset
-                                  }
-                                },
-                                [
-                                  _c(
-                                    "b-form-group",
-                                    {
-                                      attrs: {
-                                        id: "input-group-2",
-                                        label: "Nama lengkap:",
-                                        "label-for": "input-2"
+                      "div",
+                      { staticClass: "col-6" },
+                      [
+                        _c(
+                          "b-card",
+                          { staticClass: "mb-1", attrs: { "no-body": "" } },
+                          [
+                            _c(
+                              "b-card-header",
+                              {
+                                staticClass:
+                                  "p-1 text-center justify-content-center d-flex",
+                                attrs: { "header-tag": "header", role: "tab" }
+                              },
+                              [
+                                _c(
+                                  "b-button",
+                                  {
+                                    directives: [
+                                      {
+                                        name: "b-toggle",
+                                        rawName: "v-b-toggle.accordion",
+                                        modifiers: { accordion: true }
                                       }
-                                    },
+                                    ],
+                                    staticStyle: { width: "150px" },
+                                    attrs: {
+                                      block: "",
+                                      href: "#",
+                                      variant: "info"
+                                    }
+                                  },
+                                  [_vm._v("Daftar")]
+                                )
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "b-collapse",
+                              {
+                                attrs: {
+                                  id: "accordion",
+                                  accordion: "my-accordion",
+                                  role: "tabpanel"
+                                }
+                              },
+                              [
+                                _c("b-card-body", [
+                                  _c(
+                                    "div",
                                     [
-                                      _c("b-form-input", {
-                                        attrs: {
-                                          id: "input-2",
-                                          required: "",
-                                          placeholder: "Ketikan nama"
-                                        },
-                                        model: {
-                                          value: _vm.form.name,
-                                          callback: function($$v) {
-                                            _vm.$set(_vm.form, "name", $$v)
-                                          },
-                                          expression: "form.name"
-                                        }
-                                      })
+                                      _vm.show
+                                        ? _c(
+                                            "b-form",
+                                            {
+                                              on: {
+                                                submit: _vm.onSubmit,
+                                                reset: _vm.onReset
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "b-form-group",
+                                                {
+                                                  attrs: {
+                                                    id: "input-group-2",
+                                                    label: "Nama lengkap:",
+                                                    "label-for": "input-2"
+                                                  }
+                                                },
+                                                [
+                                                  _c("b-form-input", {
+                                                    attrs: {
+                                                      id: "input-2",
+                                                      required: "",
+                                                      placeholder:
+                                                        "Ketikan nama"
+                                                    },
+                                                    model: {
+                                                      value: _vm.form.name,
+                                                      callback: function($$v) {
+                                                        _vm.$set(
+                                                          _vm.form,
+                                                          "name",
+                                                          $$v
+                                                        )
+                                                      },
+                                                      expression: "form.name"
+                                                    }
+                                                  })
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "b-form-group",
+                                                {
+                                                  attrs: {
+                                                    id: "input-group-4",
+                                                    label: "Asal Institusi:",
+                                                    "label-for": "input-4"
+                                                  }
+                                                },
+                                                [
+                                                  _c("b-form-input", {
+                                                    attrs: {
+                                                      id: "input-4",
+                                                      required: "",
+                                                      placeholder:
+                                                        "Ketikan asal institusi"
+                                                    },
+                                                    model: {
+                                                      value: _vm.form.institusi,
+                                                      callback: function($$v) {
+                                                        _vm.$set(
+                                                          _vm.form,
+                                                          "institusi",
+                                                          $$v
+                                                        )
+                                                      },
+                                                      expression:
+                                                        "form.institusi"
+                                                    }
+                                                  })
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "b-form-group",
+                                                {
+                                                  attrs: {
+                                                    id: "input-group-1",
+                                                    label: "Email:",
+                                                    "label-for": "input-1"
+                                                  }
+                                                },
+                                                [
+                                                  _c("b-form-input", {
+                                                    attrs: {
+                                                      id: "input-1",
+                                                      type: "email",
+                                                      required: "",
+                                                      placeholder:
+                                                        "Ketikan Email"
+                                                    },
+                                                    model: {
+                                                      value: _vm.form.email,
+                                                      callback: function($$v) {
+                                                        _vm.$set(
+                                                          _vm.form,
+                                                          "email",
+                                                          $$v
+                                                        )
+                                                      },
+                                                      expression: "form.email"
+                                                    }
+                                                  })
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "b-form-group",
+                                                {
+                                                  attrs: {
+                                                    id: "input-group-5",
+                                                    label: "Nomor HP:",
+                                                    "label-for": "input-5"
+                                                  }
+                                                },
+                                                [
+                                                  _c("b-form-input", {
+                                                    attrs: {
+                                                      id: "input-5",
+                                                      required: "",
+                                                      placeholder:
+                                                        "Ketikan No HP"
+                                                    },
+                                                    model: {
+                                                      value: _vm.form.NomorHP,
+                                                      callback: function($$v) {
+                                                        _vm.$set(
+                                                          _vm.form,
+                                                          "NomorHP",
+                                                          $$v
+                                                        )
+                                                      },
+                                                      expression: "form.NomorHP"
+                                                    }
+                                                  })
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "b-form-group",
+                                                {
+                                                  attrs: {
+                                                    id: "input-group-3",
+                                                    label: "jenis kelamin:",
+                                                    "label-for": "input-3"
+                                                  }
+                                                },
+                                                [
+                                                  _c("b-form-select", {
+                                                    attrs: {
+                                                      id: "input-3",
+                                                      options: _vm.gender,
+                                                      required: ""
+                                                    },
+                                                    model: {
+                                                      value: _vm.form.gender,
+                                                      callback: function($$v) {
+                                                        _vm.$set(
+                                                          _vm.form,
+                                                          "gender",
+                                                          $$v
+                                                        )
+                                                      },
+                                                      expression: "form.gender"
+                                                    }
+                                                  })
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "b-form-group",
+                                                {
+                                                  attrs: {
+                                                    id: "input-group-6",
+                                                    label: "Alamat:",
+                                                    "label-for": "input-6"
+                                                  }
+                                                },
+                                                [
+                                                  _c("b-form-textarea", {
+                                                    attrs: {
+                                                      id: "textarea",
+                                                      placeholder:
+                                                        "Ketikan Alamat",
+                                                      rows: "3",
+                                                      "max-rows": "6"
+                                                    },
+                                                    model: {
+                                                      value: _vm.text,
+                                                      callback: function($$v) {
+                                                        _vm.text = $$v
+                                                      },
+                                                      expression: "text"
+                                                    }
+                                                  }),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "pre",
+                                                    {
+                                                      staticClass: "mt-3 mb-0"
+                                                    },
+                                                    [_vm._v(_vm._s(_vm.Alamat))]
+                                                  )
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "b-form-group",
+                                                {
+                                                  attrs: {
+                                                    id: "input-group-7",
+                                                    label: "Pilih Acara:",
+                                                    "label-for": "input-7"
+                                                  }
+                                                },
+                                                [
+                                                  _c("b-form-checkbox-group", {
+                                                    attrs: {
+                                                      options: _vm.options,
+                                                      plain: "",
+                                                      stacked: ""
+                                                    },
+                                                    model: {
+                                                      value: _vm.selected,
+                                                      callback: function($$v) {
+                                                        _vm.selected = $$v
+                                                      },
+                                                      expression: "selected"
+                                                    }
+                                                  })
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "div",
+                                                { staticClass: "text-center" },
+                                                [
+                                                  _c(
+                                                    "b-button",
+                                                    {
+                                                      attrs: {
+                                                        type: "submit",
+                                                        variant: "primary"
+                                                      }
+                                                    },
+                                                    [_vm._v("Submit")]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "b-button",
+                                                    {
+                                                      attrs: {
+                                                        type: "reset",
+                                                        variant: "danger"
+                                                      }
+                                                    },
+                                                    [_vm._v("Reset")]
+                                                  )
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        : _vm._e()
                                     ],
                                     1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "b-form-group",
-                                    {
-                                      attrs: {
-                                        id: "input-group-4",
-                                        label: "Asal Institusi:",
-                                        "label-for": "input-4"
-                                      }
-                                    },
-                                    [
-                                      _c("b-form-input", {
-                                        attrs: {
-                                          id: "input-4",
-                                          required: "",
-                                          placeholder: "Ketikan asal institusi"
-                                        },
-                                        model: {
-                                          value: _vm.form.institusi,
-                                          callback: function($$v) {
-                                            _vm.$set(_vm.form, "institusi", $$v)
-                                          },
-                                          expression: "form.institusi"
-                                        }
-                                      })
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "b-form-group",
-                                    {
-                                      attrs: {
-                                        id: "input-group-1",
-                                        label: "Email:",
-                                        "label-for": "input-1"
-                                      }
-                                    },
-                                    [
-                                      _c("b-form-input", {
-                                        attrs: {
-                                          id: "input-1",
-                                          type: "email",
-                                          required: "",
-                                          placeholder: "Ketikan Email"
-                                        },
-                                        model: {
-                                          value: _vm.form.email,
-                                          callback: function($$v) {
-                                            _vm.$set(_vm.form, "email", $$v)
-                                          },
-                                          expression: "form.email"
-                                        }
-                                      })
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "b-form-group",
-                                    {
-                                      attrs: {
-                                        id: "input-group-5",
-                                        label: "Nomor HP:",
-                                        "label-for": "input-5"
-                                      }
-                                    },
-                                    [
-                                      _c("b-form-input", {
-                                        attrs: {
-                                          id: "input-5",
-                                          required: "",
-                                          placeholder: "Ketikan kuwuk"
-                                        },
-                                        model: {
-                                          value: _vm.form.NomorHP,
-                                          callback: function($$v) {
-                                            _vm.$set(_vm.form, "NomorHP", $$v)
-                                          },
-                                          expression: "form.NomorHP"
-                                        }
-                                      })
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "b-form-group",
-                                    {
-                                      attrs: {
-                                        id: "input-group-3",
-                                        label: "jenis kelamin:",
-                                        "label-for": "input-3"
-                                      }
-                                    },
-                                    [
-                                      _c("b-form-select", {
-                                        attrs: {
-                                          id: "input-3",
-                                          options: _vm.gender,
-                                          required: ""
-                                        },
-                                        model: {
-                                          value: _vm.form.gender,
-                                          callback: function($$v) {
-                                            _vm.$set(_vm.form, "gender", $$v)
-                                          },
-                                          expression: "form.gender"
-                                        }
-                                      })
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "b-form-group",
-                                    {
-                                      attrs: {
-                                        id: "input-group-6",
-                                        label: "Alamat:",
-                                        "label-for": "input-6"
-                                      }
-                                    },
-                                    [
-                                      _c("b-form-textarea", {
-                                        attrs: {
-                                          id: "textarea",
-                                          placeholder: "Ketikan Alamat",
-                                          rows: "3",
-                                          "max-rows": "6"
-                                        },
-                                        model: {
-                                          value: _vm.text,
-                                          callback: function($$v) {
-                                            _vm.text = $$v
-                                          },
-                                          expression: "text"
-                                        }
-                                      }),
-                                      _vm._v(" "),
-                                      _c("pre", { staticClass: "mt-3 mb-0" }, [
-                                        _vm._v(_vm._s(_vm.Alamat))
-                                      ])
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "b-form-group",
-                                    {
-                                      attrs: {
-                                        id: "input-group-7",
-                                        label: "Pilih Acara:",
-                                        "label-for": "input-7"
-                                      }
-                                    },
-                                    [
-                                      _c("b-form-checkbox-group", {
-                                        attrs: {
-                                          options: _vm.options,
-                                          plain: "",
-                                          stacked: ""
-                                        },
-                                        model: {
-                                          value: _vm.selected,
-                                          callback: function($$v) {
-                                            _vm.selected = $$v
-                                          },
-                                          expression: "selected"
-                                        }
-                                      })
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "b-button",
-                                    {
-                                      attrs: {
-                                        type: "submit",
-                                        variant: "primary"
-                                      }
-                                    },
-                                    [_vm._v("Submit")]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "b-button",
-                                    {
-                                      attrs: {
-                                        type: "reset",
-                                        variant: "danger"
-                                      }
-                                    },
-                                    [_vm._v("Reset")]
                                   )
-                                ],
-                                1
-                              )
-                            : _vm._e()
-                        ],
-                        1
-                      )
-                    ])
-                  ],
-                  1
+                                ])
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    )
+                  ]
                 )
-              ],
-              1
+              ]
             )
-          ],
-          1
-        )
-      ])
+          ])
+        ],
+        1
+      )
     ],
     1
   )
@@ -40867,6 +40987,7 @@ var render = function() {
           },
           [
             _c("b-navbar-brand", { attrs: { id: "logo" } }, [
+              _vm._v("\n<<<<<<< HEAD\n                    "),
               _c("a", { attrs: { href: "/" } }, [
                 _c("img", {
                   attrs: {
@@ -40876,7 +40997,20 @@ var render = function() {
                     title: ""
                   }
                 })
-              ])
+              ]),
+              _vm._v("\n=======\n                    "),
+              _c("a", { attrs: { href: "/" } }, [
+                _c("img", {
+                  attrs: {
+                    src: "asset/img/plugin.png",
+                    width: "175",
+                    height: "50"
+                  }
+                })
+              ]),
+              _vm._v(
+                "\n>>>>>>> b25738ba804b0d8fbde8e1f9ffed0c086d5f80bb\n                "
+              )
             ]),
             _vm._v(" "),
             _c("b-navbar-toggle", { attrs: { target: "nav-collapse" } }),
@@ -40912,6 +41046,65 @@ var render = function() {
             )
           ],
           1
+        )
+      ],
+      1
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Regis.vue?vue&type=template&id=521c4b3a&":
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Regis.vue?vue&type=template&id=521c4b3a& ***!
+  \********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c(
+      "div",
+      { staticClass: "text-center", attrs: { id: "regis" } },
+      [
+        _c("h1", [_vm._v("Registrasi Sukses")]),
+        _vm._v(" "),
+        _c("b-img", {
+          staticStyle: {},
+          attrs: {
+            src: "asset/img/sukses.jpg",
+            width: "450px",
+            height: "350px"
+          }
+        }),
+        _vm._v(" "),
+        _c("h3", [_vm._v("Anda Sudah Melakukan Registrasi")]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v("Terima kasih telah menyelesaikan proses regisatrasi")
+        ]),
+        _vm._v(" "),
+        _c("p", [_vm._v("Segera cek E-mail anda")]),
+        _vm._v(" "),
+        _c(
+          "b-button",
+          {
+            staticStyle: { width: "200px" },
+            attrs: { pill: "", variant: "primary", href: "/" }
+          },
+          [_vm._v("Ke Halaman Utama")]
         )
       ],
       1
@@ -56187,22 +56380,26 @@ __webpack_require__.r(__webpack_exports__);
 /*!*******************************************!*\
   !*** ./resources/js/components/Regis.vue ***!
   \*******************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-var render, staticRenderFns
-var script = {}
+/* harmony import */ var _Regis_vue_vue_type_template_id_521c4b3a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Regis.vue?vue&type=template&id=521c4b3a& */ "./resources/js/components/Regis.vue?vue&type=template&id=521c4b3a&");
+/* harmony import */ var _Regis_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Regis.vue?vue&type=script&lang=js& */ "./resources/js/components/Regis.vue?vue&type=script&lang=js&");
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Regis_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Regis_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__["default"])(
-  script,
-  render,
-  staticRenderFns,
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Regis_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Regis_vue_vue_type_template_id_521c4b3a___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Regis_vue_vue_type_template_id_521c4b3a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -56210,8 +56407,44 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   
 )
 
+/* hot reload */
+if (false) { var api; }
 component.options.__file = "resources/js/components/Regis.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Regis.vue?vue&type=script&lang=js&":
+/*!********************************************************************!*\
+  !*** ./resources/js/components/Regis.vue?vue&type=script&lang=js& ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Regis_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Regis.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Regis.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Regis_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Regis_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Regis_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Regis_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Regis_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Regis.vue?vue&type=template&id=521c4b3a&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/components/Regis.vue?vue&type=template&id=521c4b3a& ***!
+  \**************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Regis_vue_vue_type_template_id_521c4b3a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Regis.vue?vue&type=template&id=521c4b3a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Regis.vue?vue&type=template&id=521c4b3a&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Regis_vue_vue_type_template_id_521c4b3a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Regis_vue_vue_type_template_id_521c4b3a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
 
 /***/ }),
 
