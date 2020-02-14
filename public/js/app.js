@@ -1919,6 +1919,54 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+}
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -1934,7 +1982,6 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
-    console.log("Berhasil tampil");
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('https://plugin-apps-server.herokuapps.com/api/event').then(function (response) {
       return _this.events = response.data;
     });
@@ -2184,6 +2231,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
 //
 //
 //
@@ -35579,7 +35628,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "\n.jumbotron {\n    min-height: 300px;\n    margin-top: 70px;\n}\n.event {\n    margin-left: 40px !important;\n    position: relative;\n}\n.footer {\n    margin-top: -100px;\n}\n.sci {\n    margin: 0;\n    padding: 0;\n    display: flex;\n    justify-content: center;\n    align-items: bottom;\n    align-content: center;\n    margin-top: 50px;\n}\n.sci li {\n    list-style: none;\n    margin: 0 20px;\n}\n.sci li a {\n    color: #000;\n    font-size: 2em;\n    transition: 0, 5s;\n}\n.sci li a:hover {\n    color: #000;\n}\n.COPYRIGHT {\n    text-align: center;\n    color: #000;\n}\n.ftlogo {\n    margin-top: 40px;\n    padding-top: 40;\n}\n.img_squad {\n    width: auto;\n    height: auto;\n}\n.center_vertical {\n    margin: auto;\n}\n\n", ""]);
+exports.push([module.i, "\n.section_gap_footer{\n    padding-top: 100px;\n    padding-bottom: 10px;\n}\n\n\n", ""]);
 
 // exports
 
@@ -40062,175 +40111,9 @@ var render = function() {
       _vm._v(" "),
       _vm._m(2),
       _vm._v(" "),
-      _c(
-        "section",
-        [
-          _c(
-            "b-container",
-            { staticClass: "bv-example-row" },
-            [
-              _c(
-                "b-card-group",
-                { staticClass: "event", attrs: { deck: "" } },
-                _vm._l(_vm.events, function(event) {
-                  return _c(
-                    "div",
-                    { key: event.event_id },
-                    [
-                      _c(
-                        "b-card",
-                        {
-                          staticClass: "mb-2",
-                          staticStyle: { "max-width": "20rem" },
-                          attrs: {
-                            "img-src":
-                              "https://picsum.photos/600/300/?image=25",
-                            "img-alt": "Image",
-                            "img-top": "",
-                            tag: "article"
-                          }
-                        },
-                        [
-                          _c("b-card-title", [
-                            _vm._v(_vm._s(event.event_name))
-                          ]),
-                          _vm._v(" "),
-                          _c("b-card-text", [
-                            _vm._v(_vm._s(event.description))
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "router-link",
-                            {
-                              staticClass: "btn btn-primary",
-                              attrs: { to: "/event" }
-                            },
-                            [_vm._v("Detail")]
-                          )
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
-                }),
-                0
-              )
-            ],
-            1
-          )
-        ],
-        1
-      ),
+      _vm._m(3),
       _vm._v(" "),
-      _c(
-        "section",
-        [
-          _c(
-            "b-jumbotron",
-            {
-              attrs: {
-                "bg-variant": "white",
-                "text-variant": "black",
-                "border-variant": "",
-                id: "kontak"
-              }
-            },
-            [
-              _c(
-                "div",
-                {
-                  staticClass: "text-center",
-                  staticStyle: { "padding-bottom": "20px" },
-                  attrs: { id: "kontak" }
-                },
-                [_c("h1", [_c("b", [_vm._v("Hubungi Kami")])])]
-              ),
-              _vm._v(" "),
-              _c("br"),
-              _vm._v(" "),
-              _c("b-row", { staticStyle: { "margin-bottom": "50px" } }, [
-                _c("div", { staticClass: "col-sm-4" }, [
-                  _c("div", { staticClass: "text-center" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticStyle: { "margin-bottom": "20px" },
-                        attrs: {
-                          src: "asset/img/phone.png",
-                          width: "40px",
-                          height: "40px"
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("h3", [_c("b", [_vm._v("Phone")])]),
-                    _vm._v(" "),
-                    _c("p", { staticStyle: { color: "#17A6E7" } }, [
-                      _vm._v(
-                        "\n                            Felix\n                            "
-                      ),
-                      _c("br"),
-                      _vm._v("087848114793\n                        ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-sm-4" }, [
-                  _c("div", { staticClass: "text-center" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticStyle: { "margin-bottom": "20px" },
-                        attrs: { src: "asset/img/email.png", width: "50px" }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("h3", [_c("b", [_vm._v("Email")])]),
-                    _vm._v(" "),
-                    _c("p", { staticStyle: { color: "#17A6E7" } }, [
-                      _vm._v(
-                        "\n                            plugintegal@gmail.com\n                        "
-                      )
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-sm-4" }, [
-                  _c("div", { staticClass: "text-center" }, [
-                    _c(
-                      "a",
-                      {
-                        attrs: {
-                          href:
-                            "https://www.google.co.id/maps/place/PLUGIN+HOME/@-6.8886796,109.1138097,17z/data=!3m1!4b1!4m5!3m4!1s0x2e6fb9a911a57b03:0x517b64e58f7cbd9c!8m2!3d-6.8886796!4d109.1159984",
-                          target: "_blank"
-                        }
-                      },
-                      [
-                        _c("img", {
-                          staticStyle: { "margin-bottom": "20px" },
-                          attrs: { src: "asset/img/alamat.png", width: "50px" }
-                        })
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("h3", [_c("b", [_vm._v("Alamat")])]),
-                    _vm._v(" "),
-                    _c("p", { staticStyle: { color: "#17A6E7" } }, [
-                      _vm._v(
-                        "\n                            Jl. Mataram No.9, Kel. pesurungan lor, Kel. Pesurungan Lor,\n                            Pesurungan Lor, Margadana, Kota Tegal, Jawa Tengah 52147\n                        "
-                      )
-                    ])
-                  ])
-                ])
-              ])
-            ],
-            1
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _vm._m(3)
+      _vm._m(4)
     ],
     1
   )
@@ -40242,11 +40125,55 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "section",
-      { staticClass: "jumbotron bg-white", attrs: { id: "about" } },
+      { staticClass: "home_banner_area", attrs: { id: "home" } },
       [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "text-center" }, [
-            _c("h1", [_c("b", [_vm._v("PLUG-IN")])])
+        _c("div", { staticClass: "banner_inner" }, [
+          _c("div", { staticClass: "container" }, [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-lg-6" }, [
+                _c("div", { staticClass: "home_left_img" }, [
+                  _c("img", {
+                    staticClass: "img-fluid",
+                    attrs: { src: "asset/img/penguin_banner.png", alt: "" }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-lg-6" }, [
+                _c("div", { staticClass: "banner_content" }, [
+                  _c("h2", [
+                    _vm._v("\n                                PLUG-IN "),
+                    _c("br"),
+                    _vm._v(" "),
+                    _c("h4", [
+                      _vm._v("Poltek Harber Linux User Group "),
+                      _c("br"),
+                      _vm._v("\n                                    Indonesia")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "video-play-button",
+                        attrs: {
+                          id: "play-home-video",
+                          href: "https://www.youtube.com/watch?v=PHvHxK_gfa0"
+                        }
+                      },
+                      [_c("span")]
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "watch_video text-uppercase" }, [
+                      _vm._v(
+                        "\n                                    watch the video\n                                "
+                      )
+                    ])
+                  ])
+                ])
+              ])
+            ])
           ])
         ])
       ]
@@ -40256,203 +40183,522 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("section", { attrs: { id: "squad" } }, [
-      _c("div", { staticClass: "container" }, [
-        _c(
-          "div",
-          {
-            staticClass: "text-center",
-            staticStyle: { "padding-bottom": "20px" }
-          },
-          [_c("h1", { attrs: { id: "squad" } }, [_c("b", [_vm._v("Squad")])])]
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-lg-5" }, [
-            _c("div", { staticClass: "d-inline-block" }, [
-              _c("br"),
-              _c("br"),
-              _vm._v(" "),
-              _c("img", {
-                staticClass: "img-fluid center_vertical",
-                attrs: { src: "asset/img/web.png", alt: "" }
-              })
+    return _c(
+      "section",
+      { staticClass: "about_us_area section_gap_top", attrs: { id: "about" } },
+      [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row about_content align-items-center" }, [
+            _c("div", { staticClass: "col-lg-6" }, [
+              _c("div", { staticClass: "section_content" }, [
+                _c("h6", [_vm._v("About Us")]),
+                _vm._v(" "),
+                _c(
+                  "h2",
+                  { staticStyle: { color: "white", "text-align": "justify" } },
+                  [
+                    _vm._v("Poltek Harber Linux User Group "),
+                    _c("br"),
+                    _vm._v("Indonesia")
+                  ]
+                ),
+                _vm._v(" "),
+                _c("p", { staticStyle: { "text-align": "justify" } }, [
+                  _vm._v(
+                    "Plug-in adalah suatu organisasi atau komunitas studi linux di\n                            Politeknik Harapan\n                            Bersama Tegal.\n                            Kami\n                            mempunyai tujuan untuk mengenalkan dan mengOpen Source kan mahasiswa dan masyarakat\n                            umum dengan\n                            berbagai kegiatan yang nantinya bisa membuka wawasan serta mindset OpenSource guna\n                            untuk\n                            mengurangi\n                            angka pembajakan Software di Indonesia."
+                  )
+                ]),
+                _vm._v(" "),
+                _c("a", { staticClass: "primary_btn", attrs: { href: "#" } }, [
+                  _vm._v("Learn More")
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-lg-6" }, [
+              _c(
+                "div",
+                { staticClass: "about_us_image_box justify-content-center" },
+                [
+                  _c("img", {
+                    staticClass: "img-fluid w-100",
+                    attrs: { src: "asset/img/about_img.png", alt: "" }
+                  })
+                ]
+              )
+            ])
+          ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "section",
+      { staticClass: "upcoming_games_area", attrs: { id: "squad" } },
+      [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-lg-12" }, [
+              _c("div", { staticClass: "main_title" }, [
+                _c("h2", [_vm._v("Squad PLUG-IN")]),
+                _vm._v(" "),
+                _c("h1", { staticStyle: { color: "white" } }, [
+                  _vm._v("Squad PLUG-IN")
+                ])
+              ])
             ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-lg-7" }, [
-            _c("div", { staticClass: "row", staticStyle: { margin: "20px" } }, [
-              _c("div", { staticClass: "col-md-2" }, [
-                _c("img", {
-                  attrs: {
-                    src: "asset/img/web_squad.png",
-                    alt: "",
-                    srcset: "",
-                    width: "70"
-                  }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-md-10" }, [
-                _c("div", [
-                  _c("h4", {}, [_vm._v("Web Developer")]),
-                  _vm._v(" "),
-                  _c("p", {}, [
-                    _vm._v(
-                      "Anda bisa berhemat dan tetap mendapatkan hosting\n                                terbaik dengan fitur lengkap, dari auto install WordPress, cPanel lengkap, hingga\n                                SSL gratis\n                            "
-                    )
-                  ])
-                ])
-              ])
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-lg-6 col-md-12 col-sm-12" }, [
+              _c("img", {
+                attrs: { src: "asset/img/web.png", alt: "", srcset: "" }
+              })
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "row", staticStyle: { margin: "20px" } }, [
-              _c("div", { staticClass: "col-md-2" }, [
-                _c("img", {
-                  attrs: {
-                    src: "asset/img/mobile_squad.png",
-                    alt: "",
-                    srcset: "",
-                    width: "70"
-                  }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-md-10" }, [
-                _c("div", [
-                  _c("h4", {}, [_vm._v("Mobile Developer")]),
-                  _vm._v(" "),
-                  _c("p", {}, [
-                    _vm._v(
-                      "Anda bisa berhemat dan tetap mendapatkan hosting\n                                terbaik dengan fitur lengkap, dari auto install WordPress, cPanel lengkap, hingga\n                                SSL gratis\n                            "
-                    )
-                  ])
+            _c("div", { staticClass: "col-lg-6 col-md-12 col-sm-12" }, [
+              _c("div", { staticStyle: { color: "white" } }, [
+                _c("h4", [_vm._v("Web Developer")]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio error, nisi neque\n                            ipsa reiciendis suscipit qui maiores, blanditiis iusto harum soluta voluptas consequatur\n                            optio delectus. Ad temporibus id quam iste."
+                  )
                 ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "row", staticStyle: { margin: "20px" } }, [
-              _c("div", { staticClass: "col-md-2" }, [
-                _c("img", {
-                  attrs: {
-                    src: "asset/img/uiux_squad.png",
-                    alt: "",
-                    srcset: "",
-                    width: "65"
-                  }
-                })
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "col-md-10" }, [
-                _c("div", [
-                  _c("h4", {}, [_vm._v("UI / UX Designer")]),
-                  _vm._v(" "),
-                  _c("p", {}, [
-                    _vm._v(
-                      "Anda bisa berhemat dan tetap mendapatkan hosting\n                                terbaik dengan fitur lengkap, dari auto install WordPress, cPanel lengkap, hingga\n                                SSL gratis\n                            "
-                    )
-                  ])
+              _c("div", { staticStyle: { color: "white" } }, [
+                _c("h4", [_vm._v("Mobile Developer")]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio error, nisi neque\n                            ipsa reiciendis suscipit qui maiores, blanditiis iusto harum soluta voluptas consequatur\n                            optio delectus. Ad temporibus id quam iste."
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticStyle: { color: "white" } }, [
+                _c("h4", [_vm._v("UI / UX Designer")]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio error, nisi neque\n                            ipsa reiciendis suscipit qui maiores, blanditiis iusto harum soluta voluptas consequatur\n                            optio delectus. Ad temporibus id quam iste."
+                  )
                 ])
               ])
             ])
           ])
         ])
-      ])
-    ])
+      ]
+    )
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("h1", { attrs: { id: "event" } }, [
-      _c("div", { staticClass: "text-center" }, [_c("b", [_vm._v("Event")])])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("footer", { staticClass: "footer-area section-gap" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col" }, [
-            _c("div", { staticClass: "ftlogo" }, [
-              _c("div", { staticClass: "sci" }, [
-                _c("img", {
-                  attrs: {
-                    src: "asset/img/plugin.png",
-                    width: "200",
-                    height: "60",
-                    alt: ""
-                  }
-                })
-              ]),
-              _vm._v(" "),
-              _c("ul", { staticClass: "sci" }, [
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "https://github.com/plugintegal",
-                        target: "_blank"
-                      }
-                    },
-                    [_c("i", { staticClass: "fa fa-github" })]
-                  )
+    return _c(
+      "section",
+      { staticClass: "about_us_area section_gap_top", attrs: { id: "event" } },
+      [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-lg-12" }, [
+              _c("div", { staticClass: "main_title" }, [
+                _c("h2", { staticStyle: { color: "#17A6E7" } }, [
+                  _vm._v("Event")
                 ]),
                 _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "https://www.instagram.com/officialplugin/",
-                        target: "_blank"
-                      }
-                    },
-                    [_c("i", { staticClass: "fa fa-instagram" })]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href:
-                          "https://plus.google.com/u/0/107691223860674495969",
-                        target: "_blank"
-                      }
-                    },
-                    [_c("i", { staticClass: "fa fa-google-plus" })]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href:
-                          "https://www.youtube.com/channel/UCW0p5Y6cNZ34G1LkY46xeLg",
-                        target: "_blank"
-                      }
-                    },
-                    [_c("i", { staticClass: "fa fa-youtube" })]
-                  )
-                ])
-              ]),
-              _c("br"),
-              _vm._v(" "),
-              _c("p", { staticClass: "COPYRIGHT" }, [
-                _vm._v("© COPYRIGHT 2019. MAINTANCE BY PLUGIN TEAM")
+                _c("h1", [_vm._v("Event")])
               ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row mx-auto" }, [
+            _c("div", { staticClass: "col col-lg-4" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "card mx-auto",
+                  staticStyle: { width: "19rem" }
+                },
+                [
+                  _c("div", { staticClass: "align-center" }, [
+                    _c("img", {
+                      staticClass: "card-img-top",
+                      attrs: {
+                        src: "asset/img/jumbotron.png",
+                        alt: "Card image cap"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "card-body" }, [
+                      _c(
+                        "h5",
+                        { staticClass: "card-title justify-content-center" },
+                        [
+                          _vm._v(
+                            "SEMINAR POLTEK HARBER LINUX USER GROUP - INDONESIA"
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "p",
+                        {
+                          staticClass: "card-text",
+                          staticStyle: { color: "#17A6E7" }
+                        },
+                        [
+                          _c("i", {
+                            staticClass: "fa fa-calendar-times-o",
+                            staticStyle: { color: "#17A6E7" }
+                          }),
+                          _vm._v("Jun 20, 2020")
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-primary",
+                          attrs: { href: "#" }
+                        },
+                        [_vm._v("Read More")]
+                      )
+                    ])
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col col-lg-4" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "card mx-auto",
+                  staticStyle: { width: "19rem" }
+                },
+                [
+                  _c("img", {
+                    staticClass: "card-img-top",
+                    attrs: {
+                      src: "asset/img/jumbotron.png",
+                      alt: "Card image cap"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-body" }, [
+                    _c(
+                      "h5",
+                      { staticClass: "card-title justify-content-center" },
+                      [
+                        _vm._v(
+                          "SEMINAR POLTEK HARBER LINUX USER GROUP - INDONESIA"
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "p",
+                      {
+                        staticClass: "card-text",
+                        staticStyle: { color: "#17A6E7" }
+                      },
+                      [
+                        _c("i", {
+                          staticClass: "fa fa-calendar-times-o",
+                          staticStyle: { color: "#17A6E7" }
+                        }),
+                        _vm._v("Jun 20, 2020")
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      { staticClass: "btn btn-primary", attrs: { href: "#" } },
+                      [_vm._v("Read More")]
+                    )
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col col-lg-4" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "card mx-auto",
+                  staticStyle: { width: "19rem" }
+                },
+                [
+                  _c("img", {
+                    staticClass: "card-img-top",
+                    attrs: {
+                      src: "asset/img/jumbotron.png",
+                      alt: "Card image cap"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-body" }, [
+                    _c(
+                      "h5",
+                      { staticClass: "card-title justify-content-center" },
+                      [
+                        _vm._v(
+                          "SEMINAR POLTEK HARBER LINUX USER GROUP - INDONESIA"
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "p",
+                      {
+                        staticClass: "card-text",
+                        staticStyle: { color: "#17A6E7" }
+                      },
+                      [
+                        _c("i", {
+                          staticClass: "fa fa-calendar-times-o",
+                          staticStyle: { color: "#17A6E7" }
+                        }),
+                        _vm._v("Jun 20, 2020")
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      { staticClass: "btn btn-primary", attrs: { href: "#" } },
+                      [_vm._v("Read More")]
+                    )
+                  ])
+                ]
+              )
             ])
           ])
         ])
-      ])
-    ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "footer",
+      {
+        staticClass: "footer_area section_gap_footer",
+        attrs: { id: "contact" }
+      },
+      [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row footer_inner" }, [
+            _c("div", { staticClass: "col-lg-6 col-sm-12" }, [
+              _c("ul", [
+                _c("div", { staticClass: "text-center" }, [
+                  _c("img", {
+                    attrs: {
+                      src: "asset/img/logoputih.png",
+                      alt: "",
+                      srcset: "",
+                      width: "150",
+                      height: "50"
+                    }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("ul", [
+                _c("h3", [
+                  _c("b", { staticStyle: { color: "white" } }, [
+                    _vm._v("Contact Information")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row text-center" }, [
+                  _c("div", { staticClass: "col-md-6" }, [
+                    _c("aside", { staticClass: "f_widget ab_widget" }, [
+                      _c(
+                        "p",
+                        {
+                          staticStyle: { color: "white" },
+                          attrs: { align: "justify" }
+                        },
+                        [
+                          _vm._v(
+                            "Sumbrodo Perumahan Ndalem Parikesit No.B7, Slerok, Kota\n                                        Tegal. "
+                          ),
+                          _c(
+                            "a",
+                            {
+                              staticStyle: { color: "#2F4574" },
+                              attrs: {
+                                href:
+                                  "https://www.google.co.id/maps/place/Ndalem+Parikesit/@-6.8811978,109.1431099,3a,75y,175.22h,81.96t/data=!3m6!1e1!3m4!1s7U4CiCrUYuiXnYauUIYHNA!2e0!7i13312!8i6656!4m5!3m4!1s0x2e6fb93464361e0f:0xca4bd2a90586ebbc!8m2!3d-6.8814505!4d109.1444167"
+                              }
+                            },
+                            [
+                              _vm._v(
+                                "View\n                                            Map"
+                              )
+                            ]
+                          )
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-6" }, [
+                    _c("aside", { staticClass: "f_widget ab_widget" }, [
+                      _c("p", { staticStyle: { color: "white" } }, [
+                        _vm._v("Phone: +62 878-4811-4793 "),
+                        _c("br"),
+                        _vm._v(" Email: "),
+                        _c("i", [_vm._v("plugintegal@gmail.com")])
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("hr")
+              ]),
+              _vm._v(" "),
+              _c("ul", [
+                _c("h3", [
+                  _c("b", { staticStyle: { color: "white" } }, [
+                    _vm._v("Follow Us")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("a", { attrs: { href: "https://github.com/plugintegal" } }, [
+                  _c("img", { attrs: { src: "asset/img/github.png", alt: "" } })
+                ]),
+                _vm._v("  \n                        "),
+                _c("a", { attrs: { href: "" } }, [
+                  _c("img", {
+                    attrs: {
+                      src: "asset/img/instagram.png",
+                      alt: "",
+                      srcset: ""
+                    }
+                  })
+                ]),
+                _vm._v("  \n                        "),
+                _c("a", { attrs: { href: "" } }, [
+                  _c("img", {
+                    attrs: {
+                      src: "asset/img/google-plus.png",
+                      alt: "",
+                      srcset: ""
+                    }
+                  })
+                ]),
+                _vm._v("  \n                        "),
+                _c("a", { attrs: { href: "" } }, [
+                  _c("img", {
+                    attrs: { src: "asset/img/youtube.png", alt: "", srcset: "" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("hr")
+              ]),
+              _vm._v(" "),
+              _c("ul", [
+                _c("h5", [
+                  _c("b", { staticStyle: { color: "white" } }, [
+                    _vm._v("Navigation")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  { staticStyle: { color: "white" }, attrs: { href: "#home" } },
+                  [_vm._v("Home")]
+                ),
+                _vm._v("   \n                        "),
+                _c(
+                  "a",
+                  {
+                    staticStyle: { color: "white" },
+                    attrs: { href: "#about" }
+                  },
+                  [_vm._v("About")]
+                ),
+                _vm._v("   \n                        "),
+                _c(
+                  "a",
+                  { staticStyle: { color: "white" }, attrs: { href: "#" } },
+                  [_vm._v("Squad")]
+                ),
+                _vm._v("   \n                        "),
+                _c(
+                  "a",
+                  { staticStyle: { color: "white" }, attrs: { href: "#" } },
+                  [_vm._v("Contact")]
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-lg-6 col-sm-12" }, [
+              _c("h2", [
+                _c("b", { staticStyle: { color: "white" } }, [
+                  _vm._v("Contact Us")
+                ])
+              ]),
+              _vm._v(" "),
+              _c("form", { attrs: { action: "", method: "post" } }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("input", {
+                    staticClass: "form-control",
+                    attrs: { type: "text", placeholder: "Email Address" }
+                  }),
+                  _vm._v(" "),
+                  _c("br"),
+                  _vm._v(" "),
+                  _c("textarea", {
+                    staticClass: "form-control",
+                    attrs: {
+                      name: "",
+                      id: "",
+                      rows: "5",
+                      placeholder: "Write Your Message Here..."
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("input", {
+                    staticClass: "btn btn-primary float-right",
+                    attrs: { type: "submit", value: "Sumbit" }
+                  }),
+                  _c("br"),
+                  _c("br")
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row single-footer-widget" }, [
+            _c("div", { staticClass: "col-lg-6 col-md-6 col-sm-12" }, [
+              _c(
+                "div",
+                { staticClass: "copy_right_text justify-content-center" },
+                [
+                  _c("p", [
+                    _vm._v(
+                      "Copyright © 2020 Poltek Harber Linux User Group - Indonesia"
+                    )
+                  ])
+                ]
+              )
+            ])
+          ])
+        ])
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -40974,85 +41220,136 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("header", { attrs: { id: "header" } }, [
-    _c(
-      "div",
-      {},
-      [
-        _c(
-          "b-navbar",
-          {
-            staticClass: "justify-content-between d-flex mr-sm-5 ml-sm-5",
-            attrs: { toggleable: "lg", type: "dark" }
-          },
-          [
-            _c("b-navbar-brand", { attrs: { id: "logo" } }, [
-              _vm._v("\n<<<<<<< HEAD\n                    "),
-              _c("a", { attrs: { href: "/" } }, [
-                _c("img", {
-                  attrs: {
-                    src: "asset/img/plugin.png",
-                    width: "155",
-                    alt: "",
-                    title: ""
-                  }
-                })
-              ]),
-              _vm._v("\n=======\n                    "),
-              _c("a", { attrs: { href: "/" } }, [
-                _c("img", {
-                  attrs: {
-                    src: "asset/img/plugin.png",
-                    width: "175",
-                    height: "50"
-                  }
-                })
-              ]),
-              _vm._v(
-                "\n>>>>>>> b25738ba804b0d8fbde8e1f9ffed0c086d5f80bb\n                "
-              )
-            ]),
-            _vm._v(" "),
-            _c("b-navbar-toggle", { attrs: { target: "nav-collapse" } }),
-            _vm._v(" "),
-            _c(
-              "b-collapse",
-              { attrs: { id: "nav-collapse", "is-nav": "" } },
-              [
-                _c(
-                  "b-navbar-nav",
-                  { staticClass: "ml-auto" },
-                  [
-                    _c("b-nav-item", { attrs: { href: "#about" } }, [
-                      _vm._v("About")
-                    ]),
-                    _vm._v(" "),
-                    _c("b-nav-item", { attrs: { href: "#squad" } }, [
-                      _vm._v("Squad")
-                    ]),
-                    _vm._v(" "),
-                    _c("b-nav-item", { attrs: { href: "#event" } }, [
-                      _vm._v("Event")
-                    ]),
-                    _vm._v(" "),
-                    _c("b-nav-item", { attrs: { href: "#kontak" } }, [
-                      _vm._v("Contact")
-                    ])
-                  ],
-                  1
-                )
-              ],
-              1
-            )
-          ],
-          1
-        )
-      ],
-      1
-    )
-  ])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("header", { staticClass: "header_area" }, [
+        _c("div", { staticClass: "main_menu" }, [
+          _c("nav", { staticClass: "navbar navbar-expand-lg navbar-light" }, [
+            _c("div", { staticClass: "container" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "navbar-brand logo_h",
+                  attrs: { href: "#home" }
+                },
+                [
+                  _c("img", {
+                    staticStyle: { "margin-left": "20px" },
+                    attrs: {
+                      src: "asset/img/logoputih.png",
+                      alt: "",
+                      width: "150",
+                      height: "50"
+                    }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "navbar-toggler",
+                  staticStyle: { "margin-right": "20px" },
+                  attrs: {
+                    type: "button",
+                    "data-toggle": "collapse",
+                    "data-target": "#navbarSupportedContent",
+                    "aria-controls": "navbarSupportedContent",
+                    "aria-expanded": "false",
+                    "aria-label": "Toggle navigation"
+                  }
+                },
+                [
+                  _c("span", { staticClass: "icon-bar" }),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "icon-bar" }),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "icon-bar" })
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "collapse navbar-collapse offset",
+                  staticStyle: { "margin-right": "20px" },
+                  attrs: { id: "navbarSupportedContent" }
+                },
+                [
+                  _c(
+                    "ul",
+                    {
+                      staticClass: "nav navbar-nav menu_nav justify-content-end"
+                    },
+                    [
+                      _c(
+                        "li",
+                        { staticClass: "nav-item", attrs: { href: "#about" } },
+                        [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "nav-link",
+                              attrs: { href: "#about" }
+                            },
+                            [_vm._v("About")]
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "li",
+                        { staticClass: "nav-item", attrs: { href: "" } },
+                        [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "nav-link",
+                              attrs: { href: "#squad" }
+                            },
+                            [_vm._v("Squad")]
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("li", { staticClass: "nav-item" }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "nav-link",
+                            attrs: { href: "#event" }
+                          },
+                          [_vm._v("Event")]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", { staticClass: "nav-item" }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "nav-link",
+                            attrs: { href: "#contact" }
+                          },
+                          [_vm._v("Contact")]
+                        )
+                      ])
+                    ]
+                  )
+                ]
+              )
+            ])
+          ])
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 

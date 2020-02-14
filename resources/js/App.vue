@@ -4,220 +4,268 @@
             integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
             crossorigin="anonymous" />
         <app-navbar />
-
-
-
-        <!-- Tentang -->
-        <section id="about" class="jumbotron bg-white">
-            <!-- <b-jumbotron bg-variant="white" text-variant="black">
-                <div class="text-center">
-                    <h1>PLUG-IN</h1>
-                </div>
-
-                <div class="text-center">
-                    <p style="text-align: justify">
-                        Plug-in adalah suatu organisasi atau komunitas studi linux di Politeknik Harapan Bersama Tegal.
-                        Kami
-                        mempunyai tujuan untuk mengenalkan dan mengOpen Source kan mahasiswa dan masyarakat umum dengan
-                        berbagai kegiatan yang nantinya bisa membuka wawasan serta mindset OpenSource guna untuk
-                        mengurangi
-                        angka pembajakan Software di Indonesia.
-                    </p>
-                </div>
-                <hr class="my-4" />
-
-                <p class="text-center">Politeknik Harapan Bersama Linux User Group Indonesia.</p>
-            </b-jumbotron> -->
-            <div class="container">
-                <div class="text-center">
-                    <h1><b>PLUG-IN</b></h1>
+        <!-- Home -->
+        <section class="home_banner_area" id="home">
+            <div class="banner_inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="home_left_img">
+                                <img class="img-fluid" src="asset/img/penguin_banner.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="banner_content">
+                                <h2>
+                                    PLUG-IN <br>
+                                    <h4>Poltek Harber Linux User Group <br>
+                                        Indonesia</h4>
+                                </h2>
+                                <!-- <p class="mx-auto d-block">
+                                    Plug-in adalah suatu organisasi atau komunitas studi linux di Politeknik Harapan
+                                    Bersama Tegal.
+                                    Kami
+                                    mempunyai tujuan untuk mengenalkan dan mengOpen Source kan mahasiswa dan masyarakat
+                                    umum dengan
+                                    berbagai kegiatan yang nantinya bisa membuka wawasan serta mindset OpenSource guna
+                                    untuk
+                                    mengurangi
+                                    angka pembajakan Software di Indonesia.
+                                </p> -->
+                                <div class="d-flex align-items-center">
+                                    <a id="play-home-video" class="video-play-button"
+                                        href="https://www.youtube.com/watch?v=PHvHxK_gfa0">
+                                        <span></span>
+                                    </a>
+                                    <div class="watch_video text-uppercase">
+                                        watch the video
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+        <!-- Endome -->
+        <!-- About -->
+        <section class="about_us_area section_gap_top" id="about">
+            <div class="container">
+                <div class="row about_content align-items-center">
+                    <div class="col-lg-6">
+                        <div class="section_content">
+                            <h6>About Us</h6>
+                            <h2 style="color: white; text-align: justify">Poltek Harber Linux User Group <br>Indonesia</h2>
+                            <p style="text-align: justify">Plug-in adalah suatu organisasi atau komunitas studi linux di
+                                Politeknik Harapan
+                                Bersama Tegal.
+                                Kami
+                                mempunyai tujuan untuk mengenalkan dan mengOpen Source kan mahasiswa dan masyarakat
+                                umum dengan
+                                berbagai kegiatan yang nantinya bisa membuka wawasan serta mindset OpenSource guna
+                                untuk
+                                mengurangi
+                                angka pembajakan Software di Indonesia.</p>
+                            <a class="primary_btn" href="#">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about_us_image_box justify-content-center">
+                            <img class="img-fluid w-100" src="asset/img/about_img.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- EndAbout -->
 
         <!-- Squad -->
-        <!-- <section id="squad">
-
-            <b-jumbotron bg-variant="white" text-variant="black" border-variant id="squad">
-                <div class="text-center" style="padding-bottom:20px">
-                    <h1>Programming Squad</h1>
-                </div>
-                <br />
-                
-            </b-jumbotron>
-        </section> -->
-        <section id="squad">
-        <div class="container">
-            <div class="text-center" style="padding-bottom: 20px">
-                <h1 id="squad"><b>Squad</b></h1>
-            </div>
-            <div class="row">
-                <div class="col-lg-5">
-                    <div class="d-inline-block"><br><br>
-                        <img class="img-fluid center_vertical" src="asset/img/web.png" alt="">
-
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="row" style="margin: 20px">
-                        <div class="col-md-2">
-                            <img src="asset/img/web_squad.png" alt="" srcset="" width="70">
-                        </div>
-                        <div class="col-md-10">
-                            <div>
-                                <h4 class="">Web Developer</h4>
-                                <p class="">Anda bisa berhemat dan tetap mendapatkan hosting
-                                    terbaik dengan fitur lengkap, dari auto install WordPress, cPanel lengkap, hingga
-                                    SSL gratis
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row" style="margin: 20px">
-                        <div class="col-md-2" style="">
-                            <img src="asset/img/mobile_squad.png" alt="" srcset="" width="70">
-                        </div>
-                        <div class="col-md-10">
-                            <div>
-                                <h4 class="">Mobile Developer</h4>
-                                <p class="">Anda bisa berhemat dan tetap mendapatkan hosting
-                                    terbaik dengan fitur lengkap, dari auto install WordPress, cPanel lengkap, hingga
-                                    SSL gratis
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row" style="margin: 20px">
-                        <div class="col-md-2">
-                            <img src="asset/img/uiux_squad.png" alt="" srcset="" width="65">
-                        </div>
-                        <div class="col-md-10">
-                            <div>
-                                <h4 class="">UI / UX Designer</h4>
-                                <p class="">Anda bisa berhemat dan tetap mendapatkan hosting
-                                    terbaik dengan fitur lengkap, dari auto install WordPress, cPanel lengkap, hingga
-                                    SSL gratis
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </section>
-
-        <!-- Event -->
-        <h1  id="event">
-                <div class="text-center"><b>Event</b></div>
-            </h1>
-        <section>
-            <b-container class="bv-example-row">
-                <b-card-group deck class="event">
-                    <div class="" v-for="event of events" v-bind:key="event.event_id">
-                        <b-card img-src="https://picsum.photos/600/300/?image=25" img-alt="Image" img-top tag="article"
-                            style="max-width: 20rem;" class="mb-2">
-                            <b-card-title>{{event.event_name}}</b-card-title>
-                            <b-card-text>{{event.description}}</b-card-text>
-                            <router-link to="/event" class="btn btn-primary">Detail</router-link>
-                            <!-- <b-button router-link to="/event" variant="primary">Detail</b-button> -->
-                            <!-- <router-link :to="{name: 'detailMember', params: {member_id: user.member_id}}">Detail</router-link> -->
-                        </b-card>
-                    </div>
-                </b-card-group>
-            </b-container>
-        </section>
-
-        <!-- Contacts -->
-        <section >
-            <b-jumbotron bg-variant="white" text-variant="black" border-variant id="kontak">
-                <div class="text-center" style="padding-bottom:20px" id="kontak">
-                    <h1><b>Hubungi Kami</b></h1>
-                </div>
-                <br />
-                <b-row style="margin-bottom: 50px">
-                    <div class="col-sm-4">
-                        <div class="text-center">
-                            <a href="#">
-                                <img src="asset/img/phone.png" width="40px" height="40px" style="margin-bottom: 20px" />
-                            </a>
-                            <h3><b>Phone</b></h3>
-                            <p style="color: #17A6E7">
-                                Felix
-                                <br />087848114793
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="text-center">
-                            <a href="#">
-                                <img src="asset/img/email.png" width="50px" style="margin-bottom: 20px" />
-                            </a>
-                            <h3><b>Email</b></h3>
-                            <p style="color: #17A6E7">
-                                plugintegal@gmail.com
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="text-center">
-                            <a href="https://www.google.co.id/maps/place/PLUGIN+HOME/@-6.8886796,109.1138097,17z/data=!3m1!4b1!4m5!3m4!1s0x2e6fb9a911a57b03:0x517b64e58f7cbd9c!8m2!3d-6.8886796!4d109.1159984"
-                                target="_blank">
-                                <img src="asset/img/alamat.png" width="50px"
-                                    style="margin-bottom: 20px" />
-                            </a>
-                            <h3><b>Alamat</b></h3>
-                            <p style="color: #17A6E7">
-                                Jl. Mataram No.9, Kel. pesurungan lor, Kel. Pesurungan Lor,
-                                Pesurungan Lor, Margadana, Kota Tegal, Jawa Tengah 52147
-                            </p>
-                        </div>
-                    </div>
-                </b-row>
-            </b-jumbotron>
-        </section>
-
-        <!--Start Footer-->
-        <footer class="footer-area section-gap">
+        <section class="upcoming_games_area" id="squad">
             <div class="container">
                 <div class="row">
-                    <div class="col">
-                        <div class="ftlogo">
-                            <div class="sci">
-                                <img src="asset/img/plugin.png" width="200" height="60" alt>
+                    <div class="col-lg-12">
+                        <div class="main_title">
+                            <h2>Squad PLUG-IN</h2>
+                            <h1 style="color: white">Squad PLUG-IN</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <img src="asset/img/web.png" alt="" srcset="">
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div style="color: white">
+                            <h4>Web Developer</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio error, nisi neque
+                                ipsa reiciendis suscipit qui maiores, blanditiis iusto harum soluta voluptas consequatur
+                                optio delectus. Ad temporibus id quam iste.</p>
+                        </div>
+                        <div style="color: white">
+                            <h4>Mobile Developer</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio error, nisi neque
+                                ipsa reiciendis suscipit qui maiores, blanditiis iusto harum soluta voluptas consequatur
+                                optio delectus. Ad temporibus id quam iste.</p>
+                        </div>
+                        <div style="color: white">
+                            <h4>UI / UX Designer</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio error, nisi neque
+                                ipsa reiciendis suscipit qui maiores, blanditiis iusto harum soluta voluptas consequatur
+                                optio delectus. Ad temporibus id quam iste.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Squad -->
+
+        <!-- Event -->
+        <section class="about_us_area section_gap_top" id="event">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="main_title">
+                            <h2 style="color: #17A6E7">Event</h2>
+                            <h1>Event</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mx-auto">
+                    <div class="col col-lg-4">
+                        <div class="card mx-auto" style="width: 19rem">
+                            <div class="align-center">
+                                <img class="card-img-top" src="asset/img/jumbotron.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title justify-content-center">SEMINAR POLTEK HARBER LINUX USER GROUP - INDONESIA</h5>
+                                <p class="card-text" style="color: #17A6E7"><i class="fa fa-calendar-times-o" style="color: #17A6E7"></i>Jun 20, 2020</p>
+                                <a href="#" class="btn btn-primary">Read More</a>
                             </div>
-                            <ul class="sci">
-                                <li>
-                                    <a href="https://github.com/plugintegal" target="_blank">
-                                        <i class="fa fa-github"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.instagram.com/officialplugin/" target="_blank">
-                                        <i class="fa fa-instagram"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://plus.google.com/u/0/107691223860674495969" target="_blank">
-                                        <i class="fa fa-google-plus"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.youtube.com/channel/UCW0p5Y6cNZ34G1LkY46xeLg" target="_blank">
-                                        <i class="fa fa-youtube"></i>
-                                    </a>
-                                </li>
-                            </ul><br>
-                            <p class="COPYRIGHT">© COPYRIGHT 2019. MAINTANCE BY PLUGIN TEAM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-lg-4">
+                        <div class="card mx-auto" style="width: 19rem">
+                            <img class="card-img-top" src="asset/img/jumbotron.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title justify-content-center">SEMINAR POLTEK HARBER LINUX USER GROUP - INDONESIA</h5>
+                                <p class="card-text" style="color: #17A6E7"><i class="fa fa-calendar-times-o" style="color: #17A6E7"></i>Jun 20, 2020</p>
+                                <a href="#" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-lg-4">
+                        <div class="card mx-auto" style="width: 19rem">
+                            <img class="card-img-top" src="asset/img/jumbotron.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title justify-content-center">SEMINAR POLTEK HARBER LINUX USER GROUP - INDONESIA</h5>
+                                <p class="card-text" style="color: #17A6E7"><i class="fa fa-calendar-times-o" style="color: #17A6E7"></i>Jun 20, 2020</p>
+                                <a href="#" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col col-lg-4">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="asset/img/jumbotron.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title justify-content-center">TALK-SHOW POLTEK HARBER LINUX USER GROUP - INDONESIA</h5>
+                                <p class="card-text" style="color: #17A6E7"><i class="fa fa-calendar-times-o" style="color: #17A6E7"></i>Jun 20, 2020</p>
+                                <a href="#" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+        <!-- EndEvent -->
+        <!-- Footer -->
+        <footer class="footer_area section_gap_footer" id="contact">
+            <div class="container">
+                <div class="row footer_inner">
+                    <div class="col-lg-6 col-sm-12">
+                        <ul>
+                            <div class="text-center">
+                                <img src="asset/img/logoputih.png" alt="" srcset="" width="150" height="50">
+                            </div>
+                        </ul>
+                        <ul>
+                            <h3><b style="color: white">Contact Information</b></h3>
+                            <div class="row text-center" >
+                                <div class="col-md-6">
+                                    <aside class="f_widget ab_widget">
+                                        <p align="justify" style="color: white">Sumbrodo Perumahan Ndalem Parikesit No.B7, Slerok, Kota
+                                            Tegal. <a style="color: #2F4574"
+                                                href="https://www.google.co.id/maps/place/Ndalem+Parikesit/@-6.8811978,109.1431099,3a,75y,175.22h,81.96t/data=!3m6!1e1!3m4!1s7U4CiCrUYuiXnYauUIYHNA!2e0!7i13312!8i6656!4m5!3m4!1s0x2e6fb93464361e0f:0xca4bd2a90586ebbc!8m2!3d-6.8814505!4d109.1444167">View
+                                                Map</a></p>
+                                    </aside>
+                                </div>
+                                <div class="col-md-6">
+                                    <aside class="f_widget ab_widget">
+                                        <p style="color: white">Phone: +62 878-4811-4793 <br> Email: <i>plugintegal@gmail.com</i></p>
+                                    </aside>
+                                </div>
+                            </div>
+                            <hr>
+                        </ul>
+                        <ul>
+                            <h3><b style="color: white">Follow Us</b></h3>
+                            <a href="https://github.com/plugintegal"><img src="asset/img/github.png"
+                                    alt=""></a>&nbsp;&nbsp;
+                            <a href=""><img src="asset/img/instagram.png" alt="" srcset=""></a>&nbsp;&nbsp;
+                            <a href=""><img src="asset/img/google-plus.png" alt="" srcset=""></a>&nbsp;&nbsp;
+                            <a href=""><img src="asset/img/youtube.png" alt="" srcset=""></a>
+                            <hr>
+                        </ul>
+                        <ul>
+                            <h5><b style="color: white">Navigation</b></h5>
+                            <a href="#home" style="color: white">Home</a>&nbsp;&nbsp;&nbsp;
+                            <a href="#about" style="color: white">About</a>&nbsp;&nbsp;&nbsp;
+                            <a href="#" style="color: white">Squad</a>&nbsp;&nbsp;&nbsp;
+                            <a href="#" style="color: white">Contact</a>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <h2><b style="color: white">Contact Us</b></h2>
+                        <form action="" method="post">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Email Address">
+                                <br>
+                                <textarea name="" id="" class="form-control" rows="5"
+                                    placeholder="Write Your Message Here..."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Sumbit" class="btn btn-primary float-right"><br><br>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row single-footer-widget">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="copy_right_text justify-content-center">
+                            <p>Copyright &copy; 2020 Poltek Harber Linux User Group - Indonesia</p>
                         </div>
                     </div>
                 </div>
             </div>
         </footer>
-        <!--End Footer-->
+        <!-- EndFooter -->
+
+
     </div>
 </template>
 
 <script>
+    window.onscroll = function () {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("navbar").style.top = "0";
+        } else {
+            document.getElementById("navbar").style.top = "-50px";
+        }
+    }
+
     import axios from "axios";
     import Navbar from "./components/Navbar.vue";
     export default {
@@ -231,7 +279,6 @@
             };
         },
         mounted() {
-            console.log("Berhasil tampil");
             axios.get('https://plugin-apps-server.herokuapps.com/api/event').then(response => this.events = response
                 .data);
         }
@@ -239,64 +286,10 @@
 
 </script>
 <style>
-    .jumbotron {
-        min-height: 300px;
-        margin-top: 70px;
-    }
+.section_gap_footer{
+    padding-top: 100px;
+    padding-bottom: 10px;
+}
 
-    .event {
-        margin-left: 40px !important;
-        position: relative;
-
-
-    }
-
-    .footer {
-        margin-top: -100px;
-    }
-
-    .sci {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: bottom;
-        align-content: center;
-        margin-top: 50px;
-    }
-
-    .sci li {
-        list-style: none;
-        margin: 0 20px;
-    }
-
-    .sci li a {
-        color: #000;
-        font-size: 2em;
-        transition: 0, 5s;
-    }
-
-    .sci li a:hover {
-        color: #000;
-    }
-
-    .COPYRIGHT {
-        text-align: center;
-        color: #000;
-    }
-
-    .ftlogo {
-        margin-top: 40px;
-        padding-top: 40;
-    }
-
-    .img_squad {
-        width: auto;
-        height: auto;
-    }
-
-    .center_vertical {
-        margin: auto;
-    }
 
 </style>
