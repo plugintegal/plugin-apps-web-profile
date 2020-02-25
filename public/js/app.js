@@ -1938,29 +1938,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 window.addEventListener('scroll', function () {
   var scroll = window.requestAnimationFrame || function (callback) {
     window.setTimeout(callback, 1000 / 60);
@@ -1997,7 +1974,7 @@ window.addEventListener('scroll', function () {
   components: {
     "app-navbar": _components_Navbar_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
-  name: "wp",
+  name: 'wp',
   data: function data() {
     return {
       events: []
@@ -2006,8 +1983,9 @@ window.addEventListener('scroll', function () {
   mounted: function mounted() {
     var _this = this;
 
-    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('https://plugin-apps-server.herokuapps.com/api/event').then(function (response) {
-      return _this.events = response.data;
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('http://plugin-apps-server.herokuapp.com/api/event').then(function (response) {
+      _this.events = response.data.results;
+      console.log(_this.events);
     });
   }
 });
@@ -2026,19 +2004,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Navbar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Navbar.vue */ "./resources/js/components/Navbar.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -35671,7 +35636,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.jevent {\n  min-height: 550px;\n  background: url(/asset/img/jumbotron.png);\n  background-size: cover;\n  margin-top: 30px;\n}\n.OPREC1{\n  text-align: center;\n  margin-top: 50px;\n}\n.daftar{\n  position: absolute;\n  right: 20%;\n  left: 20%;\n  margin-bottom: 10px;\n  /* background: #16a1e3; */\n  /* width: 30px; */\n}\n.form{\n  background-color: #16a1e3;\n  border: none;\n  border-radius: 20px;\n  text-align: left;\n}\n.jarak{\n  margin-top: 35px;\n}\n.tombol{\n  background: #16a1e3;\n  width: 150px;\n}\n.submit{\n  background: #1676bd;\n}\n", ""]);
+exports.push([module.i, "\n.jevent {\n    min-height: 550px;\n    background: url(/asset/img/jumbotron.png);\n    background-size: cover;\n    margin-top: 30px;\n}\n.OPREC1 {\n    text-align: center;\n    margin-top: 50px;\n}\n.daftar {\n    position: absolute;\n    right: 20%;\n    left: 20%;\n    margin-bottom: 10px;\n    /* background: #16a1e3; */\n    /* width: 30px; */\n}\n.form {\n    background-color: #16a1e3;\n    border: none;\n    border-radius: 20px;\n    text-align: left;\n}\n.jarak {\n    margin-top: 35px;\n}\n.tombol {\n    background: #16a1e3;\n    width: 150px;\n}\n.submit {\n    background: #1676bd;\n}\n\n", ""]);
 
 // exports
 
@@ -40135,7 +40100,82 @@ var render = function() {
       _vm._v(" "),
       _vm._m(2),
       _vm._v(" "),
-      _vm._m(3),
+      _c(
+        "section",
+        {
+          staticClass: "about_us_area section_gap_top",
+          attrs: { id: "event" }
+        },
+        [
+          _c("div", { staticClass: "container" }, [
+            _vm._m(3),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "row mx-auto" },
+              _vm._l(_vm.events, function(data, index) {
+                return _c("div", { key: index }, [
+                  _c("div", { staticClass: "col col-lg-4" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "card mx-auto",
+                        staticStyle: { width: "19rem" }
+                      },
+                      [
+                        _c("div", { staticClass: "align-center" }, [
+                          _c("img", {
+                            staticClass: "card-img-top",
+                            attrs: {
+                              src: "asset/img/jumbotron.png",
+                              alt: "Card image cap"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "card-body" }, [
+                            _c(
+                              "h5",
+                              {
+                                staticClass: "card-title justify-content-center"
+                              },
+                              [_vm._v(_vm._s(data.title))]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "p",
+                              {
+                                staticClass: "card-text",
+                                staticStyle: { color: "#17A6E7" }
+                              },
+                              [
+                                _c("i", {
+                                  staticClass: "fa fa-calendar-times-o",
+                                  staticStyle: { color: "#17A6E7" }
+                                }),
+                                _vm._v(_vm._s(data.opened))
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "btn btn-primary",
+                                attrs: { href: "#" }
+                              },
+                              [_vm._v("Read More")]
+                            )
+                          ])
+                        ])
+                      ]
+                    )
+                  ])
+                ])
+              }),
+              0
+            )
+          ])
+        ]
+      ),
       _vm._v(" "),
       _vm._m(4)
     ],
@@ -40361,188 +40401,15 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "section",
-      { staticClass: "about_us_area section_gap_top", attrs: { id: "event" } },
-      [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-lg-12" }, [
-              _c("div", { staticClass: "main_title" }, [
-                _c("h2", { staticStyle: { color: "#17A6E7" } }, [
-                  _vm._v("Event")
-                ]),
-                _vm._v(" "),
-                _c("h1", [_vm._v("Event")])
-              ])
-            ])
-          ]),
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-lg-12" }, [
+        _c("div", { staticClass: "main_title" }, [
+          _c("h2", { staticStyle: { color: "#17A6E7" } }, [_vm._v("Event")]),
           _vm._v(" "),
-          _c("div", { staticClass: "row mx-auto" }, [
-            _c("div", { staticClass: "col col-lg-4" }, [
-              _c(
-                "div",
-                {
-                  staticClass: "card mx-auto",
-                  staticStyle: { width: "19rem" }
-                },
-                [
-                  _c("div", { staticClass: "align-center" }, [
-                    _c("img", {
-                      staticClass: "card-img-top",
-                      attrs: {
-                        src: "asset/img/jumbotron.png",
-                        alt: "Card image cap"
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "card-body" }, [
-                      _c(
-                        "h5",
-                        { staticClass: "card-title justify-content-center" },
-                        [
-                          _vm._v(
-                            "SEMINAR POLTEK HARBER LINUX USER GROUP\n                                    - INDONESIA"
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "p",
-                        {
-                          staticClass: "card-text",
-                          staticStyle: { color: "#17A6E7" }
-                        },
-                        [
-                          _c("i", {
-                            staticClass: "fa fa-calendar-times-o",
-                            staticStyle: { color: "#17A6E7" }
-                          }),
-                          _vm._v("Jun 20, 2020")
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "a",
-                        {
-                          staticClass: "btn btn-primary",
-                          attrs: { href: "#" }
-                        },
-                        [_vm._v("Read More")]
-                      )
-                    ])
-                  ])
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col col-lg-4" }, [
-              _c(
-                "div",
-                {
-                  staticClass: "card mx-auto",
-                  staticStyle: { width: "19rem" }
-                },
-                [
-                  _c("img", {
-                    staticClass: "card-img-top",
-                    attrs: {
-                      src: "asset/img/jumbotron.png",
-                      alt: "Card image cap"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-body" }, [
-                    _c(
-                      "h5",
-                      { staticClass: "card-title justify-content-center" },
-                      [
-                        _vm._v(
-                          "SEMINAR POLTEK HARBER LINUX USER GROUP -\n                                INDONESIA"
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "p",
-                      {
-                        staticClass: "card-text",
-                        staticStyle: { color: "#17A6E7" }
-                      },
-                      [
-                        _c("i", {
-                          staticClass: "fa fa-calendar-times-o",
-                          staticStyle: { color: "#17A6E7" }
-                        }),
-                        _vm._v("Jun 20, 2020")
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "a",
-                      { staticClass: "btn btn-primary", attrs: { href: "#" } },
-                      [_vm._v("Read More")]
-                    )
-                  ])
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col col-lg-4" }, [
-              _c(
-                "div",
-                {
-                  staticClass: "card mx-auto",
-                  staticStyle: { width: "19rem" }
-                },
-                [
-                  _c("img", {
-                    staticClass: "card-img-top",
-                    attrs: {
-                      src: "asset/img/jumbotron.png",
-                      alt: "Card image cap"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-body" }, [
-                    _c(
-                      "h5",
-                      { staticClass: "card-title justify-content-center" },
-                      [
-                        _vm._v(
-                          "SEMINAR POLTEK HARBER LINUX USER GROUP -\n                                INDONESIA"
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "p",
-                      {
-                        staticClass: "card-text",
-                        staticStyle: { color: "#17A6E7" }
-                      },
-                      [
-                        _c("i", {
-                          staticClass: "fa fa-calendar-times-o",
-                          staticStyle: { color: "#17A6E7" }
-                        }),
-                        _vm._v("Jun 20, 2020")
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "a",
-                      { staticClass: "btn btn-primary", attrs: { href: "#" } },
-                      [_vm._v("Read More")]
-                    )
-                  ])
-                ]
-              )
-            ])
-          ])
+          _c("h1", [_vm._v("Event")])
         ])
-      ]
-    )
+      ])
+    ])
   },
   function() {
     var _vm = this
@@ -40799,7 +40666,7 @@ var render = function() {
         },
         [
           _c("b-jumbotron", {
-            staticClass: "jevent",
+            staticClass: "jevent align-middle",
             attrs: { "text-variant": "black" },
             scopedSlots: _vm._u([
               {
@@ -40814,7 +40681,7 @@ var render = function() {
                 fn: function() {
                   return [
                     _vm._v(
-                      "\n          This is a simple hero unit, a simple jumbotron-style component for calling extra attention to\n          featured content or information. Lorem ipsum dolor sit amet consectetur adipisicing elit.\n          Saepe ratione delectus esse iste repellendus, dolorum nulla vitae veritatis ducimus,\n          quasi quos reprehenderit dignissimos debitis eligendi ab quia iure sit. Obcaecati?\n        "
+                      "\n                This is a simple hero unit, a simple jumbotron-style component for calling extra attention to\n                featured content or information. Lorem ipsum dolor sit amet consectetur adipisicing elit.\n                Saepe ratione delectus esse iste repellendus, dolorum nulla vitae veritatis ducimus,\n                quasi quos reprehenderit dignissimos debitis eligendi ab quia iure sit. Obcaecati?\n            "
                     )
                   ]
                 },
@@ -40865,7 +40732,9 @@ var render = function() {
                 _vm._v(" "),
                 _c("p", { staticStyle: { "text-align": "left" } }, [
                   _vm._v("Fasilitas : Sertifikat, Snack & Merchandise")
-                ])
+                ]),
+                _vm._v(" "),
+                _c("br")
               ]),
               _vm._v(" "),
               _c(
@@ -40878,8 +40747,20 @@ var render = function() {
                   _vm._v(" "),
                   _c("P", { staticStyle: { "text-align": "justify" } }, [
                     _vm._v(
-                      "\n            Lorem ipsum dolor sit amet consectetur adipisicing elit.\n            Laborum quidem quos maiores asperiores qui laudantium fugiat consequuntur.\n            Voluptatum saepe dignissimos facere consectetur,\n            quam officiis excepturi! Quibusdam veniam praesentium magni sed.\n            Lorem ipsum dolor sit amet consectetur adipisicing elit.\n            Aliquam tenetur culpa praesentium est odio impedit consequuntur totam quidem nisi! Fugit,eligendi.\n            Praesentium corrupti reprehenderit cupiditate blanditiis voluptatem totam voluptatibus architecto!\n          "
+                      "\n                    Lorem ipsum dolor sit amet consectetur adipisicing elit.\n                    Laborum quidem quos maiores asperiores qui laudantium fugiat consequuntur.\n                    Voluptatum saepe dignissimos facere consectetur,\n                    quam officiis excepturi! Quibusdam veniam praesentium magni sed.\n                    Lorem ipsum dolor sit amet consectetur adipisicing elit.\n                    Aliquam tenetur culpa praesentium est odio impedit consequuntur totam quidem nisi!\n                    Fugit,eligendi.\n                    Praesentium corrupti reprehenderit cupiditate blanditiis voluptatem totam voluptatibus\n                    architecto!\n                "
                     )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "text-center" }, [
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://s.kaskus.id/r540x540/images/2019/05/02/10419174_20190502042606.jpg",
+                        alt: "",
+                        width: "150px",
+                        height: "150px"
+                      }
+                    })
                   ])
                 ],
                 1
@@ -56796,8 +56677,8 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/faqih/Documents/webprofile-plugin/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/faqih/Documents/webprofile-plugin/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/felix/Documents/PLUGIN/plugin-apps-web-profile/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/felix/Documents/PLUGIN/plugin-apps-web-profile/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

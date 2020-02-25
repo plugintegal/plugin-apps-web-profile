@@ -139,43 +139,20 @@
                     </div>
                 </div>
                 <div class="row mx-auto">
-                    <div class="col col-lg-4">
+                    <div v-for="(data, index) in events" :key="index">
+                        <div class="col col-lg-4">
                         <div class="card mx-auto" style="width: 19rem">
                             <div class="align-center">
                                 <img class="card-img-top" src="asset/img/jumbotron.png" alt="Card image cap">
                                 <div class="card-body">
-                                    <h5 class="card-title justify-content-center">SEMINAR POLTEK HARBER LINUX USER GROUP
-                                        - INDONESIA</h5>
+                                    <h5 class="card-title justify-content-center">{{ data.title }}</h5>
                                     <p class="card-text" style="color: #17A6E7"><i class="fa fa-calendar-times-o"
-                                            style="color: #17A6E7"></i>Jun 20, 2020</p>
+                                            style="color: #17A6E7"></i>{{ data.opened }}</p>
                                     <a href="#" class="btn btn-primary">Read More</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col col-lg-4">
-                        <div class="card mx-auto" style="width: 19rem">
-                            <img class="card-img-top" src="asset/img/jumbotron.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title justify-content-center">SEMINAR POLTEK HARBER LINUX USER GROUP -
-                                    INDONESIA</h5>
-                                <p class="card-text" style="color: #17A6E7"><i class="fa fa-calendar-times-o"
-                                        style="color: #17A6E7"></i>Jun 20, 2020</p>
-                                <a href="#" class="btn btn-primary">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col col-lg-4">
-                        <div class="card mx-auto" style="width: 19rem">
-                            <img class="card-img-top" src="asset/img/jumbotron.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title justify-content-center">SEMINAR POLTEK HARBER LINUX USER GROUP -
-                                    INDONESIA</h5>
-                                <p class="card-text" style="color: #17A6E7"><i class="fa fa-calendar-times-o"
-                                        style="color: #17A6E7"></i>Jun 20, 2020</p>
-                                <a href="#" class="btn btn-primary">Read More</a>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -307,17 +284,21 @@
         components: {
             "app-navbar": Navbar
         },
-        name: "wp",
-        data() {
+        name: 'wp',
+        data(){
             return {
                 events: []
             };
         },
         mounted() {
-            axios.get('https://plugin-apps-server.herokuapps.com/api/event').then(response => this.events = response
-                .data);
+            axios.get('http://plugin-apps-server.herokuapp.com/api/event').then( (response) => {
+                this.events = response.data.results;
+                console.log(this.events)
+                }
+            );
         }
-    };
+    }
+    
 
 </script>
 <style>
