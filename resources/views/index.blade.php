@@ -16,6 +16,7 @@
 	<link rel="stylesheet" href="asset/vendors/nice-select/css/nice-select.css">
 	<link rel="stylesheet" href="asset/vendors/animate-css/animate.css">
 	<link rel="stylesheet" href="asset/vendors/flaticon/flaticon.css">
+	<script src="asset/js/jquery-3.2.1.min.js"></script>
 	<!-- main css -->
 	<link rel="stylesheet" href="asset/css/style.css">
 </head>
@@ -55,7 +56,7 @@
     
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="asset/js/jquery-3.2.1.min.js"></script>
+	
 	<script src="asset/js/popper.js"></script>
 	<script src="asset/js/bootstrap.min.js"></script>
 	<script src="asset/js/stellar.js"></script>
@@ -72,6 +73,7 @@
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
 	<script src="asset/js/theme.js"></script>
 	<script src="asset/js/gmaps.min.js"></script>
+	<script src="asset/js/jquery.inview.js"></script>
 </body>
 
 </html>

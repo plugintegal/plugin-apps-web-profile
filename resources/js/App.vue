@@ -11,7 +11,7 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="home_left_img">
-                                <img class="img-fluid" src="asset/img/penguin_banner.png" alt="">
+                                <img class="img-fluid show-on-scroll" src="asset/img/penguin_banner.png" alt="">
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -50,28 +50,36 @@
         <!-- Endome -->
         <!-- About -->
         <section class="about_us_area section_gap_top" id="about">
-            <div class="container">
-                <div class="row about_content align-items-center">
-                    <div class="col-lg-6">
-                        <div class="section_content">
-                            <h6>About Us</h6>
-                            <h2 style="color: white; text-align: justify">Poltek Harber Linux User Group <br>Indonesia</h2>
-                            <p style="text-align: justify">Plug-in adalah suatu organisasi atau komunitas studi linux di
-                                Politeknik Harapan
-                                Bersama Tegal.
-                                Kami
-                                mempunyai tujuan untuk mengenalkan dan mengOpen Source kan mahasiswa dan masyarakat
-                                umum dengan
-                                berbagai kegiatan yang nantinya bisa membuka wawasan serta mindset OpenSource guna
-                                untuk
-                                mengurangi
-                                angka pembajakan Software di Indonesia.</p>
-                            <a class="primary_btn" href="#">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="about_us_image_box justify-content-center">
-                            <img class="img-fluid w-100" src="asset/img/about_img.png" alt="">
+            <div class="demo">
+                <div data-class-in="" data-class-out="out-animation">
+                    <div class="container">
+                        <div class="row about_content align-items-center">
+                            <div class="col-lg-6">
+                                <div class="section_content slideInLeft">
+                                    <h6>About Us</h6>
+                                    <h2 style="color: white; text-align: justify">Poltek Harber Linux User Group
+                                        <br>Indonesia</h2>
+                                    <p style="text-align: justify">Plug-in adalah suatu organisasi atau komunitas studi
+                                        linux di
+                                        Politeknik Harapan
+                                        Bersama Tegal.
+                                        Kami
+                                        mempunyai tujuan untuk mengenalkan dan mengOpen Source kan mahasiswa dan
+                                        masyarakat
+                                        umum dengan
+                                        berbagai kegiatan yang nantinya bisa membuka wawasan serta mindset OpenSource
+                                        guna
+                                        untuk
+                                        mengurangi
+                                        angka pembajakan Software di Indonesia.</p>
+                                    <a class="primary_btn" href="#">Learn More</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="about_us_image_box justify-content-center">
+                                    <img class="img-fluid w-100" src="asset/img/about_img.png" alt="">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -135,21 +143,13 @@
                         <div class="card mx-auto" style="width: 19rem">
                             <div class="align-center">
                                 <img class="card-img-top" src="asset/img/jumbotron.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title justify-content-center">SEMINAR POLTEK HARBER LINUX USER GROUP - INDONESIA</h5>
-                                <p class="card-text" style="color: #17A6E7"><i class="fa fa-calendar-times-o" style="color: #17A6E7"></i>Jun 20, 2020</p>
-                                <a href="#" class="btn btn-primary">Read More</a>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col col-lg-4">
-                        <div class="card mx-auto" style="width: 19rem">
-                            <img class="card-img-top" src="asset/img/jumbotron.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title justify-content-center">SEMINAR POLTEK HARBER LINUX USER GROUP - INDONESIA</h5>
-                                <p class="card-text" style="color: #17A6E7"><i class="fa fa-calendar-times-o" style="color: #17A6E7"></i>Jun 20, 2020</p>
-                                <a href="#" class="btn btn-primary">Read More</a>
+                                <div class="card-body">
+                                    <h5 class="card-title justify-content-center">SEMINAR POLTEK HARBER LINUX USER GROUP
+                                        - INDONESIA</h5>
+                                    <p class="card-text" style="color: #17A6E7"><i class="fa fa-calendar-times-o"
+                                            style="color: #17A6E7"></i>Jun 20, 2020</p>
+                                    <a href="#" class="btn btn-primary">Read More</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -157,22 +157,26 @@
                         <div class="card mx-auto" style="width: 19rem">
                             <img class="card-img-top" src="asset/img/jumbotron.png" alt="Card image cap">
                             <div class="card-body">
-                                <h5 class="card-title justify-content-center">SEMINAR POLTEK HARBER LINUX USER GROUP - INDONESIA</h5>
-                                <p class="card-text" style="color: #17A6E7"><i class="fa fa-calendar-times-o" style="color: #17A6E7"></i>Jun 20, 2020</p>
+                                <h5 class="card-title justify-content-center">SEMINAR POLTEK HARBER LINUX USER GROUP -
+                                    INDONESIA</h5>
+                                <p class="card-text" style="color: #17A6E7"><i class="fa fa-calendar-times-o"
+                                        style="color: #17A6E7"></i>Jun 20, 2020</p>
                                 <a href="#" class="btn btn-primary">Read More</a>
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="col col-lg-4">
-                        <div class="card" style="width: 18rem;">
+                    <div class="col col-lg-4">
+                        <div class="card mx-auto" style="width: 19rem">
                             <img class="card-img-top" src="asset/img/jumbotron.png" alt="Card image cap">
                             <div class="card-body">
-                                <h5 class="card-title justify-content-center">TALK-SHOW POLTEK HARBER LINUX USER GROUP - INDONESIA</h5>
-                                <p class="card-text" style="color: #17A6E7"><i class="fa fa-calendar-times-o" style="color: #17A6E7"></i>Jun 20, 2020</p>
+                                <h5 class="card-title justify-content-center">SEMINAR POLTEK HARBER LINUX USER GROUP -
+                                    INDONESIA</h5>
+                                <p class="card-text" style="color: #17A6E7"><i class="fa fa-calendar-times-o"
+                                        style="color: #17A6E7"></i>Jun 20, 2020</p>
                                 <a href="#" class="btn btn-primary">Read More</a>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </section>
@@ -189,10 +193,11 @@
                         </ul>
                         <ul>
                             <h3><b style="color: white">Contact Information</b></h3>
-                            <div class="row text-center" >
+                            <div class="row text-center">
                                 <div class="col-md-6">
                                     <aside class="f_widget ab_widget">
-                                        <p align="justify" style="color: white">Sumbrodo Perumahan Ndalem Parikesit No.B7, Slerok, Kota
+                                        <p align="justify" style="color: white">Sumbrodo Perumahan Ndalem Parikesit
+                                            No.B7, Slerok, Kota
                                             Tegal. <a style="color: #2F4574"
                                                 href="https://www.google.co.id/maps/place/Ndalem+Parikesit/@-6.8811978,109.1431099,3a,75y,175.22h,81.96t/data=!3m6!1e1!3m4!1s7U4CiCrUYuiXnYauUIYHNA!2e0!7i13312!8i6656!4m5!3m4!1s0x2e6fb93464361e0f:0xca4bd2a90586ebbc!8m2!3d-6.8814505!4d109.1444167">View
                                                 Map</a></p>
@@ -200,7 +205,8 @@
                                 </div>
                                 <div class="col-md-6">
                                     <aside class="f_widget ab_widget">
-                                        <p style="color: white">Phone: +62 878-4811-4793 <br> Email: <i>plugintegal@gmail.com</i></p>
+                                        <p style="color: white">Phone: +62 878-4811-4793 <br> Email:
+                                            <i>plugintegal@gmail.com</i></p>
                                     </aside>
                                 </div>
                             </div>
@@ -254,17 +260,46 @@
 </template>
 
 <script>
-    window.onscroll = function () {
-        scrollFunction()
-    };
+    window.addEventListener('scroll', function () {
+        var scroll = window.requestAnimationFrame ||
+            function (callback) {
+                window.setTimeout(callback, 1000 / 60)
+            };
 
-    function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            document.getElementById("navbar").style.top = "0";
-        } else {
-            document.getElementById("navbar").style.top = "-50px";
+        var elementsToShow = document.querySelectorAll('.show-on-scroll');
+
+        function loop() {
+
+            elementsToShow.forEach(function (element) {
+                if (isElementInViewport(element)) {
+                    element.classList.add('is-visible');
+                } else {
+                    element.classList.remove('is-visible');
+                }
+            });
+
+            scroll(loop);
         }
-    }
+
+        loop();
+
+        function isElementInViewport(el) {
+            // special bonus for those using jQuery
+            if (typeof jQuery === "function" && el instanceof jQuery) {
+                el = el[0];
+            }
+            var rect = el.getBoundingClientRect();
+            return (
+                (rect.top <= 0 &&
+                    rect.bottom >= 0) ||
+                (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.top <= (window.innerHeight || document.documentElement.clientHeight)) ||
+                (rect.top >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+            );
+        }
+
+    })
 
     import axios from "axios";
     import Navbar from "./components/Navbar.vue";
@@ -286,10 +321,16 @@
 
 </script>
 <style>
-.section_gap_footer{
-    padding-top: 100px;
-    padding-bottom: 10px;
-}
+    .section_gap_footer {
+        padding-top: 100px;
+        padding-bottom: 10px;
+    }
 
+    .out-animation {
+        opacity: 0;
+        -webkit-transform: translateX(80px);
+        -moz-transform: translateX(80px);
+        transform: translateX(80px);
+    }
 
 </style>

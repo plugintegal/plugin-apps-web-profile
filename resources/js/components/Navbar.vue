@@ -13,11 +13,11 @@
                             <span class="icon-bar"></span>
                         </button>
                         <div class="collapse navbar-collapse offset" id="navbarSupportedContent" style="margin-right: 20px">
-                            <ul class="nav navbar-nav menu_nav justify-content-end">
-                                <li class="nav-item" href="#about"><a class="nav-link" href="#about">About</a></li>
-                                <li class="nav-item" href=""><a class="nav-link" href="#squad">Squad</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#event">Event</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                            <ul class="nav navbar-nav menu_nav justify-content-end" id="navbar_area">
+                                <li class="nav-item" href="#about"><a class="nav-link click" href="#about">About</a></li>
+                                <li class="nav-item" href=""><a class="nav-link click" href="#squad">Squad</a></li>
+                                <li class="nav-item"><a class="nav-link click" href="#event">Event</a></li>
+                                <li class="nav-item"><a class="nav-link click" href="#contact">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -32,6 +32,22 @@
     export default {
 
     }
+
+    $(document).ready(function(){
+        $('.click').click(function(event){
+            if(this.hash != ""){
+                event.preventDefault();
+
+                var hash = this.hash;
+
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                },800, function(){
+                    window.location.hash = hash;
+                });
+            }
+        });
+    });
 
 </script>
 

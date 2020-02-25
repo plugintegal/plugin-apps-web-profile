@@ -1955,18 +1955,42 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-window.onscroll = function () {
-  scrollFunction();
-};
+//
+//
+//
+//
+//
+//
+window.addEventListener('scroll', function () {
+  var scroll = window.requestAnimationFrame || function (callback) {
+    window.setTimeout(callback, 1000 / 60);
+  };
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("navbar").style.top = "0";
-  } else {
-    document.getElementById("navbar").style.top = "-50px";
+  var elementsToShow = document.querySelectorAll('.show-on-scroll');
+
+  function loop() {
+    elementsToShow.forEach(function (element) {
+      if (isElementInViewport(element)) {
+        element.classList.add('is-visible');
+      } else {
+        element.classList.remove('is-visible');
+      }
+    });
+    scroll(loop);
   }
-}
 
+  loop();
+
+  function isElementInViewport(el) {
+    // special bonus for those using jQuery
+    if (typeof jQuery === "function" && el instanceof jQuery) {
+      el = el[0];
+    }
+
+    var rect = el.getBoundingClientRect();
+    return rect.top <= 0 && rect.bottom >= 0 || rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) && rect.top <= (window.innerHeight || document.documentElement.clientHeight) || rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+  }
+});
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2262,6 +2286,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({});
+$(document).ready(function () {
+  $('.click').click(function (event) {
+    if (this.hash != "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function () {
+        window.location.hash = hash;
+      });
+    }
+  });
+});
 
 /***/ }),
 
@@ -35628,7 +35665,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "\n.section_gap_footer{\n    padding-top: 100px;\n    padding-bottom: 10px;\n}\n\n\n", ""]);
+exports.push([module.i, "\n.section_gap_footer {\n    padding-top: 100px;\n    padding-bottom: 10px;\n}\n.out-animation {\n    opacity: 0;\n    transform: translateX(80px);\n}\n\n", ""]);
 
 // exports
 
@@ -40133,7 +40170,7 @@ var staticRenderFns = [
               _c("div", { staticClass: "col-lg-6" }, [
                 _c("div", { staticClass: "home_left_img" }, [
                   _c("img", {
-                    staticClass: "img-fluid",
+                    staticClass: "img-fluid show-on-scroll",
                     attrs: { src: "asset/img/penguin_banner.png", alt: "" }
                   })
                 ])
@@ -40187,47 +40224,84 @@ var staticRenderFns = [
       "section",
       { staticClass: "about_us_area section_gap_top", attrs: { id: "about" } },
       [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "row about_content align-items-center" }, [
-            _c("div", { staticClass: "col-lg-6" }, [
-              _c("div", { staticClass: "section_content" }, [
-                _c("h6", [_vm._v("About Us")]),
-                _vm._v(" "),
+        _c("div", { staticClass: "demo" }, [
+          _c(
+            "div",
+            {
+              attrs: { "data-class-in": "", "data-class-out": "out-animation" }
+            },
+            [
+              _c("div", { staticClass: "container" }, [
                 _c(
-                  "h2",
-                  { staticStyle: { color: "white", "text-align": "justify" } },
+                  "div",
+                  { staticClass: "row about_content align-items-center" },
                   [
-                    _vm._v("Poltek Harber Linux User Group "),
-                    _c("br"),
-                    _vm._v("Indonesia")
+                    _c("div", { staticClass: "col-lg-6" }, [
+                      _c(
+                        "div",
+                        { staticClass: "section_content slideInLeft" },
+                        [
+                          _c("h6", [_vm._v("About Us")]),
+                          _vm._v(" "),
+                          _c(
+                            "h2",
+                            {
+                              staticStyle: {
+                                color: "white",
+                                "text-align": "justify"
+                              }
+                            },
+                            [
+                              _vm._v(
+                                "Poltek Harber Linux User Group\n                                    "
+                              ),
+                              _c("br"),
+                              _vm._v("Indonesia")
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "p",
+                            { staticStyle: { "text-align": "justify" } },
+                            [
+                              _vm._v(
+                                "Plug-in adalah suatu organisasi atau komunitas studi\n                                    linux di\n                                    Politeknik Harapan\n                                    Bersama Tegal.\n                                    Kami\n                                    mempunyai tujuan untuk mengenalkan dan mengOpen Source kan mahasiswa dan\n                                    masyarakat\n                                    umum dengan\n                                    berbagai kegiatan yang nantinya bisa membuka wawasan serta mindset OpenSource\n                                    guna\n                                    untuk\n                                    mengurangi\n                                    angka pembajakan Software di Indonesia."
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "a",
+                            {
+                              staticClass: "primary_btn",
+                              attrs: { href: "#" }
+                            },
+                            [_vm._v("Learn More")]
+                          )
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-lg-6" }, [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "about_us_image_box justify-content-center"
+                        },
+                        [
+                          _c("img", {
+                            staticClass: "img-fluid w-100",
+                            attrs: { src: "asset/img/about_img.png", alt: "" }
+                          })
+                        ]
+                      )
+                    ])
                   ]
-                ),
-                _vm._v(" "),
-                _c("p", { staticStyle: { "text-align": "justify" } }, [
-                  _vm._v(
-                    "Plug-in adalah suatu organisasi atau komunitas studi linux di\n                            Politeknik Harapan\n                            Bersama Tegal.\n                            Kami\n                            mempunyai tujuan untuk mengenalkan dan mengOpen Source kan mahasiswa dan masyarakat\n                            umum dengan\n                            berbagai kegiatan yang nantinya bisa membuka wawasan serta mindset OpenSource guna\n                            untuk\n                            mengurangi\n                            angka pembajakan Software di Indonesia."
-                  )
-                ]),
-                _vm._v(" "),
-                _c("a", { staticClass: "primary_btn", attrs: { href: "#" } }, [
-                  _vm._v("Learn More")
-                ])
+                )
               ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-lg-6" }, [
-              _c(
-                "div",
-                { staticClass: "about_us_image_box justify-content-center" },
-                [
-                  _c("img", {
-                    staticClass: "img-fluid w-100",
-                    attrs: { src: "asset/img/about_img.png", alt: "" }
-                  })
-                ]
-              )
-            ])
-          ])
+            ]
+          )
         ])
       ]
     )
@@ -40341,7 +40415,7 @@ var staticRenderFns = [
                         { staticClass: "card-title justify-content-center" },
                         [
                           _vm._v(
-                            "SEMINAR POLTEK HARBER LINUX USER GROUP - INDONESIA"
+                            "SEMINAR POLTEK HARBER LINUX USER GROUP\n                                    - INDONESIA"
                           )
                         ]
                       ),
@@ -40397,7 +40471,7 @@ var staticRenderFns = [
                       { staticClass: "card-title justify-content-center" },
                       [
                         _vm._v(
-                          "SEMINAR POLTEK HARBER LINUX USER GROUP - INDONESIA"
+                          "SEMINAR POLTEK HARBER LINUX USER GROUP -\n                                INDONESIA"
                         )
                       ]
                     ),
@@ -40449,7 +40523,7 @@ var staticRenderFns = [
                       { staticClass: "card-title justify-content-center" },
                       [
                         _vm._v(
-                          "SEMINAR POLTEK HARBER LINUX USER GROUP - INDONESIA"
+                          "SEMINAR POLTEK HARBER LINUX USER GROUP -\n                                INDONESIA"
                         )
                       ]
                     ),
@@ -40529,7 +40603,7 @@ var staticRenderFns = [
                         },
                         [
                           _vm._v(
-                            "Sumbrodo Perumahan Ndalem Parikesit No.B7, Slerok, Kota\n                                        Tegal. "
+                            "Sumbrodo Perumahan Ndalem Parikesit\n                                        No.B7, Slerok, Kota\n                                        Tegal. "
                           ),
                           _c(
                             "a",
@@ -40556,7 +40630,9 @@ var staticRenderFns = [
                       _c("p", { staticStyle: { color: "white" } }, [
                         _vm._v("Phone: +62 878-4811-4793 "),
                         _c("br"),
-                        _vm._v(" Email: "),
+                        _vm._v(
+                          " Email:\n                                        "
+                        ),
                         _c("i", [_vm._v("plugintegal@gmail.com")])
                       ])
                     ])
@@ -41285,7 +41361,9 @@ var staticRenderFns = [
                   _c(
                     "ul",
                     {
-                      staticClass: "nav navbar-nav menu_nav justify-content-end"
+                      staticClass:
+                        "nav navbar-nav menu_nav justify-content-end",
+                      attrs: { id: "navbar_area" }
                     },
                     [
                       _c(
@@ -41295,7 +41373,7 @@ var staticRenderFns = [
                           _c(
                             "a",
                             {
-                              staticClass: "nav-link",
+                              staticClass: "nav-link click",
                               attrs: { href: "#about" }
                             },
                             [_vm._v("About")]
@@ -41310,7 +41388,7 @@ var staticRenderFns = [
                           _c(
                             "a",
                             {
-                              staticClass: "nav-link",
+                              staticClass: "nav-link click",
                               attrs: { href: "#squad" }
                             },
                             [_vm._v("Squad")]
@@ -41322,7 +41400,7 @@ var staticRenderFns = [
                         _c(
                           "a",
                           {
-                            staticClass: "nav-link",
+                            staticClass: "nav-link click",
                             attrs: { href: "#event" }
                           },
                           [_vm._v("Event")]
@@ -41333,7 +41411,7 @@ var staticRenderFns = [
                         _c(
                           "a",
                           {
-                            staticClass: "nav-link",
+                            staticClass: "nav-link click",
                             attrs: { href: "#contact" }
                           },
                           [_vm._v("Contact")]
