@@ -49,23 +49,17 @@
     </b-container>
     <!-- akhir detail event -->
 
-    <!-- daftar -->
-    <div class="daftar">
-    <b-container class="bv-example-row">
-    <div role="tablist" style="margin-bottom: 10px">
-      <div class="row justify-content-center d-flex" >
-      <div class="col-6">
-      <b-card no-body class="mb-1" >
-        <b-card-header header-tag="header" class="p-1 text-center justify-content-center d-flex" role="tab">
-          <b-button block href="#" v-b-toggle.accordion variant="info" style="width :150px">Daftar</b-button>
-        </b-card-header>
-        <b-collapse id="accordion" accordion="my-accordion" role="tabpanel">
-          <b-card-body>
+<div class="daftar mb-5 text-center">
+  <b-container>
+  <b-button v-b-toggle.collapse-1 class="tombol">Daftar</b-button>
+  <b-collapse id="collapse-1" class="mt-2">
+    <b-card  class="form">
+      <b-card-body>
             <!-- isi daftar -->
             <div>
               <b-form @submit="onSubmit" @reset="onReset" v-if="show">
                 <!-- nama -->
-                <b-form-group id="input-group-2" label="Nama lengkap:" label-for="input-2">
+                <b-form-group id="input-group-2" label-for="input-2">
                   <b-form-input
                     id="input-2"
                     v-model="form.name"
@@ -74,7 +68,7 @@
                   ></b-form-input>
                 </b-form-group>
                 <!-- asal -->
-                <b-form-group id="input-group-4" label="Asal Institusi:" label-for="input-4">
+                <b-form-group id="input-group-4" label-for="input-4">
                   <b-form-input
                     id="input-4"
                     v-model="form.institusi"
@@ -83,7 +77,7 @@
                   ></b-form-input>
                 </b-form-group>
                 <!-- email -->
-                <b-form-group id="input-group-1" label="Email:" label-for="input-1">
+                <b-form-group id="input-group-1" label-for="input-1">
                   <b-form-input
                     id="input-1"
                     v-model="form.email"
@@ -93,7 +87,7 @@
                   ></b-form-input>
                 </b-form-group>
                 <!-- Nomor HP -->
-                <b-form-group id="input-group-5" label="Nomor HP:" label-for="input-5">
+                <b-form-group id="input-group-5" label-for="input-5">
                   <b-form-input
                     id="input-5"
                     v-model="form.NomorHP"
@@ -102,11 +96,12 @@
                   ></b-form-input>
                 </b-form-group>
                 <!-- Gender -->
-                <b-form-group id="input-group-3" label="jenis kelamin:" label-for="input-3">
+                <b-form-group id="input-group-3" label-for="input-3">
                   <b-form-select id="input-3" v-model="form.gender" :options="gender" required></b-form-select>
                 </b-form-group>
+                <br>
                 <!-- Alamat -->
-                <b-form-group id="input-group-6" label="Alamat:" label-for="input-6">
+                <b-form-group id="input-group-6" label-for="input-6" class="jarak">
                   <b-form-textarea
                     id="textarea"
                     v-model="text"
@@ -123,21 +118,16 @@
                 <!-- Save -->
                 <div class="text-center">
                   <!-- <router-link to="/regis" class="btn btn-primary" type="submit">Daftar</router-link> -->
-                  <b-button type="submit" variant="primary">Submit</b-button>
-                  <b-button type="reset" variant="danger">Reset</b-button>
+                  <b-button type="submit" variant="primary" class="submit">Submit</b-button>
                 </div>
               </b-form>
             </div>
             <!-- akhir isi daftar -->
           </b-card-body>
-        </b-collapse>
-      </b-card>
-      </div>
-      </div>
-    </div>
-    </b-container>
-    </div>
-    <!-- akhir daftar -->
+    </b-card>
+  </b-collapse>
+  </b-container>
+</div>
   </div>
 </template>
 
@@ -155,15 +145,14 @@ export default {
       selected: [], // Must be an array reference!
       options: [
         { text: "Seminar", value: "Seminar" },
-        { text: "Workshop", value: "Workshop" },
-        { text: "TalkShow", value: "TalkShow" }
+        { text: "Workshop", value: "Workshop" }
       ],
 
       form: {
         name: "",
         institusi: "",
         email: "",
-        NomorHP: " ",
+        NomorHP: "",
         gender: null,
         Alamat: ""
       },
@@ -186,10 +175,10 @@ export default {
       // Reset our form values
       this.form.email = "";
       this.form.name = "";
-      this.form.institusi = " ";
-      this.form.NomorHP = " ";
+      this.form.institusi = "";
+      this.form.NomorHP = "";
       this.form.gender = null;
-      this.textArea.Alamat = " ";
+      this.textArea.Alamat = "";
       this.selected;
       // Trick to reset/clear native browser form validation state
       this.show = false;
@@ -211,15 +200,35 @@ export default {
   min-height: 550px;
   background: url(/asset/img/jumbotron.png);
   background-size: cover;
+  margin-top: 30px;
 }
-
 .OPREC1{
   text-align: center;
-
+  margin-top: 50px;
 
 }
-/* .daftar{
-  position:
-
-} */
+.daftar{
+  position: absolute;
+  right: 20%;
+  left: 20%;
+  margin-bottom: 10px;
+  /* background: #16a1e3; */
+  /* width: 30px; */
+}
+.form{
+  background-color: #16a1e3;
+  border: none;
+  border-radius: 20px;
+  text-align: left;
+}
+.jarak{
+  margin-top: 35px;
+}
+.tombol{
+  background: #16a1e3;
+  width: 150px;
+}
+.submit{
+  background: #1676bd;
+}
 </style>
