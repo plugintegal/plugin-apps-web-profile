@@ -2136,16 +2136,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2162,15 +2152,12 @@ __webpack_require__.r(__webpack_exports__);
       }, {
         text: "Workshop",
         value: "Workshop"
-      }, {
-        text: "TalkShow",
-        value: "TalkShow"
       }],
       form: {
         name: "",
         institusi: "",
         email: "",
-        NomorHP: " ",
+        NomorHP: "",
         gender: null,
         Alamat: ""
       },
@@ -2198,10 +2185,10 @@ __webpack_require__.r(__webpack_exports__);
 
       this.form.email = "";
       this.form.name = "";
-      this.form.institusi = " ";
-      this.form.NomorHP = " ";
+      this.form.institusi = "";
+      this.form.NomorHP = "";
       this.form.gender = null;
-      this.textArea.Alamat = " ";
+      this.textArea.Alamat = "";
       this.selected; // Trick to reset/clear native browser form validation state
 
       this.show = false;
@@ -35647,7 +35634,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.jevent {\n  min-height: 550px;\n  background: url(/asset/img/jumbotron.png);\n  background-size: cover;\n}\n.OPREC1{\n  text-align: center;\n}\n/* .daftar{\n  position:\n\n} */\n", ""]);
+exports.push([module.i, "\n.jevent {\n  min-height: 550px;\n  background: url(/asset/img/jumbotron.png);\n  background-size: cover;\n  margin-top: 30px;\n}\n.OPREC1{\n  text-align: center;\n  margin-top: 50px;\n}\n.daftar{\n  position: absolute;\n  right: 20%;\n  left: 20%;\n  margin-bottom: 10px;\n  /* background: #16a1e3; */\n  /* width: 30px; */\n}\n.form{\n  background-color: #16a1e3;\n  border: none;\n  border-radius: 20px;\n  text-align: left;\n}\n.jarak{\n  margin-top: 35px;\n}\n.tombol{\n  background: #16a1e3;\n  width: 150px;\n}\n.submit{\n  background: #1676bd;\n}\n", ""]);
 
 // exports
 
@@ -40751,7 +40738,7 @@ var render = function() {
                 fn: function() {
                   return [
                     _vm._v(
-                      "\n        This is a simple hero unit, a simple jumbotron-style component for calling extra attention to\n        featured content or information. Lorem ipsum dolor sit amet consectetur adipisicing elit.\n        Saepe ratione delectus esse iste repellendus, dolorum nulla vitae veritatis ducimus,\n        quasi quos reprehenderit dignissimos debitis eligendi ab quia iure sit. Obcaecati?\n      "
+                      "\n          This is a simple hero unit, a simple jumbotron-style component for calling extra attention to\n          featured content or information. Lorem ipsum dolor sit amet consectetur adipisicing elit.\n          Saepe ratione delectus esse iste repellendus, dolorum nulla vitae veritatis ducimus,\n          quasi quos reprehenderit dignissimos debitis eligendi ab quia iure sit. Obcaecati?\n        "
                     )
                   ]
                 },
@@ -40815,7 +40802,7 @@ var render = function() {
                   _vm._v(" "),
                   _c("P", { staticStyle: { "text-align": "justify" } }, [
                     _vm._v(
-                      "\n          Lorem ipsum dolor sit amet consectetur adipisicing elit.\n          Laborum quidem quos maiores asperiores qui laudantium fugiat consequuntur.\n          Voluptatum saepe dignissimos facere consectetur,\n          quam officiis excepturi! Quibusdam veniam praesentium magni sed.\n          Lorem ipsum dolor sit amet consectetur adipisicing elit.\n          Aliquam tenetur culpa praesentium est odio impedit consequuntur totam quidem nisi! Fugit,eligendi.\n          Praesentium corrupti reprehenderit cupiditate blanditiis voluptatem totam voluptatibus architecto!\n        "
+                      "\n            Lorem ipsum dolor sit amet consectetur adipisicing elit.\n            Laborum quidem quos maiores asperiores qui laudantium fugiat consequuntur.\n            Voluptatum saepe dignissimos facere consectetur,\n            quam officiis excepturi! Quibusdam veniam praesentium magni sed.\n            Lorem ipsum dolor sit amet consectetur adipisicing elit.\n            Aliquam tenetur culpa praesentium est odio impedit consequuntur totam quidem nisi! Fugit,eligendi.\n            Praesentium corrupti reprehenderit cupiditate blanditiis voluptatem totam voluptatibus architecto!\n          "
                     )
                   ])
                 ],
@@ -40832,365 +40819,289 @@ var render = function() {
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "daftar" },
+        { staticClass: "daftar mb-5 text-center" },
         [
-          _c("b-container", { staticClass: "bv-example-row" }, [
-            _c(
-              "div",
-              {
-                staticStyle: { "margin-bottom": "10px" },
-                attrs: { role: "tablist" }
-              },
-              [
-                _c(
-                  "div",
-                  { staticClass: "row justify-content-center d-flex" },
-                  [
-                    _c(
-                      "div",
-                      { staticClass: "col-6" },
-                      [
+          _c(
+            "b-container",
+            [
+              _c(
+                "b-button",
+                {
+                  directives: [
+                    {
+                      name: "b-toggle",
+                      rawName: "v-b-toggle.collapse-1",
+                      modifiers: { "collapse-1": true }
+                    }
+                  ],
+                  staticClass: "tombol"
+                },
+                [_vm._v("Daftar")]
+              ),
+              _vm._v(" "),
+              _c(
+                "b-collapse",
+                { staticClass: "mt-2", attrs: { id: "collapse-1" } },
+                [
+                  _c(
+                    "b-card",
+                    { staticClass: "form" },
+                    [
+                      _c("b-card-body", [
                         _c(
-                          "b-card",
-                          { staticClass: "mb-1", attrs: { "no-body": "" } },
+                          "div",
                           [
-                            _c(
-                              "b-card-header",
-                              {
-                                staticClass:
-                                  "p-1 text-center justify-content-center d-flex",
-                                attrs: { "header-tag": "header", role: "tab" }
-                              },
-                              [
-                                _c(
-                                  "b-button",
+                            _vm.show
+                              ? _c(
+                                  "b-form",
                                   {
-                                    directives: [
-                                      {
-                                        name: "b-toggle",
-                                        rawName: "v-b-toggle.accordion",
-                                        modifiers: { accordion: true }
-                                      }
-                                    ],
-                                    staticStyle: { width: "150px" },
-                                    attrs: {
-                                      block: "",
-                                      href: "#",
-                                      variant: "info"
+                                    on: {
+                                      submit: _vm.onSubmit,
+                                      reset: _vm.onReset
                                     }
                                   },
-                                  [_vm._v("Daftar")]
-                                )
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "b-collapse",
-                              {
-                                attrs: {
-                                  id: "accordion",
-                                  accordion: "my-accordion",
-                                  role: "tabpanel"
-                                }
-                              },
-                              [
-                                _c("b-card-body", [
-                                  _c(
-                                    "div",
-                                    [
-                                      _vm.show
-                                        ? _c(
-                                            "b-form",
-                                            {
-                                              on: {
-                                                submit: _vm.onSubmit,
-                                                reset: _vm.onReset
-                                              }
+                                  [
+                                    _c(
+                                      "b-form-group",
+                                      {
+                                        attrs: {
+                                          id: "input-group-2",
+                                          "label-for": "input-2"
+                                        }
+                                      },
+                                      [
+                                        _c("b-form-input", {
+                                          attrs: {
+                                            id: "input-2",
+                                            required: "",
+                                            placeholder: "Ketikan nama"
+                                          },
+                                          model: {
+                                            value: _vm.form.name,
+                                            callback: function($$v) {
+                                              _vm.$set(_vm.form, "name", $$v)
                                             },
-                                            [
-                                              _c(
-                                                "b-form-group",
-                                                {
-                                                  attrs: {
-                                                    id: "input-group-2",
-                                                    label: "Nama lengkap:",
-                                                    "label-for": "input-2"
-                                                  }
-                                                },
-                                                [
-                                                  _c("b-form-input", {
-                                                    attrs: {
-                                                      id: "input-2",
-                                                      required: "",
-                                                      placeholder:
-                                                        "Ketikan nama"
-                                                    },
-                                                    model: {
-                                                      value: _vm.form.name,
-                                                      callback: function($$v) {
-                                                        _vm.$set(
-                                                          _vm.form,
-                                                          "name",
-                                                          $$v
-                                                        )
-                                                      },
-                                                      expression: "form.name"
-                                                    }
-                                                  })
-                                                ],
-                                                1
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "b-form-group",
-                                                {
-                                                  attrs: {
-                                                    id: "input-group-4",
-                                                    label: "Asal Institusi:",
-                                                    "label-for": "input-4"
-                                                  }
-                                                },
-                                                [
-                                                  _c("b-form-input", {
-                                                    attrs: {
-                                                      id: "input-4",
-                                                      required: "",
-                                                      placeholder:
-                                                        "Ketikan asal institusi"
-                                                    },
-                                                    model: {
-                                                      value: _vm.form.institusi,
-                                                      callback: function($$v) {
-                                                        _vm.$set(
-                                                          _vm.form,
-                                                          "institusi",
-                                                          $$v
-                                                        )
-                                                      },
-                                                      expression:
-                                                        "form.institusi"
-                                                    }
-                                                  })
-                                                ],
-                                                1
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "b-form-group",
-                                                {
-                                                  attrs: {
-                                                    id: "input-group-1",
-                                                    label: "Email:",
-                                                    "label-for": "input-1"
-                                                  }
-                                                },
-                                                [
-                                                  _c("b-form-input", {
-                                                    attrs: {
-                                                      id: "input-1",
-                                                      type: "email",
-                                                      required: "",
-                                                      placeholder:
-                                                        "Ketikan Email"
-                                                    },
-                                                    model: {
-                                                      value: _vm.form.email,
-                                                      callback: function($$v) {
-                                                        _vm.$set(
-                                                          _vm.form,
-                                                          "email",
-                                                          $$v
-                                                        )
-                                                      },
-                                                      expression: "form.email"
-                                                    }
-                                                  })
-                                                ],
-                                                1
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "b-form-group",
-                                                {
-                                                  attrs: {
-                                                    id: "input-group-5",
-                                                    label: "Nomor HP:",
-                                                    "label-for": "input-5"
-                                                  }
-                                                },
-                                                [
-                                                  _c("b-form-input", {
-                                                    attrs: {
-                                                      id: "input-5",
-                                                      required: "",
-                                                      placeholder:
-                                                        "Ketikan No HP"
-                                                    },
-                                                    model: {
-                                                      value: _vm.form.NomorHP,
-                                                      callback: function($$v) {
-                                                        _vm.$set(
-                                                          _vm.form,
-                                                          "NomorHP",
-                                                          $$v
-                                                        )
-                                                      },
-                                                      expression: "form.NomorHP"
-                                                    }
-                                                  })
-                                                ],
-                                                1
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "b-form-group",
-                                                {
-                                                  attrs: {
-                                                    id: "input-group-3",
-                                                    label: "jenis kelamin:",
-                                                    "label-for": "input-3"
-                                                  }
-                                                },
-                                                [
-                                                  _c("b-form-select", {
-                                                    attrs: {
-                                                      id: "input-3",
-                                                      options: _vm.gender,
-                                                      required: ""
-                                                    },
-                                                    model: {
-                                                      value: _vm.form.gender,
-                                                      callback: function($$v) {
-                                                        _vm.$set(
-                                                          _vm.form,
-                                                          "gender",
-                                                          $$v
-                                                        )
-                                                      },
-                                                      expression: "form.gender"
-                                                    }
-                                                  })
-                                                ],
-                                                1
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "b-form-group",
-                                                {
-                                                  attrs: {
-                                                    id: "input-group-6",
-                                                    label: "Alamat:",
-                                                    "label-for": "input-6"
-                                                  }
-                                                },
-                                                [
-                                                  _c("b-form-textarea", {
-                                                    attrs: {
-                                                      id: "textarea",
-                                                      placeholder:
-                                                        "Ketikan Alamat",
-                                                      rows: "3",
-                                                      "max-rows": "6"
-                                                    },
-                                                    model: {
-                                                      value: _vm.text,
-                                                      callback: function($$v) {
-                                                        _vm.text = $$v
-                                                      },
-                                                      expression: "text"
-                                                    }
-                                                  }),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "pre",
-                                                    {
-                                                      staticClass: "mt-3 mb-0"
-                                                    },
-                                                    [_vm._v(_vm._s(_vm.Alamat))]
-                                                  )
-                                                ],
-                                                1
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "b-form-group",
-                                                {
-                                                  attrs: {
-                                                    id: "input-group-7",
-                                                    label: "Pilih Acara:",
-                                                    "label-for": "input-7"
-                                                  }
-                                                },
-                                                [
-                                                  _c("b-form-checkbox-group", {
-                                                    attrs: {
-                                                      options: _vm.options,
-                                                      plain: "",
-                                                      stacked: ""
-                                                    },
-                                                    model: {
-                                                      value: _vm.selected,
-                                                      callback: function($$v) {
-                                                        _vm.selected = $$v
-                                                      },
-                                                      expression: "selected"
-                                                    }
-                                                  })
-                                                ],
-                                                1
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "div",
-                                                { staticClass: "text-center" },
-                                                [
-                                                  _c(
-                                                    "b-button",
-                                                    {
-                                                      attrs: {
-                                                        type: "submit",
-                                                        variant: "primary"
-                                                      }
-                                                    },
-                                                    [_vm._v("Submit")]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "b-button",
-                                                    {
-                                                      attrs: {
-                                                        type: "reset",
-                                                        variant: "danger"
-                                                      }
-                                                    },
-                                                    [_vm._v("Reset")]
-                                                  )
-                                                ],
-                                                1
+                                            expression: "form.name"
+                                          }
+                                        })
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "b-form-group",
+                                      {
+                                        attrs: {
+                                          id: "input-group-4",
+                                          "label-for": "input-4"
+                                        }
+                                      },
+                                      [
+                                        _c("b-form-input", {
+                                          attrs: {
+                                            id: "input-4",
+                                            required: "",
+                                            placeholder:
+                                              "Ketikan asal institusi"
+                                          },
+                                          model: {
+                                            value: _vm.form.institusi,
+                                            callback: function($$v) {
+                                              _vm.$set(
+                                                _vm.form,
+                                                "institusi",
+                                                $$v
                                               )
-                                            ],
-                                            1
-                                          )
-                                        : _vm._e()
-                                    ],
-                                    1
-                                  )
-                                ])
-                              ],
-                              1
-                            )
+                                            },
+                                            expression: "form.institusi"
+                                          }
+                                        })
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "b-form-group",
+                                      {
+                                        attrs: {
+                                          id: "input-group-1",
+                                          "label-for": "input-1"
+                                        }
+                                      },
+                                      [
+                                        _c("b-form-input", {
+                                          attrs: {
+                                            id: "input-1",
+                                            type: "email",
+                                            required: "",
+                                            placeholder: "Ketikan Email"
+                                          },
+                                          model: {
+                                            value: _vm.form.email,
+                                            callback: function($$v) {
+                                              _vm.$set(_vm.form, "email", $$v)
+                                            },
+                                            expression: "form.email"
+                                          }
+                                        })
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "b-form-group",
+                                      {
+                                        attrs: {
+                                          id: "input-group-5",
+                                          "label-for": "input-5"
+                                        }
+                                      },
+                                      [
+                                        _c("b-form-input", {
+                                          attrs: {
+                                            id: "input-5",
+                                            required: "",
+                                            placeholder: "Ketikan No HP"
+                                          },
+                                          model: {
+                                            value: _vm.form.NomorHP,
+                                            callback: function($$v) {
+                                              _vm.$set(_vm.form, "NomorHP", $$v)
+                                            },
+                                            expression: "form.NomorHP"
+                                          }
+                                        })
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "b-form-group",
+                                      {
+                                        attrs: {
+                                          id: "input-group-3",
+                                          "label-for": "input-3"
+                                        }
+                                      },
+                                      [
+                                        _c("b-form-select", {
+                                          attrs: {
+                                            id: "input-3",
+                                            options: _vm.gender,
+                                            required: ""
+                                          },
+                                          model: {
+                                            value: _vm.form.gender,
+                                            callback: function($$v) {
+                                              _vm.$set(_vm.form, "gender", $$v)
+                                            },
+                                            expression: "form.gender"
+                                          }
+                                        })
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c("br"),
+                                    _vm._v(" "),
+                                    _c(
+                                      "b-form-group",
+                                      {
+                                        staticClass: "jarak",
+                                        attrs: {
+                                          id: "input-group-6",
+                                          "label-for": "input-6"
+                                        }
+                                      },
+                                      [
+                                        _c("b-form-textarea", {
+                                          attrs: {
+                                            id: "textarea",
+                                            placeholder: "Ketikan Alamat",
+                                            rows: "3",
+                                            "max-rows": "6"
+                                          },
+                                          model: {
+                                            value: _vm.text,
+                                            callback: function($$v) {
+                                              _vm.text = $$v
+                                            },
+                                            expression: "text"
+                                          }
+                                        }),
+                                        _vm._v(" "),
+                                        _c(
+                                          "pre",
+                                          { staticClass: "mt-3 mb-0" },
+                                          [_vm._v(_vm._s(_vm.Alamat))]
+                                        )
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "b-form-group",
+                                      {
+                                        attrs: {
+                                          id: "input-group-7",
+                                          label: "Pilih Acara:",
+                                          "label-for": "input-7"
+                                        }
+                                      },
+                                      [
+                                        _c("b-form-checkbox-group", {
+                                          attrs: {
+                                            options: _vm.options,
+                                            plain: "",
+                                            stacked: ""
+                                          },
+                                          model: {
+                                            value: _vm.selected,
+                                            callback: function($$v) {
+                                              _vm.selected = $$v
+                                            },
+                                            expression: "selected"
+                                          }
+                                        })
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "text-center" },
+                                      [
+                                        _c(
+                                          "b-button",
+                                          {
+                                            staticClass: "submit",
+                                            attrs: {
+                                              type: "submit",
+                                              variant: "primary"
+                                            }
+                                          },
+                                          [_vm._v("Submit")]
+                                        )
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                )
+                              : _vm._e()
                           ],
                           1
                         )
-                      ],
-                      1
-                    )
-                  ]
-                )
-              ]
-            )
-          ])
+                      ])
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
         ],
         1
       )
@@ -56807,8 +56718,8 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/felix/Documents/PLUGIN/plugin-apps-web-profile/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/felix/Documents/PLUGIN/plugin-apps-web-profile/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/faqih/Documents/webprofile-plugin/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/faqih/Documents/webprofile-plugin/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
