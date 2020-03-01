@@ -1980,6 +1980,15 @@ window.addEventListener('scroll', function () {
       events: []
     };
   },
+  methods: {
+    formatDate: function formatDate(date) {
+      var monthNames = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+      var day = date.getDate();
+      var monthIndex = date.getMonth();
+      var year = date.getFullYear();
+      return day + ' ' + monthNames[monthIndex] + ' ' + year;
+    }
+  },
   mounted: function mounted() {
     var _this = this;
 
@@ -2064,18 +2073,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     "app-navbar": _Navbar_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
+  data: function data() {
+    return {
+      id: this.$route.params.id,
+      events: {}
+    };
   }
 });
 
@@ -35519,7 +35527,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.jevent {\n  min-height: 500px;\n  background: url(/asset/img/jumbotron.png);\n  background-size: cover;\n}\n.widewrapper {\n  width: 100%;\n}\n.widewrapper > img {\n  width: 100%;\n}\n.post-content {\n  background: none repeat scroll 0 0;\n  top: 0;\n  margin-top: 90px;\n  left: 0;\n  position: absolute;\n}\n.thumbnail {\n  position: relative;\n}\n.OPREC1 {\n  text-align: center;\n  margin-top: 90px;\n}\n.tombol {\n  background: #16a1e3;\n  width: 150px;\n  margin-top: 80px\n}\n", ""]);
+exports.push([module.i, "\n.jevent {\n    min-height: 500px;\n    background: url(/asset/img/jumbotron.png);\n    background-size: cover;\n}\n.widewrapper {\n    width: 100%;\n}\n.widewrapper>img {\n    width: 100%;\n}\n.post-content {\n    background: none repeat scroll 0 0;\n    top: 0;\n    margin-top: 90px;\n    left: 0;\n    position: absolute;\n}\n.thumbnail {\n    position: relative;\n}\n.OPREC1 {\n    text-align: center;\n    margin-top: 90px;\n}\n.tombol {\n    background: #16a1e3;\n    width: 150px;\n    margin-top: 80px\n}\n\n", ""]);
 
 // exports
 
@@ -40015,39 +40023,47 @@ var render = function() {
                             }
                           }),
                           _vm._v(" "),
-                          _c("div", { staticClass: "card-body" }, [
-                            _c(
-                              "h5",
-                              {
-                                staticClass: "card-title justify-content-center"
-                              },
-                              [_vm._v(_vm._s(data.title))]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "p",
-                              {
-                                staticClass: "card-text",
-                                staticStyle: { color: "#17A6E7" }
-                              },
-                              [
-                                _c("i", {
-                                  staticClass: "fa fa-calendar-times-o",
+                          _c(
+                            "div",
+                            { staticClass: "card-body" },
+                            [
+                              _c(
+                                "h5",
+                                {
+                                  staticClass:
+                                    "card-title justify-content-center"
+                                },
+                                [_vm._v(_vm._s(data.title))]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "p",
+                                {
+                                  staticClass: "card-text",
                                   staticStyle: { color: "#17A6E7" }
-                                }),
-                                _vm._v(_vm._s(data.opened))
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "a",
-                              {
-                                staticClass: "btn btn-primary",
-                                attrs: { href: "#" }
-                              },
-                              [_vm._v("Read More")]
-                            )
-                          ])
+                                },
+                                [
+                                  _c("i", {
+                                    staticClass: "fa fa-calendar-times-o",
+                                    staticStyle: { color: "#17A6E7" }
+                                  }),
+                                  _vm._v(
+                                    " " +
+                                      _vm._s(
+                                        _vm.formatDate(new Date(data.opened))
+                                      )
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "router-link",
+                                { attrs: { to: "/event/" + data.id } },
+                                [_vm._v("Selengkapnya")]
+                              )
+                            ],
+                            1
+                          )
                         ])
                       ]
                     )
@@ -40564,7 +40580,7 @@ var render = function() {
                     _vm._v(" "),
                     _c("h3", { staticClass: "text-black" }, [
                       _vm._v(
-                        "We invite you to enjoy a luxurious ground transportation service provided by our team of experts. We have the experience and skills to meet the expectations of every passenger and add value to every ride."
+                        "We invite you to enjoy a luxurious ground transportation service provided\n                        by our team of experts. We have the experience and skills to meet the expectations of every\n                        passenger and add value to every ride."
                       )
                     ]),
                     _vm._v(" "),
@@ -40646,7 +40662,7 @@ var render = function() {
                   _vm._v(" "),
                   _c("P", { staticStyle: { "text-align": "justify" } }, [
                     _vm._v(
-                      "\n          Lorem ipsum dolor sit amet consectetur adipisicing elit.\n          Laborum quidem quos maiores asperiores qui laudantium fugiat consequuntur.\n          Voluptatum saepe dignissimos facere consectetur,\n          quam officiis excepturi! Quibusdam veniam praesentium magni sed.\n          Lorem ipsum dolor sit amet consectetur adipisicing elit.\n          Aliquam tenetur culpa praesentium est odio impedit consequuntur totam quidem nisi!\n          Fugit,eligendi.\n          Praesentium corrupti reprehenderit cupiditate blanditiis voluptatem totam voluptatibus\n          architecto!\n        "
+                      "\n                    Lorem ipsum dolor sit amet consectetur adipisicing elit.\n                    Laborum quidem quos maiores asperiores qui laudantium fugiat consequuntur.\n                    Voluptatum saepe dignissimos facere consectetur,\n                    quam officiis excepturi! Quibusdam veniam praesentium magni sed.\n                    Lorem ipsum dolor sit amet consectetur adipisicing elit.\n                    Aliquam tenetur culpa praesentium est odio impedit consequuntur totam quidem nisi!\n                    Fugit,eligendi.\n                    Praesentium corrupti reprehenderit cupiditate blanditiis voluptatem totam voluptatibus\n                    architecto!\n                "
                     )
                   ]),
                   _vm._v(" "),
@@ -56256,7 +56272,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
     //yang di akan di panggil routing
     component: _js_App_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
   }, {
-    path: '/event',
+    path: '/event/:id',
     name: 'event',
     component: _components_Event_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
   }, {
@@ -56287,8 +56303,8 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/faqih/Documents/webprofile-plugin/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/faqih/Documents/webprofile-plugin/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/felix/Documents/PLUGIN/plugin-apps-web-profile/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/felix/Documents/PLUGIN/plugin-apps-web-profile/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

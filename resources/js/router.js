@@ -16,7 +16,7 @@ const router = new Router({
             component: App
         },
         {
-            path: '/event',
+            path: '/event/:id',
             name: 'event',
             component: Event
         },

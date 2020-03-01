@@ -147,8 +147,8 @@
                                 <div class="card-body">
                                     <h5 class="card-title justify-content-center">{{ data.title }}</h5>
                                     <p class="card-text" style="color: #17A6E7"><i class="fa fa-calendar-times-o"
-                                            style="color: #17A6E7"></i>{{ data.opened }}</p>
-                                    <a href="#" class="btn btn-primary">Read More</a>
+                                            style="color: #17A6E7"></i> {{ formatDate(new Date(data.opened)) }}</p>
+                                    <router-link v-bind:to="'/event/'+ data.id">Selengkapnya</router-link>
                                 </div>
                             </div>
                         </div>
@@ -289,6 +289,22 @@
             return {
                 events: []
             };
+        },
+        methods:{
+            formatDate : function formatDate(date) {
+                var monthNames = [
+                    "Januari", "Februari", "Maret",
+                    "April", "Mei", "Juni", "Juli",
+                    "Agustus", "September", "Oktober",
+                    "November", "Desember"
+                ];
+
+                var day = date.getDate();
+                var monthIndex = date.getMonth();
+                var year = date.getFullYear();
+
+                return day + ' ' + monthNames[monthIndex] + ' ' + year;
+            }
         },
         mounted() {
             axios.get('http://plugin-apps-server.herokuapp.com/api/event').then( (response) => {
