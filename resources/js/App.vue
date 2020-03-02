@@ -11,28 +11,16 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="home_left_img">
-                                <img class="img-fluid show-on-scroll" src="asset/img/penguin_banner.png" alt="">
+                                <img class="img-fluid show-on-scroll" src="asset/img/banner_image.png" alt="">
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <div class="banner_content">
+                            <div class="banner_content" style="text-align: center; color: white">
                                 <h2>
                                     PLUG-IN <br>
-                                    <h4>Poltek Harber Linux User Group <br>
-                                        Indonesia</h4>
+                                    <h5>Plug-in adalah suatu organisasi atau komunitas studi linux di Politeknik Harapan Bersama Tegal.</h5>
                                 </h2>
-                                <!-- <p class="mx-auto d-block">
-                                    Plug-in adalah suatu organisasi atau komunitas studi linux di Politeknik Harapan
-                                    Bersama Tegal.
-                                    Kami
-                                    mempunyai tujuan untuk mengenalkan dan mengOpen Source kan mahasiswa dan masyarakat
-                                    umum dengan
-                                    berbagai kegiatan yang nantinya bisa membuka wawasan serta mindset OpenSource guna
-                                    untuk
-                                    mengurangi
-                                    angka pembajakan Software di Indonesia.
-                                </p> -->
-                                <div class="d-flex align-items-center">
+                                <div class="flex align-items-center">
                                     <a id="play-home-video" class="video-play-button"
                                         href="https://www.youtube.com/watch?v=PHvHxK_gfa0">
                                         <span></span>
@@ -55,11 +43,11 @@
                     <div class="container">
                         <div class="row about_content align-items-center">
                             <div class="col-lg-6">
-                                <div class="section_content slideInLeft">
-                                    <h6>About Us</h6>
-                                    <h2 style="color: white; text-align: justify">Poltek Harber Linux User Group
+                                <div class="section_content">
+                                    <h6 class=" animation-element slide-left">About Us</h6>
+                                    <h2 style="color: white; text-align: justify" class=" animation-element slide-left">Poltek Harber Linux User Group
                                         <br>Indonesia</h2>
-                                    <p style="text-align: justify">Plug-in adalah suatu organisasi atau komunitas studi
+                                    <p style="text-align: justify" class="animation-element slide-left">Plug-in adalah suatu organisasi atau komunitas studi
                                         linux di
                                         Politeknik Harapan
                                         Bersama Tegal.
@@ -72,11 +60,11 @@
                                         untuk
                                         mengurangi
                                         angka pembajakan Software di Indonesia.</p>
-                                    <a class="primary_btn" href="#">Learn More</a>
+                                    <!-- <a class="primary_btn" href="#">Learn More</a> -->
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <div class="about_us_image_box justify-content-center">
+                                <div class="about_us_image_box justify-content-center animation-element slide-right">
                                     <img class="img-fluid w-100" src="asset/img/about_img.png" alt="">
                                 </div>
                             </div>
@@ -99,10 +87,10 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="col-lg-6 col-md-12 col-sm-12 animation-element slide-left">
                         <img src="asset/img/web.png" alt="" srcset="">
                     </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="col-lg-6 col-md-12 col-sm-12 animation-element slide-right">
                         <div style="color: white">
                             <h4>Web Developer</h4>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio error, nisi neque
@@ -138,8 +126,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mx-auto">
-                    <div v-for="(data, index) in events" :key="index">
+                <div class="row mx-auto animation-element slide-left">
+                    <div v-for="(data, index) in events" :key="index" class="mx-auto">
                         <div class="col col-lg-4">
                         <div class="card mx-auto" style="width: 19rem">
                             <div class="align-center">
@@ -165,7 +153,7 @@
                     <div class="col-lg-6 col-sm-12">
                         <ul>
                             <div class="text-center">
-                                <img src="asset/img/logoputih.png" alt="" srcset="" width="150" height="50">
+                                <img src="asset/img/logo_plugin.png" alt="" srcset="" width="150" height="40">
                             </div>
                         </ul>
                         <ul>
@@ -176,13 +164,13 @@
                                         <p align="justify" style="color: white">Sumbrodo Perumahan Ndalem Parikesit
                                             No.B7, Slerok, Kota
                                             Tegal. <a style="color: #2F4574"
-                                                href="https://www.google.co.id/maps/place/Ndalem+Parikesit/@-6.8811978,109.1431099,3a,75y,175.22h,81.96t/data=!3m6!1e1!3m4!1s7U4CiCrUYuiXnYauUIYHNA!2e0!7i13312!8i6656!4m5!3m4!1s0x2e6fb93464361e0f:0xca4bd2a90586ebbc!8m2!3d-6.8814505!4d109.1444167">View
+                                                href="https://www.google.co.id/maps/place/Ndalem+Parikesit/@-6.8811978,109.1431099,3a,75y,175.22h,81.96t/data=!3m6!1e1!3m4!1s7U4CiCrUYuiXnYauUIYHNA!2e0!7i13312!8i6656!4m5!3m4!1s0x2e6fb93464361e0f:0xca4bd2a90586ebbc!8m2!3d-6.8814505!4d109.1444167" target="_blank">View
                                                 Map</a></p>
                                     </aside>
                                 </div>
                                 <div class="col-md-6">
                                     <aside class="f_widget ab_widget">
-                                        <p style="color: white">Phone: +62 878-4811-4793 <br> Email:
+                                        <p align="justify" style="color: white">Phone: +62 878-4811-4793 <br> Email:
                                             <i>plugintegal@gmail.com</i></p>
                                     </aside>
                                 </div>

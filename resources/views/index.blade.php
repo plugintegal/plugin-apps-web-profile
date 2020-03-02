@@ -9,6 +9,7 @@
 	<title>PLUGIN</title>
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="asset/css/bootstrap.css">
+	<link rel="stylesheet" href="asset/css/animate.css">
 	<link rel="stylesheet" href="asset/vendors/linericon/style.css">
 	<link rel="stylesheet" href="asset/css/font-awesome.min.css">
 	<link rel="stylesheet" href="asset/vendors/owl-carousel/owl.carousel.min.css">
@@ -58,6 +59,7 @@
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	
 	<script src="asset/js/popper.js"></script>
+	<script src="asset/js/animate.js"></script>
 	<script src="asset/js/bootstrap.min.js"></script>
 	<script src="asset/js/stellar.js"></script>
 	<script src="asset/js/jquery.magnific-popup.min.js"></script>

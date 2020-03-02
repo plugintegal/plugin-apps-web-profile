@@ -4,7 +4,7 @@
             <div class="main_menu">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <div class="container">
-                        <a class="navbar-brand logo_h" href="#home"><img src="asset/img/logoputih.png" alt="" width="150" height="50" style="margin-left: 20px"></a>
+                        <a class="navbar-brand logo_h" href="#home"><img src="asset/img/logo_plugin.png" alt="" width="150" height="40" style="margin-left: 20px"></a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation" style="margin-right: 20px">
