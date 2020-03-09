@@ -48468,6 +48468,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -48477,8 +48487,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     data: function data() {
         return {
+
             id: this.$route.params.id,
-            events: []
+            events: [],
+            dialog: false
+
         };
     },
 
@@ -48492,6 +48505,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             return day + ' ' + monthNames[monthIndex] + ' ' + year;
         }
+
     },
     mounted: function mounted() {
         var _this = this;
@@ -53761,7 +53775,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(34)();
-exports.push([module.i, "\n.jevent {\n    min-height: 500px;\n    background: url(/asset/img/jumbotron.png);\n    background-size: cover;\n}\n.widewrapper {\n    width: 100%;\n}\n.widewrapper>img {\n    width: 100%;\n}\n.post-content {\n    background: none repeat scroll 0 0;\n    top: 0;\n    margin-top: 90px;\n    left: 0;\n    position: absolute;\n}\n.thumbnail {\n    position: relative;\n}\n.OPREC1 {\n    text-align: center;\n    margin-top: 90px;\n}\n.tombol {\n    background: #16a1e3;\n    width: 150px;\n    margin-top: 80px\n}\n\n", ""]);
+exports.push([module.i, "\n.jevent {\n    min-height: 500px;\n    background: url(/asset/img/jumbotron.png);\n    background-size: cover;\n}\n.widewrapper {\n    width: 100%;\n}\n.widewrapper>img {\n    width: 100%;\n}\n.post-content {\n    background: none repeat scroll 0 0;\n    top: 0;\n    margin-top: 90px;\n    left: 0;\n    position: absolute;\n}\n.thumbnail {\n    position: relative;\n}\n.OPREC1 {\n    text-align: center;\n    margin-top: 90px;\n}\n.tombol {\n    background: #16a1e3;\n    width: 150px;\n    margin-top: 80px\n}\n.form-rounded {\n    border-radius: 1rem;\n}\n\n", ""]);
 
 /***/ }),
 /* 322 */
@@ -54058,11 +54072,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('div', {
     staticClass: "main_menu"
   }, [_c('nav', {
-    staticClass: "navbar navbar-expand-lg navbar-light"
+    staticClass: "navbar navbar-expand-sm navbar-light"
   }, [_c('div', {
     staticClass: "container"
   }, [_c('a', {
-    staticClass: "navbar-brand logo_h",
+    staticClass: "navbar-brand logo_h click",
     attrs: {
       "href": "#home"
     }
@@ -54180,7 +54194,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }, [_c('div', {
       staticClass: "col col-lg-4"
     }, [_c('div', {
-      staticClass: "card mx-auto",
+      staticClass: "card mx-auto shadow rounded-lg",
       staticStyle: {
         "width": "19rem"
       }
@@ -54327,16 +54341,19 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "srcset": ""
     }
   })]), _vm._v(" "), _c('div', {
-    staticClass: "col-lg-6 col-md-12 col-sm-12 animation-element slide-right"
+    staticClass: "col-lg-6 col-md-12 col-sm-12"
   }, [_c('div', {
+    staticClass: "animation-element slide-right",
     staticStyle: {
       "color": "white"
     }
   }, [_c('h4', [_vm._v("Web Developer")]), _vm._v(" "), _c('p', [_vm._v("Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio error, nisi neque\n                            ipsa reiciendis suscipit qui maiores, blanditiis iusto harum soluta voluptas consequatur\n                            optio delectus. Ad temporibus id quam iste.")])]), _vm._v(" "), _c('div', {
+    staticClass: "animation-element slide-right",
     staticStyle: {
       "color": "white"
     }
   }, [_c('h4', [_vm._v("Mobile Developer")]), _vm._v(" "), _c('p', [_vm._v("Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio error, nisi neque\n                            ipsa reiciendis suscipit qui maiores, blanditiis iusto harum soluta voluptas consequatur\n                            optio delectus. Ad temporibus id quam iste.")])]), _vm._v(" "), _c('div', {
+    staticClass: "animation-element slide-right",
     staticStyle: {
       "color": "white"
     }
@@ -54687,74 +54704,214 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "cols": "4"
     }
   })], 1)], 1), _vm._v(" "), _c('b-modal', {
+    staticStyle: {
+      "position": "absolute",
+      "z-index": "9999"
+    },
     attrs: {
       "id": "modal-center",
       "centered": "",
-      "title": "Form Pendaftaran"
+      "title": "Form Pendaftaran",
+      "hide-footer": ""
     }
   }, [_c('form', {
     attrs: {
-      "action": ""
+      "action": "#",
+      "method": "post"
+    },
+    on: {
+      "submit": _vm.sub
     }
   }, [_c('div', {
     staticClass: "form-group"
-  }, [_c('label', {
+  }, [_c('label', [_vm._v("Full Name")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.full_name),
+      expression: "full_name"
+    }],
+    staticClass: "form-control form-rounded",
     attrs: {
-      "for": ""
-    }
-  }, [_vm._v("Nama")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control form-control-sm",
-    attrs: {
-      "type": "text"
-    }
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "form-group"
-  }, [_c('label', {
-    attrs: {
-      "for": ""
-    }
-  }, [_vm._v("Alamat")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control form-control-sm",
-    attrs: {
-      "type": "text"
-    }
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "form-group"
-  }, [_c('label', {
-    attrs: {
-      "for": ""
-    }
-  }, [_vm._v("Email")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control form-control-sm",
-    attrs: {
-      "type": "text"
+      "type": "text",
+      "placeholder": "type your full name",
+      "required": ""
+    },
+    domProps: {
+      "value": (_vm.full_name)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.full_name = $event.target.value
+      }
     }
   })]), _vm._v(" "), _c('div', {
     staticClass: "form-group"
-  }, [_c('label', {
+  }, [_c('label', [_vm._v("Email")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.email),
+      expression: "email"
+    }],
+    staticClass: "form-control form-rounded",
     attrs: {
-      "for": ""
-    }
-  }, [_vm._v("No. Handphone")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control form-control-sm",
-    attrs: {
-      "type": "text"
+      "type": "email",
+      "placeholder": "type your email",
+      "required": ""
+    },
+    domProps: {
+      "value": (_vm.email)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.email = $event.target.value
+      }
     }
   })]), _vm._v(" "), _c('div', {
+    staticClass: "form-group"
+  }, [_c('label', [_vm._v("Number Phone")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.phone),
+      expression: "phone"
+    }],
+    staticClass: "form-control form-rounded",
+    attrs: {
+      "type": "number",
+      "placeholder": "type your phone number",
+      "required": ""
+    },
+    domProps: {
+      "value": (_vm.phone)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.phone = $event.target.value
+      }
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "form-group"
+  }, [_c('label', [_vm._v("Institution")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.institution),
+      expression: "institution"
+    }],
+    staticClass: "form-control form-rounded",
+    attrs: {
+      "type": "text",
+      "placeholder": "type the institution's origin",
+      "required": ""
+    },
+    domProps: {
+      "value": (_vm.institution)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.institution = $event.target.value
+      }
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "form-group"
+  }, [_c('label', [_vm._v("Address")]), _vm._v(" "), _c('textarea', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.address),
+      expression: "address"
+    }],
+    staticClass: "form-control form-rounded",
+    attrs: {
+      "rows": "3",
+      "placeholder": "type your address"
+    },
+    domProps: {
+      "value": (_vm.address)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.address = $event.target.value
+      }
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "form-group row"
+  }, [_c('div', {
+    staticClass: "col-xs-3"
+  }, [_c('label', {
+    staticStyle: {
+      "margin-left": "20px"
+    }
+  }, [_vm._v("Date of Birth")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.date_of_birth),
+      expression: "date_of_birth"
+    }],
+    staticClass: "form-control form-rounded",
+    staticStyle: {
+      "margin-left": "20px"
+    },
+    attrs: {
+      "type": "date",
+      "placeholder": "Choose your date of birth",
+      "required": ""
+    },
+    domProps: {
+      "value": (_vm.date_of_birth)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.date_of_birth = $event.target.value
+      }
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "form-group"
+  }, [_c('label', [_vm._v("Select One")]), _vm._v(" "), _c('div', {
+    staticClass: "custom-control custom-radio"
+  }, [_c('input', {
+    staticClass: "custom-control-input",
+    attrs: {
+      "type": "radio",
+      "id": "customRadio1",
+      "name": "customRadio"
+    }
+  }), _vm._v(" "), _c('label', {
+    staticClass: "custom-control-label",
+    attrs: {
+      "for": "customRadio1"
+    }
+  }, [_vm._v("Web with VueJS and Firebase")])]), _vm._v(" "), _c('div', {
+    staticClass: "custom-control custom-radio"
+  }, [_c('input', {
+    staticClass: "custom-control-input",
+    attrs: {
+      "type": "radio",
+      "id": "customRadio2",
+      "name": "customRadio"
+    }
+  }), _vm._v(" "), _c('label', {
+    staticClass: "custom-control-label",
+    attrs: {
+      "for": "customRadio2"
+    }
+  }, [_vm._v("Or toggle this other custom radio")])])]), _vm._v(" "), _c('div', {
     staticClass: "form-group"
   }, [_c('input', {
     attrs: {
-      "type": "radio",
-      "name": "",
-      "id": ""
+      "type": "submit",
+      "value": "Daftar"
     }
-  }), _vm._v(" Seminar "), _c('br'), _vm._v(" "), _c('input', {
-    attrs: {
-      "type": "radio",
-      "name": "",
-      "id": ""
-    }
-  }), _vm._v(" Workshop\n            ")])])])], 1)
+  })])])])], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {

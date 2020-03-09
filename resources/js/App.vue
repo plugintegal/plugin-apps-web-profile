@@ -90,20 +90,20 @@
                     <div class="col-lg-6 col-md-12 col-sm-12 animation-element slide-left">
                         <img src="asset/img/web.png" alt="" srcset="">
                     </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 animation-element slide-right">
-                        <div style="color: white">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div style="color: white" class="animation-element slide-right">
                             <h4>Web Developer</h4>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio error, nisi neque
                                 ipsa reiciendis suscipit qui maiores, blanditiis iusto harum soluta voluptas consequatur
                                 optio delectus. Ad temporibus id quam iste.</p>
                         </div>
-                        <div style="color: white">
+                        <div style="color: white" class="animation-element slide-right">
                             <h4>Mobile Developer</h4>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio error, nisi neque
                                 ipsa reiciendis suscipit qui maiores, blanditiis iusto harum soluta voluptas consequatur
                                 optio delectus. Ad temporibus id quam iste.</p>
                         </div>
-                        <div style="color: white">
+                        <div style="color: white" class="animation-element slide-right">
                             <h4>UI / UX Designer</h4>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio error, nisi neque
                                 ipsa reiciendis suscipit qui maiores, blanditiis iusto harum soluta voluptas consequatur
@@ -129,7 +129,7 @@
                 <div class="row mx-auto animation-element slide-left">
                     <div v-for="(data, index) in events" :key="index" class="mx-auto">
                         <div class="col col-lg-4">
-                        <div class="card mx-auto" style="width: 19rem">
+                        <div class="card mx-auto shadow rounded-lg" style="width: 19rem">
                             <div class="align-center">
                                 <img class="card-img-top" src="asset/img/jumbotron.png" alt="Card image cap">
                                 <div class="card-body">

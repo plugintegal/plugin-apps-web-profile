@@ -17,9 +17,9 @@
             </b-jumbotron>
         </div>
 
-
+       
         <!-- detail event -->
-        <b-container class="bv-example-row" style="margin-bottom: 50px; padding-top: 75px">
+        <b-container class="bv-example-row" style="margin-bottom: 50px; padding-top: 75px; ">
             <b-row>
                 <div class="col-lg-4 mb-3">
                     <h3 style="text-align: center">Due Date</h3>
@@ -56,38 +56,48 @@
                 <b-col cols="4"></b-col>
             </b-row>
         </b-container>
-        <!-- akhir detail event -->
-        <!-- <b-modal id="bv-modal-example" hide-footer class="modal-dialog modal-dialog-centered" >
-            <template v-slot:modal-title>
-                Using <code>$bvModal</code> Methods
-            </template>
-            <div class="d-block text-center">
-                <h3>Hello From This Modal!</h3>
-            </div>
-            <b-button class="mt-3" block @click="$bvModal.hide('bv-modal-example')">Close Me</b-button>
-        </b-modal> -->
 
-        <b-modal id="modal-center" centered title="Form Pendaftaran">
-            <form action="">
+        <b-modal id="modal-center" centered title="Form Pendaftaran" style="position: absolute; z-index: 9999" hide-footer>
+            <form v-on:submit="sub" action="#" method="post">
                 <div class="form-group">
-                    <label for="">Nama</label>
-                    <input type="text" class="form-control form-control-sm">
+                    <label>Full Name</label>
+                    <input type="text" v-model="full_name" class="form-control form-rounded" placeholder="type your full name" required>
                 </div>
                 <div class="form-group">
-                    <label for="">Alamat</label>
-                    <input type="text" class="form-control form-control-sm">
+                    <label>Email</label>
+                    <input type="email" v-model="email" class="form-control form-rounded" placeholder="type your email" required>
                 </div>
                 <div class="form-group">
-                    <label for="">Email</label>
-                    <input type="text" class="form-control form-control-sm">
+                    <label>Number Phone</label>
+                    <input type="number" v-model="phone" class="form-control form-rounded" placeholder="type your phone number" required>
                 </div>
                 <div class="form-group">
-                    <label for="">No. Handphone</label>
-                    <input type="text" class="form-control form-control-sm">
+                    <label>Institution</label>
+                    <input type="text" v-model="institution" class="form-control form-rounded" placeholder="type the institution's origin" required>
                 </div>
                 <div class="form-group">
-                    <input type="radio" name="" id=""> Seminar <br>
-                    <input type="radio" name="" id=""> Workshop
+                    <label>Address</label>
+                    <textarea class="form-control form-rounded" rows="3" placeholder="type your address" v-model="address"></textarea>
+                </div>
+                <div class="form-group row">
+                    <div class="col-xs-3">
+                        <label style="margin-left: 20px">Date of Birth</label>
+                        <input type="date" v-model="date_of_birth" class="form-control form-rounded" placeholder="Choose your date of birth" style="margin-left: 20px" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Select One</label>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio1">Web with VueJS and Firebase</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio2">Or toggle this other custom radio</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Daftar">
                 </div>
             </form>
         </b-modal>
@@ -104,8 +114,11 @@
         },
         data() {
             return {
+                
                 id: this.$route.params.id,
-                events: []
+                events: [],
+                dialog: false,
+                
             }
         },
         methods: {
@@ -123,6 +136,8 @@
 
                 return day + ' ' + monthNames[monthIndex] + ' ' + year;
             }
+            
+            
         },
         mounted() {
             axios.get('http://plugin-apps-server.herokuapp.com/api/event/' + this.id).then((response) => {
@@ -172,6 +187,10 @@
         background: #16a1e3;
         width: 150px;
         margin-top: 80px
+    }
+
+    .form-rounded {
+        border-radius: 1rem;
     }
 
 </style>
