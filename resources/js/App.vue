@@ -295,7 +295,8 @@
             }
         },
         mounted() {
-            axios.get('http://plugin-apps-server.herokuapp.com/api/event').then( (response) => {
+            // axios.get('http://plugin-apps-server.herokuapp.com/api/event').then( (response) => {
+                axios.get('http://192.168.18.53:8000/api/event').then((response) => {
                 this.events = response.data.results;
                 console.log(this.events)
                 }

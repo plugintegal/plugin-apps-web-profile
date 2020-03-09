@@ -3,15 +3,13 @@
         <app-navbar />
         <div style="margin-bottom: 50px" id="OPREC1" class="OPREC1">
             <b-jumbotron text-variant="black" class="jevent align-middle">
-                <div class="widewrapper thumbnail">
+                <div class="widewrapper thumbnail container">
                     <div class="post-content">
                         <div v-for="(data ,index) in events" v-bind:key="index">
-                            <h2 class="text-black">{{ data.title }}</h2>
+                        <h2 class="text-black">{{ data.title }}</h2>
+                        <img src="https://www.webdesign.org/img_articles/22292/head_full_770.jpg"
+                        alt="Avatar" class="pamlet" >
                         </div>
-                        <h3 class="text-black">We invite you to enjoy a luxurious ground transportation service provided
-                            by our team of experts. We have the experience and skills to meet the expectations of every
-                            passenger and add value to every ride.</h3>
-                        <b-button v-b-modal.modal-center>Launch centered modal</b-button>
                     </div>
                 </div>
             </b-jumbotron>
@@ -28,7 +26,7 @@
                     </div>
                     <p style="text-align: left">Tempat : Plug-In Home</p>
                     <p style="text-align: left">Waktu : 08.00 - selesai WIB</p>
-                    <br />
+                    <br>
                     <h3 style="text-align: center">HTM & Fasilitas</h3>
                     <div v-for="(data ,index) in events" v-bind:key="index">
                         <div v-for="(category) in data.category" v-bind:key="category">
@@ -53,51 +51,62 @@
                     </div>
                 </div>
 
-                <b-col cols="4"></b-col>
+                <b-col>
+                    <center><div class="text"><b-button v-b-modal.modal-center class="tombol">Registrasi</b-button></div></center>
+                </b-col>
             </b-row>
         </b-container>
 
         <b-modal id="modal-center" centered title="Form Pendaftaran" style="position: absolute; z-index: 9999" hide-footer>
             <form v-on:submit="sub" action="#" method="post">
                 <div class="form-group">
-                    <label>Full Name</label>
-                    <input type="text" v-model="full_name" class="form-control form-rounded" placeholder="type your full name" required>
+                    <label>Nama lengkap</label>
+                    <input type="text" class="form-control form-rounded" placeholder="type your full name" required>
                 </div>
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="email" v-model="email" class="form-control form-rounded" placeholder="type your email" required>
+                    <input type="email" class="form-control form-rounded" placeholder="type your email" required>
                 </div>
                 <div class="form-group">
-                    <label>Number Phone</label>
-                    <input type="number" v-model="phone" class="form-control form-rounded" placeholder="type your phone number" required>
+                    <label>NO HP</label>
+                    <input type="number" class="form-control form-rounded" placeholder="type your phone number" required>
                 </div>
                 <div class="form-group">
-                    <label>Institution</label>
-                    <input type="text" v-model="institution" class="form-control form-rounded" placeholder="type the institution's origin" required>
+                    <label>Instansi</label>
+                    <input type="text" class="form-control form-rounded" placeholder="type the institution's origin" required>
                 </div>
                 <div class="form-group">
-                    <label>Address</label>
-                    <textarea class="form-control form-rounded" rows="3" placeholder="type your address" v-model="address"></textarea>
+                    <label>Alamat</label>
+                    <textarea class="form-control form-rounded" rows="3" placeholder="type your address"></textarea>
                 </div>
                 <div class="form-group row">
-                    <div class="col-xs-3">
-                        <label style="margin-left: 20px">Date of Birth</label>
-                        <input type="date" v-model="date_of_birth" class="form-control form-rounded" placeholder="Choose your date of birth" style="margin-left: 20px" required>
+                    <div class="col-xs-3" style="margin : 0px 20px 0px 20px; width:100%;">
+                        <label for="datepicker-placeholder">Tanggal Lahir</label>
+                        <b-form-datepicker class="form-control form-rounded" id="datepicker-placeholder" placeholder="Choose a date" local="en"></b-form-datepicker>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label>Select One</label>
-                    <div class="custom-control custom-radio">
+                    <label>Pilih Kategori</label>
+                     <div v-for="category in event.category" :key="category.name" class="col-xs-3" style="margin : 0px 20px 0px 20px; width:100%;">
+                       <label>{{category.name}}</label>
+                        <div v-for="subCategory in category.sub_category" :key="subCategory.id" class="custom-control custom-radio">
+                            <input type="radio" :id="subCategory.id" :name="category.name" class="custom-control-input">
+                            <label class="custom-control-label" :for="subCategory.id">{{subCategory.sub_category_name}}</label>
+                        </div>
+                    </div>
+
+                    <!-- <div class="custom-control custom-radio">
                         <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadio1">Web with VueJS and Firebase</label>
+                        <label class="custom-control-label" for="customRadio1" value="WebwithVueJSandFirebase">Web with VueJS and Firebase</label>
                     </div>
                     <div class="custom-control custom-radio">
                         <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadio2">Or toggle this other custom radio</label>
-                    </div>
+                        <label class="custom-control-label" for="customRadio2" value="AndroidwithKotlineandFirebase">Android with Kotline and Firebase</label>
+                    </div> -->
                 </div>
                 <div class="form-group">
-                    <input type="submit" value="Daftar">
+                    <!-- <input type="submit" value="Daftar"> -->
+                    <b-button class="tombol" type="submit" value="Daftar">Daftar</b-button>
                 </div>
             </form>
         </b-modal>
@@ -116,7 +125,7 @@
             return {
                 
                 id: this.$route.params.id,
-                events: [],
+                event: [],
                 dialog: false,
                 
             }
@@ -140,9 +149,11 @@
             
         },
         mounted() {
-            axios.get('http://plugin-apps-server.herokuapp.com/api/event/' + this.id).then((response) => {
-                this.events = response.data.results;
-                console.log(this.events.category);
+            //axios.get('http://plugin-apps-server.herokuapp.com/api/event/' + this.id).then((response) => {
+            axios.get('http://192.168.18.53:8000/api/event/' + this.id).then((response) => {
+                this.event = response.data.results;
+                // console.log(this.event.category);
+                console.log(response.data.results.category)
 
             })
         }
@@ -154,17 +165,18 @@
 <style>
     .jevent {
         min-height: 500px;
-        background: url(/asset/img/jumbotron.png);
+        /* background: url(http://192.168.18.53:8000/images/{{event.image}}); */
         background-size: cover;
+  /* overflow: auto; */
     }
 
-    .widewrapper {
+    /* .widewrapper {
         width: 100%;
     }
 
     .widewrapper>img {
         width: 100%;
-    }
+    } */
 
     .post-content {
         background: none repeat scroll 0 0;
@@ -175,22 +187,23 @@
     }
 
     .thumbnail {
-        position: relative;
+        /* position: relative; */
+        margin: auto;
     }
 
     .OPREC1 {
         text-align: center;
-        margin-top: 90px;
+        margin-top: 80px;
     }
 
     .tombol {
         background: #16a1e3;
         width: 150px;
-        margin-top: 80px
+        border-radius: 20px;
+        /* margin-top: 80px */
     }
 
     .form-rounded {
         border-radius: 1rem;
     }
-
 </style>

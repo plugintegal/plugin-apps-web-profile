@@ -44195,7 +44195,7 @@ var Component = __webpack_require__(59)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/felix/Documents/PLUGIN/plugin-apps-web-profile/resources/js/App.vue"
+Component.options.__file = "/home/faqih/Documents/plugin-webprofile/plugin-apps-web-profile/resources/js/App.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] App.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -44233,7 +44233,7 @@ var Component = __webpack_require__(59)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/felix/Documents/PLUGIN/plugin-apps-web-profile/resources/js/components/Event.vue"
+Component.options.__file = "/home/faqih/Documents/plugin-webprofile/plugin-apps-web-profile/resources/js/components/Event.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Event.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -44271,7 +44271,7 @@ var Component = __webpack_require__(59)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/felix/Documents/PLUGIN/plugin-apps-web-profile/resources/js/components/Navbar.vue"
+Component.options.__file = "/home/faqih/Documents/plugin-webprofile/plugin-apps-web-profile/resources/js/components/Navbar.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Navbar.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -48353,7 +48353,8 @@ window.addEventListener('scroll', function () {
     mounted: function mounted() {
         var _this = this;
 
-        __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('http://plugin-apps-server.herokuapp.com/api/event').then(function (response) {
+        // axios.get('http://plugin-apps-server.herokuapp.com/api/event').then( (response) => {
+        __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('http://192.168.18.53:8000/api/event').then(function (response) {
             _this.events = response.data.results;
             console.log(_this.events);
         });
@@ -48478,6 +48479,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -48489,7 +48499,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return {
 
             id: this.$route.params.id,
-            events: [],
+            event: [],
             dialog: false
 
         };
@@ -48510,9 +48520,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     mounted: function mounted() {
         var _this = this;
 
-        __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('http://plugin-apps-server.herokuapp.com/api/event/' + this.id).then(function (response) {
-            _this.events = response.data.results;
-            console.log(_this.events.category);
+        //axios.get('http://plugin-apps-server.herokuapp.com/api/event/' + this.id).then((response) => {
+        __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('http://192.168.18.53:8000/api/event/' + this.id).then(function (response) {
+            _this.event = response.data.results;
+            // console.log(this.event.category);
+            console.log(response.data.results.category);
         });
     }
 };
@@ -53775,7 +53787,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(34)();
-exports.push([module.i, "\n.jevent {\n    min-height: 500px;\n    background: url(/asset/img/jumbotron.png);\n    background-size: cover;\n}\n.widewrapper {\n    width: 100%;\n}\n.widewrapper>img {\n    width: 100%;\n}\n.post-content {\n    background: none repeat scroll 0 0;\n    top: 0;\n    margin-top: 90px;\n    left: 0;\n    position: absolute;\n}\n.thumbnail {\n    position: relative;\n}\n.OPREC1 {\n    text-align: center;\n    margin-top: 90px;\n}\n.tombol {\n    background: #16a1e3;\n    width: 150px;\n    margin-top: 80px\n}\n.form-rounded {\n    border-radius: 1rem;\n}\n\n", ""]);
+exports.push([module.i, "\n.jevent {\n      min-height: 500px;\n      /* background: url(http://192.168.18.53:8000/images/{{event.image}}); */\n      background-size: cover;\n/* overflow: auto; */\n}\n\n  /* .widewrapper {\n      width: 100%;\n  }\n\n  .widewrapper>img {\n      width: 100%;\n  } */\n.post-content {\n      background: none repeat scroll 0 0;\n      top: 0;\n      margin-top: 90px;\n      left: 0;\n      position: absolute;\n}\n.thumbnail {\n      /* position: relative; */\n      margin: auto;\n}\n.OPREC1 {\n      text-align: center;\n      margin-top: 80px;\n}\n.tombol {\n      background: #16a1e3;\n      width: 150px;\n      border-radius: 20px;\n      /* margin-top: 80px */\n}\n.form-rounded {\n      border-radius: 1rem;\n}\n", ""]);
 
 /***/ }),
 /* 322 */
@@ -54040,7 +54052,7 @@ var Component = __webpack_require__(59)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/felix/Documents/PLUGIN/plugin-apps-web-profile/resources/js/components/Regis.vue"
+Component.options.__file = "/home/faqih/Documents/plugin-webprofile/plugin-apps-web-profile/resources/js/components/Regis.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Regis.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -54609,26 +54621,22 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "text-variant": "black"
     }
   }, [_c('div', {
-    staticClass: "widewrapper thumbnail"
+    staticClass: "widewrapper thumbnail container"
   }, [_c('div', {
     staticClass: "post-content"
-  }, [_vm._l((_vm.events), function(data, index) {
+  }, _vm._l((_vm.events), function(data, index) {
     return _c('div', {
       key: index
     }, [_c('h2', {
       staticClass: "text-black"
-    }, [_vm._v(_vm._s(data.title))])])
-  }), _vm._v(" "), _c('h3', {
-    staticClass: "text-black"
-  }, [_vm._v("We invite you to enjoy a luxurious ground transportation service provided\n                        by our team of experts. We have the experience and skills to meet the expectations of every\n                        passenger and add value to every ride.")]), _vm._v(" "), _c('b-button', {
-    directives: [{
-      name: "b-modal",
-      rawName: "v-b-modal.modal-center",
-      modifiers: {
-        "modal-center": true
+    }, [_vm._v(_vm._s(data.title))]), _vm._v(" "), _c('img', {
+      staticClass: "pamlet",
+      attrs: {
+        "src": "https://www.webdesign.org/img_articles/22292/head_full_770.jpg",
+        "alt": "Avatar"
       }
-    }]
-  }, [_vm._v("Launch centered modal")])], 2)])])], 1), _vm._v(" "), _c('b-container', {
+    })])
+  }), 0)])])], 1), _vm._v(" "), _c('b-container', {
     staticClass: "bv-example-row",
     staticStyle: {
       "margin-bottom": "50px",
@@ -54699,11 +54707,18 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "width": "150px",
       "height": "150px"
     }
-  })])], 2), _vm._v(" "), _c('b-col', {
-    attrs: {
-      "cols": "4"
-    }
-  })], 1)], 1), _vm._v(" "), _c('b-modal', {
+  })])], 2), _vm._v(" "), _c('b-col', [_c('center', [_c('div', {
+    staticClass: "text"
+  }, [_c('b-button', {
+    directives: [{
+      name: "b-modal",
+      rawName: "v-b-modal.modal-center",
+      modifiers: {
+        "modal-center": true
+      }
+    }],
+    staticClass: "tombol"
+  }, [_vm._v("Registrasi")])], 1)])], 1)], 1)], 1), _vm._v(" "), _c('b-modal', {
     staticStyle: {
       "position": "absolute",
       "z-index": "9999"
@@ -54724,194 +54739,104 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_c('div', {
     staticClass: "form-group"
-  }, [_c('label', [_vm._v("Full Name")]), _vm._v(" "), _c('input', {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: (_vm.full_name),
-      expression: "full_name"
-    }],
+  }, [_c('label', [_vm._v("Nama lengkap")]), _vm._v(" "), _c('input', {
     staticClass: "form-control form-rounded",
     attrs: {
       "type": "text",
       "placeholder": "type your full name",
       "required": ""
-    },
-    domProps: {
-      "value": (_vm.full_name)
-    },
-    on: {
-      "input": function($event) {
-        if ($event.target.composing) { return; }
-        _vm.full_name = $event.target.value
-      }
     }
   })]), _vm._v(" "), _c('div', {
     staticClass: "form-group"
   }, [_c('label', [_vm._v("Email")]), _vm._v(" "), _c('input', {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: (_vm.email),
-      expression: "email"
-    }],
     staticClass: "form-control form-rounded",
     attrs: {
       "type": "email",
       "placeholder": "type your email",
       "required": ""
-    },
-    domProps: {
-      "value": (_vm.email)
-    },
-    on: {
-      "input": function($event) {
-        if ($event.target.composing) { return; }
-        _vm.email = $event.target.value
-      }
     }
   })]), _vm._v(" "), _c('div', {
     staticClass: "form-group"
-  }, [_c('label', [_vm._v("Number Phone")]), _vm._v(" "), _c('input', {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: (_vm.phone),
-      expression: "phone"
-    }],
+  }, [_c('label', [_vm._v("NO HP")]), _vm._v(" "), _c('input', {
     staticClass: "form-control form-rounded",
     attrs: {
       "type": "number",
       "placeholder": "type your phone number",
       "required": ""
-    },
-    domProps: {
-      "value": (_vm.phone)
-    },
-    on: {
-      "input": function($event) {
-        if ($event.target.composing) { return; }
-        _vm.phone = $event.target.value
-      }
     }
   })]), _vm._v(" "), _c('div', {
     staticClass: "form-group"
-  }, [_c('label', [_vm._v("Institution")]), _vm._v(" "), _c('input', {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: (_vm.institution),
-      expression: "institution"
-    }],
+  }, [_c('label', [_vm._v("Instansi")]), _vm._v(" "), _c('input', {
     staticClass: "form-control form-rounded",
     attrs: {
       "type": "text",
       "placeholder": "type the institution's origin",
       "required": ""
-    },
-    domProps: {
-      "value": (_vm.institution)
-    },
-    on: {
-      "input": function($event) {
-        if ($event.target.composing) { return; }
-        _vm.institution = $event.target.value
-      }
     }
   })]), _vm._v(" "), _c('div', {
     staticClass: "form-group"
-  }, [_c('label', [_vm._v("Address")]), _vm._v(" "), _c('textarea', {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: (_vm.address),
-      expression: "address"
-    }],
+  }, [_c('label', [_vm._v("Alamat")]), _vm._v(" "), _c('textarea', {
     staticClass: "form-control form-rounded",
     attrs: {
       "rows": "3",
       "placeholder": "type your address"
-    },
-    domProps: {
-      "value": (_vm.address)
-    },
-    on: {
-      "input": function($event) {
-        if ($event.target.composing) { return; }
-        _vm.address = $event.target.value
-      }
     }
   })]), _vm._v(" "), _c('div', {
     staticClass: "form-group row"
   }, [_c('div', {
-    staticClass: "col-xs-3"
+    staticClass: "col-xs-3",
+    staticStyle: {
+      "margin": "0px 20px 0px 20px",
+      "width": "100%"
+    }
   }, [_c('label', {
-    staticStyle: {
-      "margin-left": "20px"
+    attrs: {
+      "for": "datepicker-placeholder"
     }
-  }, [_vm._v("Date of Birth")]), _vm._v(" "), _c('input', {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: (_vm.date_of_birth),
-      expression: "date_of_birth"
-    }],
+  }, [_vm._v("Tanggal Lahir")]), _vm._v(" "), _c('b-form-datepicker', {
     staticClass: "form-control form-rounded",
-    staticStyle: {
-      "margin-left": "20px"
-    },
     attrs: {
-      "type": "date",
-      "placeholder": "Choose your date of birth",
-      "required": ""
-    },
-    domProps: {
-      "value": (_vm.date_of_birth)
-    },
-    on: {
-      "input": function($event) {
-        if ($event.target.composing) { return; }
-        _vm.date_of_birth = $event.target.value
+      "id": "datepicker-placeholder",
+      "placeholder": "Choose a date",
+      "local": "en"
+    }
+  })], 1)]), _vm._v(" "), _c('div', {
+    staticClass: "form-group"
+  }, [_c('label', [_vm._v("Pilih Kategori")]), _vm._v(" "), _vm._l((_vm.event.category), function(category) {
+    return _c('div', {
+      key: category.name,
+      staticClass: "col-xs-3",
+      staticStyle: {
+        "margin": "0px 20px 0px 20px",
+        "width": "100%"
       }
-    }
-  })])]), _vm._v(" "), _c('div', {
+    }, [_c('label', [_vm._v(_vm._s(category.name))]), _vm._v(" "), _vm._l((category.sub_category), function(subCategory) {
+      return _c('div', {
+        key: subCategory.id,
+        staticClass: "custom-control custom-radio"
+      }, [_c('input', {
+        staticClass: "custom-control-input",
+        attrs: {
+          "type": "radio",
+          "id": subCategory.id,
+          "name": category.name
+        }
+      }), _vm._v(" "), _c('label', {
+        staticClass: "custom-control-label",
+        attrs: {
+          "for": subCategory.id
+        }
+      }, [_vm._v(_vm._s(subCategory.sub_category_name))])])
+    })], 2)
+  })], 2), _vm._v(" "), _c('div', {
     staticClass: "form-group"
-  }, [_c('label', [_vm._v("Select One")]), _vm._v(" "), _c('div', {
-    staticClass: "custom-control custom-radio"
-  }, [_c('input', {
-    staticClass: "custom-control-input",
-    attrs: {
-      "type": "radio",
-      "id": "customRadio1",
-      "name": "customRadio"
-    }
-  }), _vm._v(" "), _c('label', {
-    staticClass: "custom-control-label",
-    attrs: {
-      "for": "customRadio1"
-    }
-  }, [_vm._v("Web with VueJS and Firebase")])]), _vm._v(" "), _c('div', {
-    staticClass: "custom-control custom-radio"
-  }, [_c('input', {
-    staticClass: "custom-control-input",
-    attrs: {
-      "type": "radio",
-      "id": "customRadio2",
-      "name": "customRadio"
-    }
-  }), _vm._v(" "), _c('label', {
-    staticClass: "custom-control-label",
-    attrs: {
-      "for": "customRadio2"
-    }
-  }, [_vm._v("Or toggle this other custom radio")])])]), _vm._v(" "), _c('div', {
-    staticClass: "form-group"
-  }, [_c('input', {
+  }, [_c('b-button', {
+    staticClass: "tombol",
     attrs: {
       "type": "submit",
       "value": "Daftar"
     }
-  })])])])], 1)
+  }, [_vm._v("Daftar")])], 1)])])], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
