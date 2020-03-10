@@ -44195,7 +44195,7 @@ var Component = __webpack_require__(59)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/faqih/Documents/plugin-webprofile/plugin-apps-web-profile/resources/js/App.vue"
+Component.options.__file = "/home/faqih/Documents/plugin-apps-web-profile/resources/js/App.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] App.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -44233,7 +44233,7 @@ var Component = __webpack_require__(59)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/faqih/Documents/plugin-webprofile/plugin-apps-web-profile/resources/js/components/Event.vue"
+Component.options.__file = "/home/faqih/Documents/plugin-apps-web-profile/resources/js/components/Event.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Event.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -44271,7 +44271,7 @@ var Component = __webpack_require__(59)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/faqih/Documents/plugin-webprofile/plugin-apps-web-profile/resources/js/components/Navbar.vue"
+Component.options.__file = "/home/faqih/Documents/plugin-apps-web-profile/resources/js/components/Navbar.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Navbar.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -48353,8 +48353,8 @@ window.addEventListener('scroll', function () {
     mounted: function mounted() {
         var _this = this;
 
-        // axios.get('http://plugin-apps-server.herokuapp.com/api/event').then( (response) => {
-        __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('http://192.168.18.53:8000/api/event').then(function (response) {
+        __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('http://plugin-apps-server.herokuapp.com/api/event').then(function (response) {
+            // axios.get('http://192.168.18.53:8000/api/event').then((response) => {
             _this.events = response.data.results;
             console.log(_this.events);
         });
@@ -48438,56 +48438,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -48505,23 +48455,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         };
     },
 
-    methods: {
-        formatDate: function formatDate(date) {
-            var monthNames = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
-
-            var day = date.getDate();
-            var monthIndex = date.getMonth();
-            var year = date.getFullYear();
-
-            return day + ' ' + monthNames[monthIndex] + ' ' + year;
-        }
-
-    },
+    methods: {},
     mounted: function mounted() {
         var _this = this;
 
-        //axios.get('http://plugin-apps-server.herokuapp.com/api/event/' + this.id).then((response) => {
-        __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('http://192.168.18.53:8000/api/event/' + this.id).then(function (response) {
+        __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('http://plugin-apps-server.herokuapp.com/api/event/' + this.id).then(function (response) {
+            // axios.get('http://192.168.18.53:8000/api/event/' + this.id).then((response) => {
             _this.event = response.data.results;
             // console.log(this.event.category);
             console.log(response.data.results.category);
@@ -48586,26 +48525,7 @@ $(document).ready(function () {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(249)))
 
 /***/ }),
-/* 279 */
-/***/ (function(module, exports) {
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/***/ }),
+/* 279 */,
 /* 280 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -48617,8 +48537,11 @@ $(document).ready(function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__js_App_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__js_App_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Event_vue__ = __webpack_require__(255);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Event_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_Event_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Regis_vue__ = __webpack_require__(325);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Regis_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_Regis_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Succsses_vue__ = __webpack_require__(342);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Succsses_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_Succsses_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_Registrasi_vue__ = __webpack_require__(341);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_Registrasi_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__components_Registrasi_vue__);
+
 
 
 
@@ -48638,9 +48561,14 @@ var router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
         name: 'event',
         component: __WEBPACK_IMPORTED_MODULE_3__components_Event_vue___default.a
     }, {
-        path: '/regis',
-        name: 'regis',
-        component: __WEBPACK_IMPORTED_MODULE_4__components_Regis_vue___default.a
+        path: '/Registrasi',
+        name: 'Registrasi',
+        component: __WEBPACK_IMPORTED_MODULE_5__components_Registrasi_vue___default.a
+
+    }, {
+        path: '/Succsses',
+        name: 'Succsses',
+        component: __WEBPACK_IMPORTED_MODULE_4__components_Succsses_vue___default.a
 
     }]
 });
@@ -53776,18 +53704,12 @@ exports = module.exports = __webpack_require__(34)();
 exports.push([module.i, "\n.section_gap_footer {\n    padding-top: 100px;\n    padding-bottom: 10px;\n}\n.out-animation {\n    opacity: 0;\n    transform: translateX(80px);\n}\n\n", ""]);
 
 /***/ }),
-/* 320 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(34)();
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
-
-/***/ }),
+/* 320 */,
 /* 321 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(34)();
-exports.push([module.i, "\n.jevent {\n      min-height: 500px;\n      /* background: url(http://192.168.18.53:8000/images/{{event.image}}); */\n      background-size: cover;\n/* overflow: auto; */\n}\n\n  /* .widewrapper {\n      width: 100%;\n  }\n\n  .widewrapper>img {\n      width: 100%;\n  } */\n.post-content {\n      background: none repeat scroll 0 0;\n      top: 0;\n      margin-top: 90px;\n      left: 0;\n      position: absolute;\n}\n.thumbnail {\n      /* position: relative; */\n      margin: auto;\n}\n.OPREC1 {\n      text-align: center;\n      margin-top: 80px;\n}\n.tombol {\n      background: #16a1e3;\n      width: 150px;\n      border-radius: 20px;\n      /* margin-top: 80px */\n}\n.form-rounded {\n      border-radius: 1rem;\n}\n", ""]);
+exports.push([module.i, "\n.Detail{\n    padding-bottom: 20px;\n    padding-top: 50px;\n    margin-bottom: 30px;\n}\n    /* .jevent {\n        max-height: 500px;\n        background: transparent;\n    } */\n.Pamlete{\n        width: 100%;\n        margin: auto;\n}\n.tombol {\n        background: #16a1e3;\n        width: 150px;\n        border-radius: 20px;\n        /* margin-top: 80px */\n}\n@media only screen and (max-width: 600px) {\n        /* img{\n            width: 360px;\n            margin-left: -17px;\n        } */\n}\n", ""]);
 
 /***/ }),
 /* 322 */
@@ -54035,44 +53957,7 @@ if(false) {
 }
 
 /***/ }),
-/* 325 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-/* styles */
-__webpack_require__(332)
-
-var Component = __webpack_require__(59)(
-  /* script */
-  __webpack_require__(279),
-  /* template */
-  __webpack_require__(328),
-  /* scopeId */
-  null,
-  /* cssModules */
-  null
-)
-Component.options.__file = "/home/faqih/Documents/plugin-webprofile/plugin-apps-web-profile/resources/js/components/Regis.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Regis.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-9eb0c9fa", Component.options)
-  } else {
-    hotAPI.reload("data-v-9eb0c9fa", Component.options)
-  }
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
+/* 325 */,
 /* 326 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -54567,53 +54452,20 @@ if (false) {
 }
 
 /***/ }),
-/* 328 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('div', {
-    staticClass: "text-center",
-    attrs: {
-      "id": "regis"
-    }
-  }, [_c('h1', [_vm._v("Registrasi Sukses")]), _vm._v(" "), _c('b-img', {
-    staticStyle: {},
-    attrs: {
-      "src": "asset/img/sukses.jpg",
-      "width": "450px",
-      "height": "350px"
-    }
-  }), _vm._v(" "), _c('h3', [_vm._v("Anda Sudah Melakukan Registrasi")]), _vm._v(" "), _c('p', [_vm._v("Terima kasih telah menyelesaikan proses regisatrasi")]), _vm._v(" "), _c('p', [_vm._v("Segera cek E-mail anda")]), _vm._v(" "), _c('b-button', {
-    staticStyle: {
-      "width": "200px"
-    },
-    attrs: {
-      "pill": "",
-      "variant": "primary",
-      "href": "/"
-    }
-  }, [_vm._v("Ke Halaman Utama")])], 1)])
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-9eb0c9fa", module.exports)
-  }
-}
-
-/***/ }),
+/* 328 */,
 /* 329 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('app-navbar'), _vm._v(" "), _c('div', {
-    staticClass: "OPREC1",
+  return _c('div', [_c('app-navbar'), _vm._v(" "), _c('b-container', {
+    staticClass: "Detail"
+  }, [_c('div', {
+    staticClass: "Banner",
     staticStyle: {
       "margin-bottom": "50px"
     },
     attrs: {
-      "id": "OPREC1"
+      "id": "#"
     }
   }, [_c('b-jumbotron', {
     staticClass: "jevent align-middle",
@@ -54621,26 +54473,19 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "text-variant": "black"
     }
   }, [_c('div', {
-    staticClass: "widewrapper thumbnail container"
-  }, [_c('div', {
-    staticClass: "post-content"
-  }, _vm._l((_vm.events), function(data, index) {
-    return _c('div', {
-      key: index
-    }, [_c('h2', {
-      staticClass: "text-black"
-    }, [_vm._v(_vm._s(data.title))]), _vm._v(" "), _c('img', {
-      staticClass: "pamlet",
-      attrs: {
-        "src": "https://www.webdesign.org/img_articles/22292/head_full_770.jpg",
-        "alt": "Avatar"
-      }
-    })])
-  }), 0)])])], 1), _vm._v(" "), _c('b-container', {
+    staticClass: "Slogan"
+  }, [_c('b-row', [_c('b-col', [_c('img', {
+    staticClass: "Pamlete",
+    attrs: {
+      "fluid": "",
+      "src": "https://www.webdesign.org/img_articles/22292/head_full_770.jpg",
+      "alt": "Avatar"
+    }
+  })])], 1)], 1)])], 1), _vm._v(" "), _c('b-container', {
     staticClass: "bv-example-row",
     staticStyle: {
       "margin-bottom": "50px",
-      "padding-top": "75px"
+      "padding-top": "20px"
     }
   }, [_c('b-row', [_c('div', {
     staticClass: "col-lg-4 mb-3"
@@ -54648,7 +54493,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticStyle: {
       "text-align": "center"
     }
-  }, [_vm._v("Due Date")]), _vm._v(" "), _vm._l((_vm.events), function(data, index) {
+  }, [_vm._v("Due Date")]), _vm._v(" "), _vm._l((_vm.event), function(data, index) {
     return _c('div', {
       key: index
     }, [_c('p', {
@@ -54668,7 +54513,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticStyle: {
       "text-align": "center"
     }
-  }, [_vm._v("HTM & Fasilitas")]), _vm._v(" "), _vm._l((_vm.events), function(data, index) {
+  }, [_vm._v("HTM & Fasilitas")]), _vm._v(" "), _vm._l((_vm.event), function(data, index) {
     return _c('div', {
       key: index
     }, _vm._l((data.category), function(category) {
@@ -54690,7 +54535,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticStyle: {
       "text-align": "center"
     }
-  }, [_vm._v("Deskripsi")]), _vm._v(" "), _vm._l((_vm.events), function(data, index) {
+  }, [_vm._v("Deskripsi")]), _vm._v(" "), _vm._l((_vm.event), function(data, index) {
     return _c('div', {
       key: index
     }, [_c('P', {
@@ -54698,145 +54543,16 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         "text-align": "justify"
       }
     }, [_vm._v("\n                        " + _vm._s(data.description) + "\n                    ")])], 1)
-  }), _vm._v(" "), _c('div', {
-    staticClass: "text-center"
-  }, [_c('img', {
-    attrs: {
-      "src": "https://s.kaskus.id/r540x540/images/2019/05/02/10419174_20190502042606.jpg",
-      "alt": "",
-      "width": "150px",
-      "height": "150px"
-    }
-  })])], 2), _vm._v(" "), _c('b-col', [_c('center', [_c('div', {
-    staticClass: "text"
-  }, [_c('b-button', {
-    directives: [{
-      name: "b-modal",
-      rawName: "v-b-modal.modal-center",
-      modifiers: {
-        "modal-center": true
-      }
-    }],
-    staticClass: "tombol"
-  }, [_vm._v("Registrasi")])], 1)])], 1)], 1)], 1), _vm._v(" "), _c('b-modal', {
-    staticStyle: {
-      "position": "absolute",
-      "z-index": "9999"
-    },
-    attrs: {
-      "id": "modal-center",
-      "centered": "",
-      "title": "Form Pendaftaran",
-      "hide-footer": ""
-    }
-  }, [_c('form', {
-    attrs: {
-      "action": "#",
-      "method": "post"
-    },
-    on: {
-      "submit": _vm.sub
-    }
-  }, [_c('div', {
+  })], 2)]), _vm._v(" "), _c('div', {
     staticClass: "form-group"
-  }, [_c('label', [_vm._v("Nama lengkap")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control form-rounded",
-    attrs: {
-      "type": "text",
-      "placeholder": "type your full name",
-      "required": ""
-    }
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "form-group"
-  }, [_c('label', [_vm._v("Email")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control form-rounded",
-    attrs: {
-      "type": "email",
-      "placeholder": "type your email",
-      "required": ""
-    }
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "form-group"
-  }, [_c('label', [_vm._v("NO HP")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control form-rounded",
-    attrs: {
-      "type": "number",
-      "placeholder": "type your phone number",
-      "required": ""
-    }
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "form-group"
-  }, [_c('label', [_vm._v("Instansi")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control form-rounded",
-    attrs: {
-      "type": "text",
-      "placeholder": "type the institution's origin",
-      "required": ""
-    }
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "form-group"
-  }, [_c('label', [_vm._v("Alamat")]), _vm._v(" "), _c('textarea', {
-    staticClass: "form-control form-rounded",
-    attrs: {
-      "rows": "3",
-      "placeholder": "type your address"
-    }
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "form-group row"
-  }, [_c('div', {
-    staticClass: "col-xs-3",
-    staticStyle: {
-      "margin": "0px 20px 0px 20px",
-      "width": "100%"
-    }
-  }, [_c('label', {
-    attrs: {
-      "for": "datepicker-placeholder"
-    }
-  }, [_vm._v("Tanggal Lahir")]), _vm._v(" "), _c('b-form-datepicker', {
-    staticClass: "form-control form-rounded",
-    attrs: {
-      "id": "datepicker-placeholder",
-      "placeholder": "Choose a date",
-      "local": "en"
-    }
-  })], 1)]), _vm._v(" "), _c('div', {
-    staticClass: "form-group"
-  }, [_c('label', [_vm._v("Pilih Kategori")]), _vm._v(" "), _vm._l((_vm.event.category), function(category) {
-    return _c('div', {
-      key: category.name,
-      staticClass: "col-xs-3",
-      staticStyle: {
-        "margin": "0px 20px 0px 20px",
-        "width": "100%"
-      }
-    }, [_c('label', [_vm._v(_vm._s(category.name))]), _vm._v(" "), _vm._l((category.sub_category), function(subCategory) {
-      return _c('div', {
-        key: subCategory.id,
-        staticClass: "custom-control custom-radio"
-      }, [_c('input', {
-        staticClass: "custom-control-input",
-        attrs: {
-          "type": "radio",
-          "id": subCategory.id,
-          "name": category.name
-        }
-      }), _vm._v(" "), _c('label', {
-        staticClass: "custom-control-label",
-        attrs: {
-          "for": subCategory.id
-        }
-      }, [_vm._v(_vm._s(subCategory.sub_category_name))])])
-    })], 2)
-  })], 2), _vm._v(" "), _c('div', {
-    staticClass: "form-group"
-  }, [_c('b-button', {
+  }, [_c('center', [_c('b-button', {
     staticClass: "tombol",
     attrs: {
-      "type": "submit",
-      "value": "Daftar"
+      "href": "/registrasi"
     }
-  }, [_vm._v("Daftar")])], 1)])])], 1)
+  }, [_vm._v("Daftar")]), _vm._v(" "), _c('router-link', {
+    staticClass: "tombol"
+  }, [_vm._v("Daftar")])], 1)], 1)], 1)], 1)], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -54899,32 +54615,7 @@ if(false) {
 }
 
 /***/ }),
-/* 332 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(320);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(60)("5d2d9c03", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-9eb0c9fa!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Regis.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-9eb0c9fa!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Regis.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
+/* 332 */,
 /* 333 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -66970,6 +66661,233 @@ var e=Object.freeze({});function t(e){return null==e}function n(e){return null!=
 __webpack_require__(258);
 module.exports = __webpack_require__(259);
 
+
+/***/ }),
+/* 338 */,
+/* 339 */
+/***/ (function(module, exports) {
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/***/ }),
+/* 340 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(34)();
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+/***/ }),
+/* 341 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(348)
+
+var Component = __webpack_require__(59)(
+  /* script */
+  __webpack_require__(345),
+  /* template */
+  __webpack_require__(347),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/home/faqih/Documents/plugin-apps-web-profile/resources/js/components/Registrasi.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] Registrasi.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-0af703c6", Component.options)
+  } else {
+    hotAPI.reload("data-v-0af703c6", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 342 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(344)
+
+var Component = __webpack_require__(59)(
+  /* script */
+  __webpack_require__(339),
+  /* template */
+  __webpack_require__(343),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/home/faqih/Documents/plugin-apps-web-profile/resources/js/components/Succsses.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] Succsses.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-9ef6f5ca", Component.options)
+  } else {
+    hotAPI.reload("data-v-9ef6f5ca", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 343 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('div', {
+    staticClass: "text-center",
+    attrs: {
+      "id": "succsses"
+    }
+  }, [_c('h1', [_vm._v("Registrasi Sukses")]), _vm._v(" "), _c('b-img', {
+    staticStyle: {},
+    attrs: {
+      "src": "asset/img/sukses.jpg",
+      "width": "450px",
+      "height": "350px"
+    }
+  }), _vm._v(" "), _c('h3', [_vm._v("Anda Sudah Melakukan Registrasi")]), _vm._v(" "), _c('p', [_vm._v("Terima kasih telah menyelesaikan proses regisatrasi")]), _vm._v(" "), _c('p', [_vm._v("Segera cek E-mail anda")]), _vm._v(" "), _c('b-button', {
+    staticStyle: {
+      "width": "200px"
+    },
+    attrs: {
+      "pill": "",
+      "variant": "primary",
+      "href": "/"
+    }
+  }, [_vm._v("Ke Halaman Utama")])], 1)])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-9ef6f5ca", module.exports)
+  }
+}
+
+/***/ }),
+/* 344 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(340);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(60)("5f738ee5", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-9ef6f5ca!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Succsses.vue", function() {
+     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-9ef6f5ca!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Succsses.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 345 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = {};
+
+/***/ }),
+/* 346 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(34)();
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+/***/ }),
+/* 347 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c("div")
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-0af703c6", module.exports)
+  }
+}
+
+/***/ }),
+/* 348 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(346);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(60)("aa86536a", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-0af703c6!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Registrasi.vue", function() {
+     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-0af703c6!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Registrasi.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
 
 /***/ })
 /******/ ]);

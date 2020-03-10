@@ -1,6 +1,6 @@
 <template>
 <div>
-    <div id="regis" class="text-center">
+    <div id="succsses" class="text-center">
         <h1>Registrasi Sukses</h1>
         
         <b-img src="asset/img/sukses.jpg" width="450px" height="350px" style=" img-fluid"></b-img>

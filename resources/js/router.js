@@ -2,7 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import App from '../js/App.vue'
 import Event from './components/Event.vue'
-import Regis from './components/Regis.vue'
+import Succsses from './components/Succsses.vue'
+import Registrasi from './components/Registrasi.vue'
+
 
 
 Vue.use(Router)
@@ -21,11 +23,17 @@ const router = new Router({
             component: Event
         },
         {
-            path: '/regis',
-            name: 'regis',
-            component: Regis
+            path: '/Registrasi',
+            name: 'Registrasi',
+            component: Registrasi
 
-        }
+        },
+        {
+            path: '/Succsses',
+            name: 'Succsses',
+            component: Succsses
+
+        },
 
     ]
 });
