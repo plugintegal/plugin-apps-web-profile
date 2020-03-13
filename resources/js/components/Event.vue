@@ -11,30 +11,29 @@
                             alt="Avatar" class="Pamlete" >
                         </b-col>
                     </b-row>
-                    <!-- <div class="Slogan" v-for="(data ,index) in event" v-bind:key="index">
-                        
-                    </div> -->
-                    <!-- <h2 class="text-black">{{ data.title }}</h2> -->
-                        
                 </div>
             </b-jumbotron>
         </div>
-       
+
         <!-- detail event -->
         <b-container class="bv-example-row" style="margin-bottom: 50px; padding-top: 20px; ">
             <b-row>
                 <div class="col-lg-4 mb-3">
                     <h3 style="text-align: center">Due Date</h3>
-                    <div v-for="(data, index) in event" v-bind:key="index">
-                        <p style="text-align: left">Tanggal : {{ formatDate(new Date(data.opened)) }}</p>
+                    <!-- <div v-for="(data, index) in event" v-bind:key="index"> -->
+                    <div>
+                        <!-- <p style="text-align: left">Tanggal : {{ formatDate(new Date(data.opened)) }}</p> -->
                     </div>
                     <p style="text-align: left">Tempat : Plug-In Home</p>
                     <p style="text-align: left">Waktu : 08.00 - selesai WIB</p>
                     <br>
                     <h3 style="text-align: center">HTM & Fasilitas</h3>
-                    <div v-for="(data ,index) in event" v-bind:key="index">
-                        <div v-for="(category) in data.category" v-bind:key="category">
-                            <p style="text-align: left">Fee : Rp {{ category.price }},-</p>
+                    <!-- <div v-for="(data ,index) in event" v-bind:key="index"> -->
+                        <div>
+                        <!-- <div v-for="(category) in data.category" v-bind:key="category"> -->
+                            <div>
+                            <!-- <p style="text-align: left">Fee : Rp {{ category.price }},-</p> -->
+                            <p style="text-align: left">Fee : Rp 0000,-</p>
                         </div>
                     </div>
 
@@ -44,9 +43,11 @@
 
                 <div class="col-lg-8">
                     <h3 style="text-align: center">Deskripsi</h3>
-                    <div v-for="(data ,index) in event" v-bind:key="index">
+                    <!-- <div v-for="(data ,index) in event" v-bind:key="index"> -->
+                        <div>
                         <P style="text-align: justify">
-                            {{ data.description }}
+                            <!-- {{ data.description }} -->
+                            data
                         </P>
                     </div>
                 </div>
@@ -54,8 +55,8 @@
                   <div class="form-group">
                     <center>
                     <!-- <input type="submit" value="Daftar"> -->
-                    <b-button class="tombol" href="/registrasi">Daftar</b-button>
-                    <router-link class="tombol">Daftar</router-link>
+                    <!-- <b-button class="tombol" href="/registrasi">Daftar</b-button> -->
+                    <router-link class="tombol" :to="{name: 'eventRegister', params: { id: event.id}}">Daftar</router-link>
                     </center>
                 </div>
         </b-container>
@@ -73,23 +74,21 @@
         },
         data() {
             return {
-                
-                id: this.$route.params.id,
+
+                // id: this.$route.params.id,
                 event: [],
                 dialog: false,
-                
+
             }
         },
         methods: {
-            
+
         },
         mounted() {
-            axios.get('http://plugin-apps-server.herokuapp.com/api/event/' + this.id).then((response) => {
+            axios.get(`http://plugin-apps-server.herokuapp.com/api/event/${this.$route.params.id}`).then((response) => {
             // axios.get('http://192.168.18.53:8000/api/event/' + this.id).then((response) => {
                 this.event = response.data.results;
-                // console.log(this.event.category);
-                console.log(response.data.results.category)
-
+                console.log(response.data.results)
             })
         }
 

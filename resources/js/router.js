@@ -23,8 +23,8 @@ const router = new Router({
             component: Event
         },
         {
-            path: '/Registrasi',
-            name: 'Registrasi',
+            path: '/registrasi/:id',
+            name: 'eventRegister',
             component: Registrasi
 
         },

@@ -2,7 +2,7 @@
 <div>
     <div id="succsses" class="text-center">
         <h1>Registrasi Sukses</h1>
-        
+
         <b-img src="asset/img/sukses.jpg" width="450px" height="350px" style=" img-fluid"></b-img>
 
         <h3>Anda Sudah Melakukan Registrasi</h3>
