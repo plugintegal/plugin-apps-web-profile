@@ -14439,7 +14439,7 @@ var Component = __webpack_require__(40)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/hisyam/Music/plugin-apps-web-profile/resources/js/components/Navbar.vue"
+Component.options.__file = "/home/faqih/Documents/plugin-apps-web-profile/resources/js/components/Navbar.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Navbar.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -44233,7 +44233,7 @@ var Component = __webpack_require__(40)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/hisyam/Music/plugin-apps-web-profile/resources/js/App.vue"
+Component.options.__file = "/home/faqih/Documents/plugin-apps-web-profile/resources/js/App.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] App.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -44271,7 +44271,7 @@ var Component = __webpack_require__(40)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/hisyam/Music/plugin-apps-web-profile/resources/js/components/Event.vue"
+Component.options.__file = "/home/faqih/Documents/plugin-apps-web-profile/resources/js/components/Event.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Event.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -53947,7 +53947,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(28)();
-exports.push([module.i, "\n.Detail{\n    padding-bottom: 20px;\n    padding-top: 50px;\n    margin-bottom: 30px;\n}\n    /* .jevent {\n        max-height: 500px;\n        background: transparent;\n    } */\n.Pamlete{\n        width: 100%;\n        margin: auto;\n}\n.tombol {\n        background: #16a1e3;\n        width: 150px;\n        border-radius: 20px;\n        /* margin-top: 80px */\n}\n@media only screen and (max-width: 600px) {\n        /* img{\n            width: 360px;\n            margin-left: -17px;\n        } */\n}\n", ""]);
+exports.push([module.i, "\n.Detail {\n    padding-bottom: 20px;\n    padding-top: 50px;\n    margin-bottom: 30px;\n}\n\n/* .jevent {\n    max-height: 500px;\n    background: transparent;\n} */\n.Pamlete {\n    width: 100%;\n    margin: auto;\n}\n.tombol {\n    background: #16a1e3;\n    width: 30px;\n    /* height: 300px; */\n    border-radius: 20px;\n    /* margin-top: 80px */\n}\n@media only screen and (max-width: 600px) {\n    /* img{\n        width: 360px;\n        margin-left: -17px;\n    } */\n}\n\n", ""]);
 
 /***/ }),
 /* 324 */
@@ -54212,7 +54212,7 @@ var Component = __webpack_require__(40)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/hisyam/Music/plugin-apps-web-profile/resources/js/components/Registrasi.vue"
+Component.options.__file = "/home/faqih/Documents/plugin-apps-web-profile/resources/js/components/Registrasi.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Registrasi.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -54250,7 +54250,7 @@ var Component = __webpack_require__(40)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/hisyam/Music/plugin-apps-web-profile/resources/js/components/Succsses.vue"
+Component.options.__file = "/home/faqih/Documents/plugin-apps-web-profile/resources/js/components/Succsses.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Succsses.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -55160,10 +55160,15 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticStyle: {
       "text-align": "justify"
     }
-  }, [_vm._v("\n                        data\n                    ")])], 1)])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\n                            data\n                        ")])], 1)])]), _vm._v(" "), _c('div', {
     staticClass: "form-group"
-  }, [_c('center', [_c('router-link', {
-    staticClass: "tombol",
+  }, [_c('center', {
+    staticStyle: {
+      "margin-left": "200px"
+    }
+  }, [_c('b-button', {
+    staticClass: "tombol"
+  }, [_c('router-link', {
     attrs: {
       "to": {
         name: 'eventRegister',
@@ -55172,7 +55177,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         }
       }
     }
-  }, [_vm._v("Daftar")])], 1)], 1)], 1)], 1)], 1)
+  }, [_vm._v("Daftar")])], 1)], 1)], 1)], 1)], 1)], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
