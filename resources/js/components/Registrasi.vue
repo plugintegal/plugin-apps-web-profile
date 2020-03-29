@@ -14,48 +14,44 @@
             <img src="/asset/img/poster.jpeg" alt srcset class="pamlete" />
           </b-col>
           <b-col sm="12" md="6">
-            <div class="Form">
-              <div class="form-group">
-                <label>Nama lengkap</label>
+            <form @submit.prevent="postRegister" class="Form">
+              <form-group :validator="$v.regFullName" class="form-group" label="Nama lengkap">
                 <input
                   v-model="regFullName"
                   type="text"
                   class="form-control form-rounded"
+                  :class="{'is-invalid': $v.regFullName.$error}"
                   placeholder="type your full name"
-                  required
                 />
-              </div>
-              <div class="form-group">
-                <label>Email</label>
+              </form-group>
+              <form-group :validator="$v.regEmail" class="form-group" label="Email">
                 <input
                   v-model="regEmail"
                   type="email"
                   class="form-control form-rounded"
+                  :class="{'is-invalid': $v.regEmail.$error}"
                   placeholder="type your email"
-                  required
                 />
-              </div>
-              <div class="form-group">
-                <label>NO HP</label>
+              </form-group>
+              <form-group :validator="$v.regPhone" class="form-group" label="NO HP">
                 <input
                   v-model="regPhone"
                   type="number"
                   class="form-control form-rounded"
+                  :class="{'is-invalid': $v.regPhone.$error}"
                   placeholder="type your phone number"
-                  required
                 />
-              </div>
-              <div class="form-group">
-                <label>Instansi</label>
+              </form-group>
+              <form-group :validator="$v.regInstitution" class="form-group" label="Instansi">
                 <input
                   v-model="regInstitution"
                   type="text"
                   class="form-control form-rounded"
+                  :class="{'is-invalid': $v.regInstitution.$error}"
                   placeholder="type the institution's origin"
-                  required
                 />
-              </div>
-              <div class="form-group">
+              </form-group>
+              <form-group class="form-group">
                 <label>Alamat</label>
                 <textarea
                   v-model="regAddress"
@@ -63,8 +59,8 @@
                   rows="3"
                   placeholder="type your address"
                 ></textarea>
-              </div>
-              <div class="form-group row">
+              </form-group>
+              <form-group class="form-group row">
                 <div class="col-xs-3" style="margin : 0px 20px 0px 20px; width:100%;">
                   <label for="datepicker-placeholder">Tanggal Lahir</label>
                   <b-form-datepicker
@@ -75,9 +71,8 @@
                     local="en"
                   ></b-form-datepicker>
                 </div>
-              </div>
-              <div class="form-group">
-                <label>Pilih Kategori</label>
+              </form-group>
+              <form-group :validator="$v.regSubCatId" class="form-group" label="Pilih Kategori">
                 <div
                 v-for="category in event.category"
                   :key="category.name"
@@ -99,6 +94,7 @@
                       :value="subCategory.sub_category_name"
                       :name="category.name"
                       class="custom-control-input"
+                      :class="{'is-invalid': $v.regSubCatId.$error}"
                     />
                     <label
                       class="custom-control-label"
@@ -106,30 +102,19 @@
                     >{{subCategory.sub_category_name}}</label>
                   </div>
                 </div>
-              </div>
-              <div class="form-group">
-                <label>Deskripsi</label>
-                <input
-                  v-model="regDescription"
-                  type="text"
-                  class="form-control form-rounded"
-                  placeholder="Deskripsi"
-                  required
-                />
-              </div>
-              <div class="form-group">
+              </form-group>
+            <form-group class="form-group">
                 <div class="form-group">
                   <center>
                     <b-button
                       class="tombol"
                       type="submit"
-                      @click="postRegister()"
                       value="Daftar"
                     >Daftar</b-button>
                   </center>
                 </div>
-              </div>
-            </div>
+              </form-group>
+            </form>
           </b-col>
         </b-row>
       </div>
@@ -139,6 +124,8 @@
 
 <script>
 import axios from "axios";
+import { required, minLength, maxLength, email } from 'vuelidate/lib/validators'
+import { notPhone } from '../validator'
 import Navbar from "./Navbar.vue";
 export default {
   components: {
@@ -161,6 +148,29 @@ export default {
       post: ""
     };
   },
+  validations : {
+      regFullName: {
+          required,
+          maxLength: maxLength(100),
+          minLength: minLength(3)
+      },
+      regEmail: {
+          required,
+          email,
+          maxLength: maxLength(100)
+      },
+      regPhone: {
+          required,
+          notPhone,
+          minLength: minLength(6)
+      },
+      regInstitution: {
+          required
+      },
+      regSubCatId: {
+          required
+      }
+  },
   methods: {
     getDetail() {
       axios
@@ -172,22 +182,24 @@ export default {
         });
     },
     postRegister(){
-        axios.post("https://plugin-apps-server.herokuapp.com/api/participant", {
-            headers: {'Content-Type': 'application/x-www-form-urlencoded' },
-            event_id: this.regEventId,
-            full_name: this.regFullName,
-            email: this.regEmail,
-            phone: this.regPhone,
-            institution: this.regInstitution,
-            address: this.regAddress,
-            date_of_birth: this.regDateOfBirth,
-            description: this.regDescription,
-            sub_category_id: this.regSubCatId
-        }).then(response => {
-            console.log(response);
-        }).catch(e => {
-            console.log(e);
-        })
+        this.$v.$touch()
+        if(this.$v.$error) return
+        // axios.post("https://plugin-apps-server.herokuapp.com/api/participant", {
+        //     headers: {'Content-Type': 'application/x-www-form-urlencoded' },
+        //     event_id: this.regEventId,
+        //     full_name: this.regFullName,
+        //     email: this.regEmail,
+        //     phone: this.regPhone,
+        //     institution: this.regInstitution,
+        //     address: this.regAddress,
+        //     date_of_birth: this.regDateOfBirth,
+        //     description: this.regDescription,
+        //     sub_category_id: this.regSubCatId
+        // }).then(response => {
+        //     console.log(response);
+        // }).catch(e => {
+        //     console.log(e);
+        // })
     }
   },
   mounted() {
